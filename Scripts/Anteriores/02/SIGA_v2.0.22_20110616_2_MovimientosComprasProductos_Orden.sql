@@ -1,0 +1,73 @@
+
+/* Elimino la Clave Primaria (PK) */
+
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.MovimientosComprasProductos
+	DROP CONSTRAINT PK_MovimientosComprasProductos
+GO
+ALTER TABLE dbo.MovimientosComprasProductos SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+
+
+/* Ajusto el campo */
+
+ALTER TABLE dbo.MovimientosComprasProductos ALTER COLUMN
+	Orden Int NOT NULL
+GO
+
+ALTER TABLE dbo.MovimientosComprasProductos ADD 
+	Orden2 Int NULL
+GO
+
+UPDATE dbo.MovimientosComprasProductos SET Orden2 = Orden
+GO
+
+ALTER TABLE dbo.MovimientosComprasProductos ALTER COLUMN
+	Orden2 Int NOT NULL
+GO
+
+ALTER TABLE dbo.MovimientosComprasProductos DROP COLUMN	Orden 
+GO
+
+EXEC sp_rename 'MovimientosComprasProductos.Orden2', 'Orden', 'COLUMN'
+GO
+
+/* Vuelvo a Crear la Clave Primaria (PK) */
+
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.MovimientosComprasProductos ADD CONSTRAINT
+	PK_MovimientosComprasProductos PRIMARY KEY CLUSTERED 
+	(
+	IdSucursal,
+	IdTipoMovimiento,
+	NumeroMovimiento,
+	Orden,
+	IdProducto
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+ALTER TABLE dbo.MovimientosComprasProductos SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+

@@ -1,0 +1,122 @@
+
+BEGIN TRANSACTION
+	SET QUOTED_IDENTIFIER ON
+	SET ARITHABORT ON
+	SET NUMERIC_ROUNDABORT OFF
+	SET CONCAT_NULL_YIELDS_NULL ON
+	SET ANSI_NULLS ON
+	SET ANSI_PADDING ON
+	SET ANSI_WARNINGS ON
+COMMIT
+
+
+BEGIN TRANSACTION
+	GO
+	ALTER TABLE dbo.PedidosEstadosProveedores SET (LOCK_ESCALATION = TABLE)
+	GO
+COMMIT
+
+
+/* Elimino la Clave Primaria (PK) */
+
+BEGIN TRANSACTION
+	SET QUOTED_IDENTIFIER ON
+	SET ARITHABORT ON
+	SET NUMERIC_ROUNDABORT OFF
+	SET CONCAT_NULL_YIELDS_NULL ON
+	SET ANSI_NULLS ON
+	SET ANSI_PADDING ON
+	SET ANSI_WARNINGS ON
+COMMIT
+
+
+BEGIN TRANSACTION
+	GO
+	ALTER TABLE dbo.PedidosEstadosProveedores
+		DROP CONSTRAINT PK_PedidosEstadosProveedores
+	GO
+	ALTER TABLE dbo.PedidosEstadosProveedores SET (LOCK_ESCALATION = TABLE)
+	GO
+COMMIT
+
+
+/* Ajusto el campo */
+ALTER TABLE dbo.PedidosEstadosProveedores ADD Orden Int NULL
+GO
+
+UPDATE dbo.PedidosEstadosProveedores 
+   --SET Orden = (SELECT ROW_NUMBER() OVER(ORDER BY IdSucursal, IdPedido, IdProducto) FROM PedidosProductos)
+   SET Orden = IdProducto
+ WHERE Orden IS NULL
+GO
+
+ALTER TABLE dbo.PedidosEstadosProveedores ALTER COLUMN	Orden Int NOT NULL
+GO
+
+
+/* Vuelvo a Crear la Clave Primaria (PK) */
+BEGIN TRANSACTION
+	SET QUOTED_IDENTIFIER ON
+	SET ARITHABORT ON
+	SET NUMERIC_ROUNDABORT OFF
+	SET CONCAT_NULL_YIELDS_NULL ON
+	SET ANSI_NULLS ON
+	SET ANSI_PADDING ON
+	SET ANSI_WARNINGS ON
+COMMIT
+
+
+BEGIN TRANSACTION
+	GO
+	ALTER TABLE dbo.PedidosEstadosProveedores ADD CONSTRAINT
+		PK_PedidosEstadosProveedores PRIMARY KEY CLUSTERED 
+		(
+		IdSucursal,
+		IdPedido,
+		IdProducto,
+		FechaEstado,
+		Orden
+		) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+	GO
+	ALTER TABLE dbo.PedidosEstadosProveedores SET (LOCK_ESCALATION = TABLE)
+	GO
+COMMIT
+
+/* Para evitar posibles problemas de pérdida de datos, debe revisar este script detalladamente antes de ejecutarlo fuera del contexto del diseñador de base de datos.*/
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.PedidosProductosProveedores SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.PedidosEstadosProveedores ADD CONSTRAINT
+	FK_PedidosEstadosProveedores_PedidosProductosProveedores FOREIGN KEY
+	(
+	IdSucursal,
+	IdPedido,
+	IdProducto,
+	Orden
+	) REFERENCES dbo.PedidosProductosProveedores
+	(
+	IdSucursal,
+	IdPedido,
+	IdProducto,
+	Orden
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.PedidosEstadosProveedores SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT

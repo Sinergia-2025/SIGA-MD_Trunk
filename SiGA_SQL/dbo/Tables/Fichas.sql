@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[Fichas] (
+    [NroOperacion]    INT             NOT NULL,
+    [IdSucursal]      INT             NOT NULL,
+    [FechaOperacion]  DATETIME        NOT NULL,
+    [MontoTotalBruto] DECIMAL (10, 2) NULL,
+    [Anticipo]        DECIMAL (10, 2) NULL,
+    [Cuotas]          INT             NULL,
+    [IdFormasPago]    INT             NULL,
+    [Interes]         DECIMAL (10, 2) NULL,
+    [TotalNeto]       DECIMAL (10, 2) NULL,
+    [Saldo]           DECIMAL (10, 2) NULL,
+    [TipoDocCobrador] VARCHAR (5)     NULL,
+    [NroDocCobrador]  VARCHAR (12)    NULL,
+    [IdEstado]        VARCHAR (10)    NULL,
+    [NroFactura]      INT             NULL,
+    [Comentario]      VARCHAR (500)   NULL,
+    [TipoDocVendedor] VARCHAR (5)     NULL,
+    [NroDocVendedor]  VARCHAR (12)    NULL,
+    [Usuario]         VARCHAR (50)    NULL,
+    [Revisar]         CHAR (1)        NULL,
+    [IdCliente]       BIGINT          NOT NULL,
+    CONSTRAINT [PK_Fichas] PRIMARY KEY CLUSTERED ([IdSucursal] ASC, [IdCliente] ASC, [NroOperacion] ASC),
+    CONSTRAINT [FK_Fichas_Clientes] FOREIGN KEY ([IdCliente]) REFERENCES [dbo].[Clientes] ([IdCliente]),
+    CONSTRAINT [FK_Fichas_Estados] FOREIGN KEY ([IdEstado]) REFERENCES [dbo].[Estados] ([IdEstado]),
+    CONSTRAINT [FK_Fichas_FormasPago] FOREIGN KEY ([IdFormasPago]) REFERENCES [dbo].[FichasFormasPago] ([IdFormasPago])
+);
+

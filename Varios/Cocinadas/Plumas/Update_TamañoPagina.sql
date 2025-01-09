@@ -1,0 +1,3 @@
+UPDATE Parametros
+       SET ValorParametro = 500
+     WHERE IdParametro = 'WEBARCHIVOSCLIENTESTAMANOPAGINAGET'

@@ -1,0 +1,61 @@
+
+/* ------ TABLA ------ */
+
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.Impuestos SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.Productos ADD
+	IdTipoImpuesto varchar(5) NULL,
+	Alicuota decimal(6, 2) NULL
+GO
+
+ALTER TABLE dbo.Productos ADD CONSTRAINT
+	FK_Productos_Impuestos FOREIGN KEY
+	(
+	IdTipoImpuesto,
+	Alicuota
+	) REFERENCES dbo.Impuestos
+	(
+	IdTipoImpuesto,
+	Alicuota
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.Productos SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+
+
+/* ------ REGISTROS ------ */
+
+UPDATE Productos SET
+  IdTipoImpuesto='IVA',
+  Alicuota = (CASE WHEN EsNogravado = 'True' THEN 0 ELSE 21 END)
+GO
+
+ALTER TABLE dbo.Productos ALTER COLUMN IdTipoImpuesto varchar(5) NOT NULL
+GO
+
+ALTER TABLE dbo.Productos ALTER COLUMN Alicuota decimal(6, 2) NOT NULL
+GO
+
+
+ALTER TABLE dbo.Productos DROP COLUMN EsNogravado
+GO
+
+

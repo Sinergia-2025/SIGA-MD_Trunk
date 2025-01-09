@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[Impresoras] (
+    [IdSucursal]              INT           NOT NULL,
+    [IdImpresora]             VARCHAR (15)  NOT NULL,
+    [TipoImpresora]           VARCHAR (10)  NOT NULL,
+    [CentroEmisor]            INT           NOT NULL,
+    [ComprobantesHabilitados] VARCHAR (500) NULL,
+    [Puerto]                  VARCHAR (5)   NULL,
+    [Velocidad]               INT           NULL,
+    [EsProtocoloExtendido]    BIT           NULL,
+    [Modelo]                  VARCHAR (15)  NULL,
+    [OrigenPapel]             CHAR (1)      NULL,
+    [CantidadCopias]          SMALLINT      NULL,
+    [TipoFormulario]          CHAR (1)      NULL,
+    [TamanioLetra]            SMALLINT      NOT NULL,
+    [Marca]                   VARCHAR (15)  NULL,
+    [Metodo]                  VARCHAR (15)  NULL,
+    [AbrirCajonDinero]        BIT           NOT NULL,
+    [GrabarLOGs]              BIT           NOT NULL,
+    [ImprimirLineaALinea]     BIT           NOT NULL,
+    [CierreFiscalEstandar]    BIT           NOT NULL,
+    [PorCtaOrden]             BIT           NOT NULL,
+    CONSTRAINT [PK_Impresoras] PRIMARY KEY CLUSTERED ([IdSucursal] ASC, [IdImpresora] ASC),
+    CONSTRAINT [FK_Impresoras_Sucursales] FOREIGN KEY ([IdSucursal]) REFERENCES [dbo].[Sucursales] ([IdSucursal])
+);
+

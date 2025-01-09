@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>SiGA_SQL</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{02fb6ad6-fd16-4d1c-8dae-bc553a60d7f0}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>SiGA_SQL</RootNamespace>
+    <AssemblyName>SiGA_SQL</AssemblyName>
+    <ModelCollation>3082,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>VB</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <AssemblyOwner>sa</AssemblyOwner>
+    <DefaultCollation>Modern_Spanish_100_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- Default to the v10.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Snapshots" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="Assemblies\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Scripts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\ContabilidadPeriodosEjercicios.sql" />
+    <Build Include="dbo\Tables\PadronARBA.sql" />
+    <Build Include="dbo\Tables\ProductosFormulas.sql" />
+    <Build Include="dbo\Tables\ComprasNumeros.sql" />
+    <Build Include="dbo\Tables\VentasObservaciones.sql" />
+    <Build Include="dbo\Tables\ZonasGeograficas.sql" />
+    <Build Include="dbo\Tables\CuentasBancariasClase.sql" />
+    <Build Include="dbo\Tables\VentasFormasPago.sql" />
+    <Build Include="dbo\Tables\ClientesDescuentosMarcas.sql" />
+    <Build Include="dbo\Tables\CuentasBancos.sql" />
+    <Build Include="dbo\Tables\ArchivosAImprimir.sql" />
+    <Build Include="dbo\Tables\CuentasCorrientes.sql" />
+    <Build Include="dbo\Tables\ContabilidadAsientosTmp.sql" />
+    <Build Include="dbo\Tables\ComprasCheques.sql" />
+    <Build Include="dbo\Tables\HistorialPrecios.sql" />
+    <Build Include="dbo\Tables\ContabilidadAsientosCuentasTmp.sql" />
+    <Build Include="dbo\Tables\AuditoriaClientes.sql" />
+    <Build Include="dbo\Tables\AlquileresEstadosContratos.sql" />
+    <Build Include="dbo\Tables\EmpleadosComisionesRubrosPrecios.sql" />
+    <Build Include="dbo\Tables\TiposComprobantes.sql" />
+    <Build Include="dbo\Tables\RetencionesCompras.sql" />
+    <Build Include="dbo\Tables\Alquileres.sql" />
+    <Build Include="dbo\Tables\SubRubros.sql" />
+    <Build Include="dbo\Tables\ClientesMarcasListasDePrecios.sql" />
+    <Build Include="dbo\Tables\ClientesDescuentosSubRubros.sql" />
+    <Build Include="dbo\Tables\EmpleadosComisionesMarcasPrecios.sql" />
+    <Build Include="dbo\Tables\Provincias.sql" />
+    <Build Include="dbo\Tables\AlquileresTarifasProductos.sql" />
+    <Build Include="dbo\Tables\Estados.sql" />
+    <Build Include="dbo\Tables\EmpleadosComisionesProductosPrecios.sql" />
+    <Build Include="dbo\Tables\Localidades.sql" />
+    <Build Include="dbo\Tables\ImpresorasPCs.sql" />
+    <Build Include="dbo\Tables\Empleados.sql" />
+    <Build Include="dbo\Tables\VentasProductosLotes.sql" />
+    <Build Include="dbo\Tables\ProductosNrosSerie.sql" />
+    <Build Include="dbo\Tables\ProductosProveedores.sql" />
+    <Build Include="dbo\Tables\TiposDocumento.sql" />
+    <Build Include="dbo\Tables\LibrosBancos.sql" />
+    <Build Include="dbo\Tables\Impresoras.sql" />
+    <Build Include="dbo\Tables\Pedidos.sql" />
+    <Build Include="dbo\Tables\TiposMovimientos.sql" />
+    <Build Include="dbo\Tables\FiltrosValores.sql" />
+    <Build Include="dbo\Tables\PercepcionVentas.sql" />
+    <Build Include="dbo\Tables\CuentasDeCajas.sql" />
+    <Build Include="dbo\Tables\ContabilidadAsientosModelo.sql" />
+    <Build Include="dbo\Tables\ListasDePrecios.sql" />
+    <Build Include="dbo\Tables\Tarjetas.sql" />
+    <Build Include="dbo\Tables\Intereses.sql" />
+    <Build Include="dbo\Tables\AFIPTiposComprobantes.sql" />
+    <Build Include="dbo\Tables\Funciones.sql" />
+    <Build Include="dbo\Tables\CuentasCorrientesRetenciones.sql" />
+    <Build Include="dbo\Tables\PedidosProductos.sql" />
+    <Build Include="dbo\Tables\CartasAClientes.sql" />
+    <Build Include="dbo\Tables\AFIPTiposDocumentos.sql" />
+    <Build Include="dbo\Tables\Monedas.sql" />
+    <Build Include="dbo\Tables\VentasTarjetas.sql" />
+    <Build Include="dbo\Tables\AFIPIVAs.sql" />
+    <Build Include="dbo\Tables\Sucursales.sql" />
+    <Build Include="dbo\Tables\VentasPercepciones.sql" />
+    <Build Include="dbo\Tables\EstadosPedidos.sql" />
+    <Build Include="dbo\Tables\Marcas.sql" />
+    <Build Include="dbo\Tables\AFIPTiposComprobantesTiposCbtes.sql" />
+    <Build Include="dbo\Tables\FichasFormasPago.sql" />
+    <Build Include="dbo\Tables\HistorialConsultaProductos.sql" />
+    <Build Include="dbo\Tables\FichasPagosAjustes.sql" />
+    <Build Include="dbo\Tables\ComprasObservaciones.sql" />
+    <Build Include="dbo\Tables\SueldosTiposRecibos.sql" />
+    <Build Include="dbo\Tables\Regimenes.sql" />
+    <Build Include="dbo\Tables\Fichas.sql" />
+    <Build Include="dbo\Tables\SueldosTiposConceptos.sql" />
+    <Build Include="dbo\Tables\Textos.sql" />
+    <Build Include="dbo\Tables\FichasPagos.sql" />
+    <Build Include="dbo\Tables\VentasNumeros.sql" />
+    <Build Include="dbo\Tables\TiposComprobantesLetras.sql" />
+    <Build Include="dbo\Tables\SueldosQuePideConcepto.sql" />
+    <Build Include="dbo\Tables\UsuariosAccesos.sql" />
+    <Build Include="dbo\Tables\FichasProductos.sql" />
+    <Build Include="dbo\Tables\RubrosConceptos.sql" />
+    <Build Include="dbo\Tables\RolesFunciones.sql" />
+    <Build Include="dbo\Tables\VentasProductos.sql" />
+    <Build Include="dbo\Tables\MovimientosComprasProductos.sql" />
+    <Build Include="dbo\Tables\FichasPagosDetalle.sql" />
+    <Build Include="dbo\Tables\Conceptos.sql" />
+    <Build Include="dbo\Tables\Transportistas.sql" />
+    <Build Include="dbo\Tables\SueldosObraSocial.sql" />
+    <Build Include="dbo\Tables\ContabilidadPlanes.sql" />
+    <Build Include="dbo\Tables\SueldosPersonalFamiliares.sql" />
+    <Build Include="dbo\Tables\Usuarios.sql" />
+    <Build Include="dbo\Tables\SueldosMotivosBaja.sql" />
+    <Build Include="dbo\Tables\ContabilidadCuentas.sql" />
+    <Build Include="dbo\Tables\MovimientosNumeros.sql" />
+    <Build Include="dbo\Tables\ProductosConceptos.sql" />
+    <Build Include="dbo\Tables\SueldosTiposVinculoFamiliar.sql" />
+    <Build Include="dbo\Tables\Tareas.sql" />
+    <Build Include="dbo\Tables\SueldosLugaresActividad.sql" />
+    <Build Include="dbo\Tables\ContabilidadPlanesCuentas.sql" />
+    <Build Include="dbo\Tables\CuentasBancarias.sql" />
+    <Build Include="dbo\Tables\SueldosEstadoCivil.sql" />
+    <Build Include="dbo\Tables\ProductosLotes.sql" />
+    <Build Include="dbo\Tables\MovimientosCompras.sql" />
+    <Build Include="dbo\Tables\SueldosConceptos.sql" />
+    <Build Include="dbo\Tables\ContabilidadAsientos.sql" />
+    <Build Include="dbo\Tables\AuditoriaProductos.sql" />
+    <Build Include="dbo\Tables\RecepcionEstadosF.sql" />
+    <Build Include="dbo\Tables\SueldosCierrePuntero.sql" />
+    <Build Include="dbo\Tables\SueldosCierreLiqDatos.sql" />
+    <Build Include="dbo\Tables\ClientesDescuentosProductos.sql" />
+    <Build Include="dbo\Tables\RecepcionNotasF.sql" />
+    <Build Include="dbo\Tables\ClientesSucursales.sql" />
+    <Build Include="dbo\Tables\PedidosEstados.sql" />
+    <Build Include="dbo\Tables\SueldosCategorias.sql" />
+    <Build Include="dbo\Tables\MovimientosVentasProductos.sql" />
+    <Build Include="dbo\Tables\CuentasCorrientesPagos.sql" />
+    <Build Include="dbo\Tables\ContabilidadAsientosCuentas.sql" />
+    <Build Include="dbo\Tables\SueldosPersonal.sql" />
+    <Build Include="dbo\Tables\ParametrosArchivos.sql" />
+    <Build Include="dbo\Tables\CuentasCorrientesProv.sql" />
+    <Build Include="dbo\Tables\SemaforoVentasUtilidades.sql" />
+    <Build Include="dbo\Tables\PedidosCriticidades.sql" />
+    <Build Include="dbo\Tables\UsuariosRoles.sql" />
+    <Build Include="dbo\Tables\SueldosPersonalCodigos.sql" />
+    <Build Include="dbo\Tables\Parametros.sql" />
+    <Build Include="dbo\Tables\CuentasCorrientesProvPagos.sql" />
+    <Build Include="dbo\Tables\CuentasCorrientesProvRetenciones.sql" />
+    <Build Include="dbo\Tables\RecepcionNotasEstadosF.sql" />
+    <Build Include="dbo\Tables\SueldosLiquidacionActual.sql" />
+    <Build Include="dbo\Tables\Depositos.sql" />
+    <Build Include="dbo\Tables\ClientesDirecciones.sql" />
+    <Build Include="dbo\Tables\Productos.sql" />
+    <Build Include="dbo\Tables\MovimientosVentas.sql" />
+    <Build Include="dbo\Tables\SueldosCierreLiquidacion.sql" />
+    <Build Include="dbo\Tables\ChequesHistorial.sql" />
+    <Build Include="dbo\Tables\RecepcionNotasProveedoresF.sql" />
+    <Build Include="dbo\Tables\TiposDeExension.sql" />
+    <Build Include="dbo\Tables\Bancos.sql" />
+    <Build Include="dbo\Tables\PedidosProveedores.sql" />
+    <Build Include="dbo\Tables\RecepcionEstados.sql" />
+    <Build Include="dbo\Tables\ProductosComponentes.sql" />
+    <Build Include="dbo\Tables\Categorias.sql" />
+    <Build Include="dbo\Tables\RecepcionNotas.sql" />
+    <Build Include="dbo\Tables\Traducciones.sql" />
+    <Build Include="dbo\Tables\Proveedores.sql" />
+    <Build Include="dbo\Tables\EstadosPedidosProveedores.sql" />
+    <Build Include="dbo\Tables\CategoriasFiscales.sql" />
+    <Build Include="dbo\Tables\Produccion.sql" />
+    <Build Include="dbo\Tables\EmpleadosComisionesRubros.sql" />
+    <Build Include="dbo\Tables\ContabilidadCuentasMediosDePago.sql" />
+    <Build Include="dbo\Tables\ProductosSucursales.sql" />
+    <Build Include="dbo\Tables\PedidosProductosProveedores.sql" />
+    <Build Include="dbo\Tables\Retenciones.sql" />
+    <Build Include="dbo\Tables\RecepcionNotasEstados.sql" />
+    <Build Include="dbo\Tables\VentasCheques.sql" />
+    <Build Include="dbo\Tables\ProduccionProductos.sql" />
+    <Build Include="dbo\Tables\EmpleadosComisionesProductos.sql" />
+    <Build Include="dbo\Tables\PedidosEstadosProveedores.sql" />
+    <Build Include="dbo\Tables\MediosDePago.sql" />
+    <Build Include="dbo\Tables\ProductosSucursalesPrecios.sql" />
+    <Build Include="dbo\Tables\RecepcionNotasProveedores.sql" />
+    <Build Include="dbo\Tables\Roles.sql" />
+    <Build Include="dbo\Tables\EmpleadosComisionesMarcas.sql" />
+    <Build Include="dbo\Tables\Clientes.sql" />
+    <Build Include="dbo\Tables\CategoriasProveedores.sql" />
+    <Build Include="dbo\Tables\CuentasCorrientesTarjetas.sql" />
+    <Build Include="dbo\Tables\ProduccionProductosComponentes.sql" />
+    <Build Include="dbo\Tables\Cajas.sql" />
+    <Build Include="dbo\Tables\VentasChequesRechazados.sql" />
+    <Build Include="dbo\Tables\Rubros.sql" />
+    <Build Include="dbo\Tables\Buscadores.sql" />
+    <Build Include="dbo\Tables\BuscadoresCampos.sql" />
+    <Build Include="dbo\Tables\DepositosCheques.sql" />
+    <Build Include="dbo\Tables\ParametrosImagenes.sql" />
+    <Build Include="dbo\Tables\PeriodosFiscales.sql" />
+    <Build Include="dbo\Tables\CajasDetalle.sql" />
+    <Build Include="dbo\Tables\RubrosCompras.sql" />
+    <Build Include="dbo\Tables\Impuestos.sql" />
+    <Build Include="dbo\Tables\CuentasCorrientesProvCheques.sql" />
+    <Build Include="dbo\Tables\EstadosCheques.sql" />
+    <Build Include="dbo\Tables\Cheques.sql" />
+    <Build Include="dbo\Tables\EscalasRetGanancias.sql" />
+    <Build Include="dbo\Tables\CuentasCorrientesCheques.sql" />
+    <Build Include="dbo\Tables\Modelos.sql" />
+    <Build Include="dbo\Tables\ContabilidadCuentasRubros.sql" />
+    <Build Include="dbo\Tables\Ventas.sql" />
+    <Build Include="dbo\Tables\TiposImpuestos.sql" />
+    <Build Include="dbo\Tables\ComprasProductos.sql" />
+    <Build Include="dbo\Tables\Observaciones.sql" />
+    <Build Include="dbo\Tables\SincronizaRegistros.sql" />
+    <Build Include="dbo\Tables\ContabilidadCentrosCostos.sql" />
+    <Build Include="dbo\Tables\Compras.sql" />
+    <Build Include="dbo\Tables\CajasNombres.sql" />
+    <Build Include="dbo\Tables\VentasImpuestos.sql" />
+    <Build Include="dbo\Tables\Actividades.sql" />
+    <Build Include="dbo\Tables\ContabilidadEjercicios.sql" />
+    <Build Include="dbo\Tables\CajasUsuarios.sql" />
+    <Build Include="dbo\Tables\ClientesActividades.sql" />
+    <Build Include="dbo\Tables\SincronizaTablas.sql" />
+    <Build Include="dbo\Tables\EmpresaActividades.sql" />
+    <Build Include="dbo\Tables\UnidadesDeMedidas.sql" />
+    <Build Include="dbo\Stored Procedures\Funciones_I.sql" />
+    <Build Include="dbo\Stored Procedures\Funciones_U.sql" />
+    <Build Include="dbo\Stored Procedures\Funciones_D.sql" />
+    <Build Include="dbo\Stored Procedures\Funciones_GA.sql" />
+    <Build Include="dbo\Stored Procedures\BackupEn.sql" />
+    <Build Include="dbo\Stored Procedures\Roles_I.sql" />
+    <Build Include="dbo\Stored Procedures\Roles_U.sql" />
+    <Build Include="dbo\Stored Procedures\Roles_D.sql" />
+    <Build Include="dbo\Stored Procedures\Roles_GA.sql" />
+    <Build Include="dbo\Stored Procedures\RolesFunciones_I.sql" />
+    <Build Include="dbo\Stored Procedures\RolesFunciones_D.sql" />
+    <Build Include="dbo\Stored Procedures\RolesFunciones_GA.sql" />
+    <Build Include="dbo\Stored Procedures\Sucursales_GA.sql" />
+    <Build Include="dbo\Stored Procedures\Usuarios_I.sql" />
+    <Build Include="dbo\Stored Procedures\Usuarios_U.sql" />
+    <Build Include="dbo\Stored Procedures\Usuarios_D.sql" />
+    <Build Include="dbo\Stored Procedures\Usuarios_GA.sql" />
+    <Build Include="dbo\Stored Procedures\Usuarios_G.sql" />
+    <Build Include="dbo\Stored Procedures\Tareas_GxFecha.sql" />
+    <Build Include="dbo\Stored Procedures\Usuarios_UClave.sql" />
+    <Build Include="dbo\Stored Procedures\UsuariosRoles_I.sql" />
+    <Build Include="dbo\Stored Procedures\UsuariosRoles_D.sql" />
+    <Build Include="dbo\Stored Procedures\UsuariosRoles_GA.sql" />
+    <Build Include="ExtendedProperties.sql" />
+    <Build Include="dbo\Tables\VtaPronosArt.sql" />
+    <Build Include="dbo\Tables\VtaPronos.sql" />
+    <Build Include="dbo\Views\zonve.sql" />
+    <Build Include="dbo\Views\vw_ContabilidadAsientosIDMaximo.sql" />
+    <Build Include="dbo\Views\VTA_VendeXMes_PROVTA.sql" />
+    <Build Include="dbo\Views\VTA_VendeCli_PROVTA.sql" />
+    <Build Include="dbo\Views\VTA_Vende_PROVTA.sql" />
+    <Build Include="dbo\Views\VTA_Indic_Todos.sql" />
+    <Build Include="dbo\Views\VTA_Dia_PROVTA.sql" />
+    <Build Include="dbo\Views\VTA_CliRub_VTA.sql" />
+    <Build Include="dbo\Views\ticli.sql" />
+    <Build Include="dbo\Views\StkDispValci.sql" />
+    <Build Include="dbo\Views\salcli.sql" />
+    <Build Include="dbo\Views\resvtacons_SIGA.sql" />
+    <Build Include="dbo\Views\resvtacons.sql" />
+    <Build Include="dbo\Views\ResPresupPed.sql" />
+    <Build Include="dbo\Views\ResPresup.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assemblies\Eniac.Seguridad.BaseDeDatos.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Eniac.Seguridad.BaseDeDatos">
+      <HintPath>Assemblies\Eniac.Seguridad.BaseDeDatos.dll</HintPath>
+      <SqlAssemblyName>Eniac.Seguridad.BaseDeDatos</SqlAssemblyName>
+      <IsModelAware>True</IsModelAware>
+      <GenerateSqlClrDdl>False</GenerateSqlClrDdl>
+      <SqlOwnerName>dbo</SqlOwnerName>
+      <SqlPermissionSet>SAFE</SqlPermissionSet>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="SiGA_SQL.refactorlog" />
+  </ItemGroup>
+</Project>

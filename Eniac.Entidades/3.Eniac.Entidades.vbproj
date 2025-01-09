@@ -1,0 +1,1003 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4421DC4F-BA75-475E-AE8C-77A60697FD67}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Eniac.Entidades</RootNamespace>
+    <AssemblyName>Eniac.Entidades</AssemblyName>
+    <MyType>Windows</MyType>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Eniac.Entidades.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42105,42106,42107,42353,42354,42355</WarningsAsErrors>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Dlls\</OutputPath>
+    <DocumentationFile>Eniac.Entidades.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42105,42106,42107,42353,42354,42355</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-Parametros|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug-Parametros\</OutputPath>
+    <DocumentationFile>Eniac.Entidades.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42105,42106,42107,42353,42354,42355</WarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_ConParametros|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug_ConParametros\</OutputPath>
+    <DocumentationFile>Eniac.Entidades.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42105,42106,42107,42353,42354,42355</WarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="actual = Eniac.Entidades.Usuario.Actual" />
+    <Import Include="Eniac.Entidades.Extensiones" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.ComponentModel" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Runtime.CompilerServices" />
+    <Import Include="System.Text" />
+    <Import Include="System.Web.Script.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GlobalAssembyInfo.vb">
+      <Link>bin\GlobalAssembyInfo.vb</Link>
+    </Compile>
+    <Compile Include="Administracion\AreaComun.vb" />
+    <Compile Include="Administracion\Cama.vb" />
+    <Compile Include="Administracion\Casillero.vb" />
+    <Compile Include="Administracion\CategoriaAccion.vb" />
+    <Compile Include="Administracion\CategoriaCama.vb" />
+    <Compile Include="Administracion\CategoriaEmbarcacion.vb" />
+    <Compile Include="Administracion\CategoriaImagen.vb" />
+    <Compile Include="Administracion\MarcaEmbarcacion.vb" />
+    <Compile Include="Administracion\MarcaMotor.vb" />
+    <Compile Include="Administracion\ModeloEmbarcacion.vb" />
+    <Compile Include="Administracion\ModeloMotor.vb" />
+    <Compile Include="Administracion\TipoEmbarcacion.vb" />
+    <Compile Include="Administracion\TipoMatricula.vb" />
+    <Compile Include="Administracion\TipoMotor.vb" />
+    <Compile Include="Administracion\TipoNave.vb" />
+    <Compile Include="Administracion\TipoSociedad.vb" />
+    <Compile Include="Administracion\TipoTimonel.vb" />
+    <Compile Include="AFIP\AFIPConceptoCM05.vb" />
+    <Compile Include="AFIP\AFIPReferenciaTransferencia.vb" />
+    <Compile Include="AFIP\AFIPTipoComprobante.vb" />
+    <Compile Include="AFIP\AFIPTipoDocumento.vb" />
+    <Compile Include="AFIP\CategoriaFiscalConfiguracion.vb" />
+    <Compile Include="AFIP\EnumAfip.vb" />
+    <Compile Include="AFIP\PadronAGIP.vb" />
+    <Compile Include="AFIP\AFIPIncoterm.vb" />
+    <Compile Include="AFIP\RegimenPercepcion.vb" />
+    <Compile Include="AFIP\RegimenPercepcionAlicuota.vb" />
+    <Compile Include="Archivos\ArchivoImportado.vb" />
+    <Compile Include="Archivos\CategoriasMercadoLibre.vb" />
+    <Compile Include="Archivos\EmpleadoComisionProductoPrecio.vb" />
+    <Compile Include="Archivos\EstadoCivil.vb" />
+    <Compile Include="Archivos\PlazoEntrega.vb" />
+    <Compile Include="Archivos\ProductoDeposito.vb" />
+    <Compile Include="Archivos\ProductoUbicacion.vb" />
+    <Compile Include="Archivos\TipoObservacion.vb" />
+    <Compile Include="Archivos\UnidadDeMedidaConversion.vb" />
+    <Compile Include="Archivos\VehiculoCliente.vb" />
+    <Compile Include="Archivos\ProductoLinks.vb" />
+    <Compile Include="Administracion\Sector.vb" />
+    <Compile Include="Calidad\CalidadListaControlConfig.vb" />
+    <Compile Include="Calidad\CalidadListaControlTipo.vb" />
+    <Compile Include="Calidad\CalidadListaControl.vb" />
+    <Compile Include="Calidad\CalidadListaControlItemGrupo.vb" />
+    <Compile Include="Calidad\CalidadListaControlItemSubGrupo.vb" />
+    <Compile Include="Calidad\CalidadListaControlItem.vb" />
+    <Compile Include="Calidad\CalidadOrdenDeControl.vb" />
+    <Compile Include="Calidad\CalidadOrdenDeControlItem.vb" />
+    <Compile Include="Calidad\EstadoOrdenCalidad.vb" />
+    <Compile Include="Calidad\CalidadListaControlProducto.vb" />
+    <Compile Include="Compras\CompraRetencion.vb" />
+    <Compile Include="Compras\CompraTarjeta.vb" />
+    <Compile Include="Compras\CompraTransferencia.vb" />
+    <Compile Include="Comunes\TipoReservaStock.vb" />
+    <Compile Include="Concesionarios\SincronizacionMovil\ConcesionarioBanco.vb" />
+    <Compile Include="Comunes\IComboBoxMultipleSeleccionElement.vb" />
+    <Compile Include="Concesionarios\SincronizacionMovil\ConcesionarioEstadoCivil.vb" />
+    <Compile Include="Concesionarios\SincronizacionMovil\ConcesionarioLocalidad.vb" />
+    <Compile Include="Concesionarios\SincronizacionMovil\ConcesionarioProvincia.vb" />
+    <Compile Include="Concesionarios\SincronizacionMovil\ConcesionariosSubTipoUnidad.vb" />
+    <Compile Include="Concesionarios\SincronizacionMovil\ConcesionariosTipoUnidad.vb" />
+    <Compile Include="Concesionarios\SincronizacionMovil\ConcesionarioTipoUnidadEje.vb" />
+    <Compile Include="CRM\CRMCicloPlanificacion.vb" />
+    <Compile Include="CRM\CRMCicloPlanificacionNovedad.vb" />
+    <Compile Include="CRM\CRMEstadoCicloPlanificacion.vb" />
+    <Compile Include="CRM\CRMMotivoNovedad.vb" />
+    <Compile Include="Ayudante\ImportarExcel.vb" />
+    <Compile Include="Comunes\ErrorBuilder.vb" />
+    <Compile Include="CRM\CRMNovedadesProductosNrosSerie.vb" />
+    <Compile Include="CRM\CRMNovedadesProductosLotes.vb" />
+    <Compile Include="CtaCteClientes\CuentaCorrienteRetencion.vb" />
+    <Compile Include="CtaCteProveedores\CuentaCorrienteProvTransferencia.vb" />
+    <Compile Include="CtaCteClientes\CuentaCorrienteTarjeta.vb" />
+    <Compile Include="Extensiones\ICollectionExtensions.vb" />
+    <Compile Include="Filtros\RequerimientosComprasABMFiltros.vb" />
+    <Compile Include="JSonEntidades\Concesionarios\Bancos.vb" />
+    <Compile Include="JSonEntidades\Concesionarios\EstadoCivil.vb" />
+    <Compile Include="JSonEntidades\Concesionarios\Localidad.vb" />
+    <Compile Include="JSonEntidades\Concesionarios\Provincia.vb" />
+    <Compile Include="JSonEntidades\Concesionarios\SistemasDestino.vb" />
+    <Compile Include="JSonEntidades\Concesionarios\SubTipoUnidad.vb" />
+    <Compile Include="JSonEntidades\Concesionarios\TipoUnidad.vb" />
+    <Compile Include="JSonEntidades\Concesionarios\TipoUnidadEje.vb" />
+    <Compile Include="PedidosProveedores\EstadoPedidoProveedorRol.vb" />
+    <Compile Include="PedidosProveedores\PedidosProveedoresAdmin.vb" />
+    <Compile Include="PedidosProveedores\RequerimientoCompra.vb" />
+    <Compile Include="PedidosProveedores\RequerimientoCompraProducto.vb" />
+    <Compile Include="PedidosProveedores\RequerimientoCompraProductoAsignacion.vb" />
+    <Compile Include="PedidosProveedores\SeleccionMultipleBase.vb" />
+    <Compile Include="PedidosProveedores\SeleccionMultipleLotes.vb" />
+    <Compile Include="PedidosProveedores\SeleccionMultipleNrosSerie.vb" />
+    <Compile Include="PedidosProveedores\SeleccionMultipleUbicaciones.vb" />
+    <Compile Include="Pedidos\EstadoPedidoRol.vb" />
+    <Compile Include="Pedidos\EstadoPedidoSucursal.vb" />
+    <Compile Include="Produccion\EstadoOrdenProduccionSucursal.vb" />
+    <Compile Include="Produccion\MRP\MRPAQLA.vb" />
+    <Compile Include="Produccion\MRP\MRPAQLB.vb" />
+    <Compile Include="Produccion\MRP\MRPCategoriaEmpleado.vb" />
+    <Compile Include="Produccion\MRP\MRPCentroProductor.vb" />
+    <Compile Include="Produccion\MRP\MRPCentroProductorCategoriaEmpleado.vb" />
+    <Compile Include="Produccion\MRP\MRPConceptoNoProductivo.vb" />
+    <Compile Include="Produccion\MRP\MRPNormaFabricacion.vb" />
+    <Compile Include="Produccion\MRP\MRPProcesoProductivo.vb" />
+    <Compile Include="Produccion\MRP\MRPProcesoProductivoCategoriaEmpleado.vb" />
+    <Compile Include="Produccion\MRP\MRPProcesoProductivoOperacion.vb" />
+    <Compile Include="Produccion\MRP\MRPProcesoProductivoProducto.vb" />
+    <Compile Include="Produccion\MRP\MRPProductosNecesarios.vb" />
+    <Compile Include="Produccion\MRP\MRPSeccion.vb" />
+    <Compile Include="Produccion\MRP\MRPTarea.vb" />
+    <Compile Include="Produccion\MRP\NovedadProduccionMRP.vb" />
+    <Compile Include="Produccion\MRP\NovedadProduccionMRPProducto.vb" />
+    <Compile Include="Produccion\MRP\NovedadProduccionMRPProductoLote.vb" />
+    <Compile Include="Produccion\MRP\NovedadProduccionMRPTiempo.vb" />
+    <Compile Include="Produccion\MRP\OrdenProduccionMRPCategoriaEmpleado.vb" />
+    <Compile Include="Produccion\MRP\OrdenProduccionMRP.vb" />
+    <Compile Include="Produccion\MRP\OrdenProduccionMRPOperacion.vb" />
+    <Compile Include="Produccion\MRP\OrdenProduccionMRPProducto.vb" />
+    <Compile Include="Produccion\MRP\Result_CostosTiemposProcesosProductivos.vb" />
+    <Compile Include="Produccion\OrdenProduccionProductoFormula.vb" />
+    <Compile Include="Produccion\ProduccionModeloForma.vb" />
+    <Compile Include="Produccion\ProduccionModeloFormaVariable.vb" />
+    <Compile Include="Produccion\ProduccionProductoCompLote.vb" />
+    <Compile Include="Produccion\ProduccionProductoCompNroSerie.vb" />
+    <Compile Include="Produccion\ProductoArbol.vb" />
+    <Compile Include="CtaCteClientes\CalculoSaldoLimiteCreditoResultado.vb" />
+    <Compile Include="Extensiones\SiNoTodosExtensions.vb" />
+    <Compile Include="Extensiones\UriExtensions.vb" />
+    <Compile Include="JSonEntidades\Archivos\CRM\CRMMotivoNovedadJSon.vb" />
+    <Compile Include="JSonEntidades\Gestion\Soporte\Comentario.vb" />
+    <Compile Include="JSonEntidades\Gestion\Soporte\Ticket.vb" />
+    <Compile Include="JSonEntidades\Pedidos\PedidoTalkiuJSon.vb" />
+    <Compile Include="Seguridad\Buscador.vb" />
+    <Compile Include="Seguridad\BuscadorCampo.vb" />
+    <Compile Include="Seguridad\FuncionVinculada.vb" />
+    <Compile Include="SimovilOficina\AjusteStock.vb" />
+    <Compile Include="Sistema\AlertaSistemaCondicion.vb" />
+    <Compile Include="Sistema\AlertaSistemaPermiso.vb" />
+    <Compile Include="Sistema\AlertaSistemaRol.vb" />
+    <Compile Include="Sistema\AlertaSistemaUsuario.vb" />
+    <Compile Include="Caja\ITarjetas.vb" />
+    <Compile Include="Concesionarios\ConcesionarioDistribucionEje.vb" />
+    <Compile Include="Concesionarios\ConcesionarioEnums.vb" />
+    <Compile Include="Concesionarios\ConcesionarioOperacion.vb" />
+    <Compile Include="Concesionarios\ConcesionarioOperacionAdicional.vb" />
+    <Compile Include="Concesionarios\ConcesionarioOperacionCheque.vb" />
+    <Compile Include="Concesionarios\ConcesionarioOperacionTarjeta.vb" />
+    <Compile Include="Concesionarios\ConcesionarioOperacionVehiculoPago.vb" />
+    <Compile Include="Concesionarios\ConcesionariosAdicionales.vb" />
+    <Compile Include="Concesionarios\ConcesionarioSubTipoUnidad.vb" />
+    <Compile Include="Concesionarios\ConcesionarioTipoUnidad.vb" />
+    <Compile Include="Archivos\EstadoVehiculo.vb" />
+    <Compile Include="Archivos\MarcaVehiculo.vb" />
+    <Compile Include="Archivos\ModeloVehiculo.vb" />
+    <Compile Include="Archivos\Nacionalidad.vb" />
+    <Compile Include="Archivos\ProductoSucursalAtributo.vb" />
+    <Compile Include="Archivos\Vehiculo.vb" />
+    <Compile Include="Caja\SituacionCupon.vb" />
+    <Compile Include="CtaCteClientes\CuentaCorrienteAntiguedadSaldoConfig.vb" />
+    <Compile Include="CtaCteClientes\CuentaCorrienteAntiguedadSaldoRangos.vb" />
+    <Compile Include="CtaCteClientes\DebitosDirectos\ArchivoRespuestaRoelaPMC.vb" />
+    <Compile Include="CtaCteClientes\DebitosDirectos\CuentasCorrientesGenerarPagosRoelaResult.vb" />
+    <Compile Include="Embarcaciones\GrupoCama.vb" />
+    <Compile Include="Extensiones\EnumExtensions.vb" />
+    <Compile Include="Extensiones\LisSourcesDictionaryExtension.vb" />
+    <Compile Include="InterfacesGenerales\IMovimientoConAtributos.vb" />
+    <Compile Include="JSonEntidades\CobranzasMovil\Temp_Ejecuciones.vb" />
+    <Compile Include="Sistema\AlertaSistema.vb" />
+    <Compile Include="Sistema\MensajeMailAgenda.vb" />
+    <Compile Include="Stock\AtributoProducto.vb" />
+    <Compile Include="Caja\Chequera.vb" />
+    <Compile Include="Caja\SituacionCheque.vb" />
+    <Compile Include="Compras\CompraProductoNroSerie.vb" />
+    <Compile Include="Comunes\AvanceProceso.vb" />
+    <Compile Include="Configuraciones\ImpresoraExtraccion.vb" />
+    <Compile Include="Configuraciones\Parametro_Parametros_Enum.vb" />
+    <Compile Include="Contabilidad\ContabilidadEstadoAsiento.vb" />
+    <Compile Include="CRM\CRMNovedadCambioEstado.vb" />
+    <Compile Include="CRM\CRMNovedadesProductos.vb" />
+    <Compile Include="CRM\CRMTipoCategoriaNovedad.vb" />
+    <Compile Include="CRM\CRMTipoEstadoNovedad.vb" />
+    <Compile Include="CRM\CRMTipoNovedadObjetivo.vb" />
+    <Compile Include="CRM\CRMTipoNovedadObjetivoUsuario.vb" />
+    <Compile Include="CtaCteClientes\CuentaCorrienteCheque.vb" />
+    <Compile Include="CtaCteClientes\CuentaCorrienteTransferencia.vb" />
+    <Compile Include="DashBoards\DashBoardModelo.vb" />
+    <Compile Include="DashBoards\DashBoardPaneles.vb" />
+    <Compile Include="DashBoards\DashBoardRefresh.vb" />
+    <Compile Include="DashBoards\DashBoardTablero.vb" />
+    <Compile Include="DashBoards\DashBoardTipo.vb" />
+    <Compile Include="Embarcaciones\Destino.vb" />
+    <Compile Include="Embarcaciones\Embarcacion.vb" />
+    <Compile Include="Embarcaciones\Nave.vb" />
+    <Compile Include="Embarcaciones\Reserva.vb" />
+    <Compile Include="Extensiones\ColorExtensions.vb" />
+    <Compile Include="Extensiones\DecimalExtensions_MidRound.vb" />
+    <Compile Include="Extensiones\DoubleExtensions_MidRound.vb" />
+    <Compile Include="Extensiones\IEnumerableExtensions.vb" />
+    <Compile Include="Filtros\GetDetallePorProductos_OrderBy.vb" />
+    <Compile Include="InterfacesGenerales\IPKComprobante.vb" />
+    <Compile Include="JSonEntidades\CobranzasMovil\Calendarios.vb" />
+    <Compile Include="JSonEntidades\Archivos\OrdenCompraJSon.vb" />
+    <Compile Include="JSonEntidades\CobranzasMovil\CalendariosHorarios.vb" />
+    <Compile Include="JSonEntidades\CobranzasMovil\CalendariosTiposTurnos.vb" />
+    <Compile Include="JSonEntidades\CobranzasMovil\Destinos.vb" />
+    <Compile Include="JSonEntidades\CobranzasMovil\Embarcaciones.vb" />
+    <Compile Include="JSonEntidades\Exportaciones\Pirelli\Request.vb" />
+    <Compile Include="JSonEntidades\Exportaciones\Pirelli\Response.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\Arborea\Bajada\Billing.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\Arborea\Bajada\Ordenes.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\Arborea\Bajada\Shipping.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\Arborea\Status.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\Arborea\Subida\Billing.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\Arborea\Subida\Categorias.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\Arborea\Subida\Clientes.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\Arborea\Subida\Images.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\Arborea\Subida\ListaPrecio.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\Arborea\Subida\Shipping.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\MercadoLibre\AccessTokenML.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\MercadoLibre\Bajada\Buyers.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\MercadoLibre\Bajada\Order_Items.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\MercadoLibre\Bajada\PedidosML.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\MercadoLibre\Bajada\PedidosProductosML.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\MercadoLibre\Bajada\Shippings.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\MercadoLibre\Subida\Actualizaciones.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\MercadoLibre\Subida\Atributos.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\MercadoLibre\Subida\CategoriaML.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\MercadoLibre\Bajada\OrdenesML.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\MercadoLibre\Subida\Categories.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\MercadoLibre\Subida\Picture.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\MercadoLibre\Subida\Publicaciones.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\MercadoLibre\Subida\SaleTerms.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\MercadoLibre\Subida\Status.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\SistemasDestino.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\TiendaNube\Addresses.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\TiendaNube\CategoriaTN.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\TiendaNube\ClienteTN.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\TiendaNube\PedidoProductoTN.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\TiendaNube\PedidosTN.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\TiendaNube\ProductoTN.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\TiendaNube\StringMultilenguaje.vb" />
+    <Compile Include="JSonEntidades\TiendasWeb\TiendaNube\VarianteTN.vb" />
+    <Compile Include="JSonEntidades\Turnos\TurnoSinergiaDTO.vb" />
+    <Compile Include="Logistica\RepartoCobranza.vb" />
+    <Compile Include="Logistica\RepartoCobranzaCheque.vb" />
+    <Compile Include="Logistica\RepartoCobranzaComprobante.vb" />
+    <Compile Include="Logistica\RepartoCobranzaNCAplicada.vb" />
+    <Compile Include="Logistica\RepartoCobranzaProducto.vb" />
+    <Compile Include="JSonEntidades\CobranzasMovil\ProductosClientes.vb" />
+    <Compile Include="Pedidos\Tiendas Web\PedidoProductoTiendaWeb.vb" />
+    <Compile Include="Pedidos\Tiendas Web\PedidoTiendaWeb.vb" />
+    <Compile Include="Precios\ProveedorComparar.vb" />
+    <Compile Include="Precios\ProveedorProductoComparar.vb" />
+    <Compile Include="Archivos\TipoVehiculo.vb" />
+    <Compile Include="Ayudante\MappedDriveResolver.vb" />
+    <Compile Include="Banco\DepositosCuentasBancos.vb" />
+    <Compile Include="Banco\DepositosTarjetasCupones.vb" />
+    <Compile Include="Caja\TiposCheques.vb" />
+    <Compile Include="Comunes\Modificable.vb" />
+    <Compile Include="Configuraciones\SyncConfig.vb" />
+    <Compile Include="Configuraciones\TipoImpresionFiscal.vb" />
+    <Compile Include="CRM\Clasificacion.vb" />
+    <Compile Include="CRM\CRMTipoComentarioNovedad.vb" />
+    <Compile Include="FilterManager\FuncionFiltro.vb" />
+    <Compile Include="FilterManager\FuncionFiltroControl.vb" />
+    <Compile Include="FilterManager\FuncionFiltroSucursal.vb" />
+    <Compile Include="FilterManager\FuncionFiltroUsuario.vb" />
+    <Compile Include="CRM\ProyectoEstado.vb" />
+    <Compile Include="Extensiones\BooleanExtensions.vb" />
+    <Compile Include="Extensiones\BytesExtensions.vb" />
+    <Compile Include="Extensiones\DecimalExtensions.vb" />
+    <Compile Include="Extensiones\FileInfoExtensions.vb" />
+    <Compile Include="Extensiones\IntegerExtensions.vb" />
+    <Compile Include="Extensiones\ListExtensions.vb" />
+    <Compile Include="Extensiones\LongExtensions.vb" />
+    <Compile Include="Extensiones\ShortExtensions.vb" />
+    <Compile Include="Filtros\ProductosPublicarEn.vb" />
+    <Compile Include="GlobalSuppressions.vb" />
+    <Compile Include="JSonEntidades\Archivos\BaseJSonTransporte.vb" />
+    <Compile Include="JSonEntidades\Archivos\CRM\CRMCategoriaNovedadJSon.vb" />
+    <Compile Include="JSonEntidades\Archivos\CRM\CRMEstadoNovedadJSon.vb" />
+    <Compile Include="JSonEntidades\Archivos\CRM\CRMMedioComunicacionNovedadJSon.vb" />
+    <Compile Include="JSonEntidades\Archivos\CRM\CRMMetodoResolucionNovedadJSon.vb" />
+    <Compile Include="JSonEntidades\Archivos\CRM\CRMNovedadJSon.vb" />
+    <Compile Include="JSonEntidades\Archivos\CRM\CRMNovedadSeguimientoJSon.vb" />
+    <Compile Include="JSonEntidades\Archivos\CRM\CRMPrioridadNovedadJSon.vb" />
+    <Compile Include="JSonEntidades\Archivos\CRM\CRMTipoComentarioNovedadJSon.vb" />
+    <Compile Include="JSonEntidades\Archivos\ProductoComponenteJson.vb" />
+    <Compile Include="Archivos\ClienteActualizacion.vb" />
+    <Compile Include="Archivos\ClienteActualizacionSuceso.vb" />
+    <Compile Include="JSonEntidades\Archivos\ProductoIdentificacionJson.vb" />
+    <Compile Include="JSonEntidades\Archivos\ProductoFormulaJson.vb" />
+    <Compile Include="JSonEntidades\CobranzasMovil\Usuarios.vb" />
+    <Compile Include="JSonEntidades\JSonEntidad.vb" />
+    <Compile Include="JSonEntidades\Soporte\CategoriasNovedades.vb" />
+    <Compile Include="JSonEntidades\Soporte\Empresas.vb" />
+    <Compile Include="JSonEntidades\Soporte\EstadosNovedades.vb" />
+    <Compile Include="JSonEntidades\Soporte\Novedades.vb" />
+    <Compile Include="JSonEntidades\Soporte\NovedadesSeguimiento.vb" />
+    <Compile Include="JSonEntidades\Soporte\TiposComentariosNovedades.vb" />
+    <Compile Include="JSonEntidades\Turismo\Actividades.vb" />
+    <Compile Include="JSonEntidades\Turismo\Cursos.vb" />
+    <Compile Include="JSonEntidades\Turismo\Establecimientos.vb" />
+    <Compile Include="JSonEntidades\Turismo\FormasPago.vb" />
+    <Compile Include="JSonEntidades\Turismo\LugaresGastronomicos.vb" />
+    <Compile Include="JSonEntidades\Turismo\Programas.vb" />
+    <Compile Include="JSonEntidades\Turismo\ResponsablesEscolares.vb" />
+    <Compile Include="JSonEntidades\Turismo\SolicitudesReservaActividades.vb" />
+    <Compile Include="JSonEntidades\Turismo\SolicitudesReserva.vb" />
+    <Compile Include="JSonEntidades\Turismo\SolicitudesReservaLugaresGastronomicos.vb" />
+    <Compile Include="JSonEntidades\Turismo\TiposVehiculos.vb" />
+    <Compile Include="JSonEntidades\Turismo\Turnos.vb" />
+    <Compile Include="JSonEntidades\Turismo\Usuarios.vb" />
+    <Compile Include="JSonEntidades\Turismo\Visitas.vb" />
+    <Compile Include="Logistica\DataSets\dtsRegistracionPagos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsRegistracionPagos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistica\DataSets\dtsRegistracionPagos.vb">
+      <DependentUpon>dtsRegistracionPagos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistica\DataSets\dtsRegistracionPagosV2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsRegistracionPagosV2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistica\DataSets\dtsRegistracionPagosV2.vb">
+      <DependentUpon>dtsRegistracionPagosV2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Documento.vb" />
+    <Compile Include="Procesos\FechaSincronizacion.vb" />
+    <Compile Include="Seguridad\AplicacionFuncion.vb" />
+    <Compile Include="Seguridad\TipoDocumentoFuncion.vb" />
+    <Compile Include="Seguridad\TipoUsuario.vb" />
+    <Compile Include="Stock\GrupoTipoAtributoProducto.vb" />
+    <Compile Include="Stock\MovimientoStock.vb" />
+    <Compile Include="Stock\MovimientoStockProducto.vb" />
+    <Compile Include="Stock\MovimientoStockProductoLotes.vb" />
+    <Compile Include="Stock\MovimientoStockProductoNrosSerie.vb" />
+    <Compile Include="Stock\SucursalDeposito.vb" />
+    <Compile Include="Stock\SucursalDepositoUsuario.vb" />
+    <Compile Include="Stock\SucursalUbicacion.vb" />
+    <Compile Include="Stock\SucursalUbicacionEstado.vb" />
+    <Compile Include="Stock\TipoAtributoProducto.vb" />
+    <Compile Include="TablerosDeComando\FiltroTableros.vb" />
+    <Compile Include="TablerosDeComando\TableroControl.vb" />
+    <Compile Include="TablerosDeComando\TableroControlPanel.vb" />
+    <Compile Include="Turismo\ReservaTurismoPasajero.vb" />
+    <Compile Include="Turismo\ReservaTurismoProducto.vb" />
+    <Compile Include="Turismo\ReservaTurismoProductoFacturacion.vb" />
+    <Compile Include="Turismo\TurismoTipoViaje.vb" />
+    <Compile Include="Turismo\TurismoTurno.vb" />
+    <Compile Include="Turismo\TurismoCurso.vb" />
+    <Compile Include="Turismo\EstadoTurismo.vb" />
+    <Compile Include="Turismo\ReservaTurismo.vb" />
+    <Compile Include="Turnos\CalendarioSucursal.vb" />
+    <Compile Include="Archivos\Calle.vb" />
+    <Compile Include="Archivos\CategoriasDescuentosSubSubRubros.vb" />
+    <Compile Include="Archivos\CategoriasDescuentosSubRubros.vb" />
+    <Compile Include="Archivos\CategoriasDescuentosRubros.vb" />
+    <Compile Include="Archivos\ClienteAdjunto.vb" />
+    <Compile Include="Archivos\ClienteBackup.vb" />
+    <Compile Include="Archivos\ClienteContacto.vb" />
+    <Compile Include="Archivos\ClienteDescuentoMarca.vb" />
+    <Compile Include="Archivos\ClienteDispositivo.vb" />
+    <Compile Include="Archivos\ClienteParametro.vb" />
+    <Compile Include="Archivos\ClienteReducido.vb" />
+    <Compile Include="Archivos\ClienteDescuentoSubRubro.vb" />
+    <Compile Include="Archivos\EmpleadoSucursal.vb" />
+    <Compile Include="Archivos\AplicacionModulo.vb" />
+    <Compile Include="Archivos\EmpleadoObjetivo.vb" />
+    <Compile Include="Archivos\EstadoTurno.vb" />
+    <Compile Include="Archivos\Empresa.vb" />
+    <Compile Include="Archivos\EstadoCliente.vb" />
+    <Compile Include="Archivos\Feriado.vb" />
+    <Compile Include="Archivos\AplicacionEdicion.vb" />
+    <Compile Include="Archivos\AplicacionEdicionModulo.vb" />
+    <Compile Include="Archivos\Grupo.vb" />
+    <Compile Include="Archivos\Numerador.vb" />
+    <Compile Include="Archivos\Pais.vb" />
+    <Compile Include="Archivos\PlanTarjeta.vb" />
+    <Compile Include="Archivos\ProductoIdentificacion.vb" />
+    <Compile Include="Archivos\ProductoOferta.vb" />
+    <Compile Include="Archivos\ProductosClientes.vb" />
+    <Compile Include="Archivos\ProductoWeb.vb" />
+    <Compile Include="Archivos\SubRubroComisionPorDescuento.vb" />
+    <Compile Include="Archivos\RubroComisionPorDescuento.vb" />
+    <Compile Include="Archivos\SubSubRubro.vb" />
+    <Compile Include="Archivos\TipoAdjunto.vb" />
+    <Compile Include="Archivos\TipoCliente.vb" />
+    <Compile Include="Ayudante\Validadores.vb" />
+    <Compile Include="Ayudante\VerificarTablasEspejo.vb" />
+    <Compile Include="Caja\EstadoCheque.vb" />
+    <Compile Include="Caja\TarjetaCupon.vb" />
+    <Compile Include="Cargos\CargoClienteObservacion.vb" />
+    <Compile Include="Cargos\ComprasLiquidacion.vb" />
+    <Compile Include="Cargos\LiquidacionCargo.vb" />
+    <Compile Include="Cargos\CargoCliente.vb" />
+    <Compile Include="Cargos\Cargo.vb" />
+    <Compile Include="AFIP\AFIPCAE.vb" />
+    <Compile Include="AFIP\EscalaRetGanancias.vb" />
+    <Compile Include="AFIP\PadronARBA.vb" />
+    <Compile Include="AFIP\TipoDeExension.vb" />
+    <Compile Include="AFIP\PercepcionVenta.vb" />
+    <Compile Include="AFIP\PercepcionVentaCalculo.vb" />
+    <Compile Include="Alerta.vb" />
+    <Compile Include="Alquileres\Alquiler.vb" />
+    <Compile Include="Alquileres\AlquilerEstadoContrato.vb" />
+    <Compile Include="Alquileres\AlquilerTarifaProducto.vb" />
+    <Compile Include="Archivos\Contacto.vb" />
+    <Compile Include="Archivos\ClienteDescuentoRubro.vb" />
+    <Compile Include="Archivos\EmpleadoComisionMarcaPrecio.vb" />
+    <Compile Include="Archivos\EmpleadoComisionRubroPrecio.vb" />
+    <Compile Include="Archivos\EstadoVisita.vb" />
+    <Compile Include="Archivos\Interes.vb" />
+    <Compile Include="Archivos\InteresDias.vb" />
+    <Compile Include="Archivos\MotivoDevolucion.vb" />
+    <Compile Include="Archivos\TipoContacto.vb" />
+    <Compile Include="Archivos\TipoDireccion.vb" />
+    <Compile Include="Archivos\MediodePago.vb" />
+    <Compile Include="Archivos\ProductoConcepto.vb" />
+    <Compile Include="Cargos\Liquidacion.vb" />
+    <Compile Include="Cargos\LiquidacionDetalleCliente.vb" />
+    <Compile Include="Compras\Aduana.vb" />
+    <Compile Include="Compras\AduanaAgenteTransporte.vb" />
+    <Compile Include="Compras\AduanaDespachante.vb" />
+    <Compile Include="Compras\AduanaDestinacion.vb" />
+    <Compile Include="Compras\CompraCheque.vb" />
+    <Compile Include="Compras\CompraObservacion.vb" />
+    <Compile Include="Compras\CompraImpuesto.vb" />
+    <Compile Include="Compras\Concepto.vb" />
+    <Compile Include="Compras\RubroConcepto.vb" />
+    <Compile Include="Comunes\CodigoBarraDocumento.vb" />
+    <Compile Include="Comunes\ConfiguracionesAplicacion.vb" />
+    <Compile Include="Comunes\EniacMail.vb" />
+    <Compile Include="Comunes\EnumSql.vb" />
+    <Compile Include="Comunes\IAdjunto.vb" />
+    <Compile Include="Comunes\IComprobanteModificable.vb" />
+    <Compile Include="Comunes\Importadores.vb" />
+    <Compile Include="Comunes\ListConBorrados.vb" />
+    <Compile Include="Comunes\ModalidadPantalla.vb" />
+    <Compile Include="Comunes\Moneda_TipoConversion.vb" />
+    <Compile Include="Comunes\OperacionesAuditorias.vb" />
+    <Compile Include="Comunes\OrigenFK.vb" />
+    <Compile Include="Comunes\ResumenDeVenta_AgrupadoPor.vb" />
+    <Compile Include="Configuraciones\ArchivoAImprimir.vb" />
+    <Compile Include="Banco\Banco.vb" />
+    <Compile Include="Buscar.vb" />
+    <Compile Include="Caja\Caja.vb" />
+    <Compile Include="Caja\CajaDetalles.vb" />
+    <Compile Include="Archivos\Categoria.vb" />
+    <Compile Include="AFIP\CategoriaFiscal.vb" />
+    <Compile Include="Caja\Cheque.vb" />
+    <Compile Include="Archivos\CategoriaProveedor.vb" />
+    <Compile Include="Comunes\EniacException.vb" />
+    <Compile Include="Configuraciones\MailConfig.vb" />
+    <Compile Include="Configuraciones\ParametroArchivo.vb" />
+    <Compile Include="Configuraciones\ParametroSucursal.vb" />
+    <Compile Include="Configuraciones\PersonalizacionDeInforme.vb" />
+    <Compile Include="Configuraciones\TareaProgramada.vb" />
+    <Compile Include="Configuraciones\TareaProgramadaHorario.vb" />
+    <Compile Include="Contabilidad\ContabilidadAsiento.vb" />
+    <Compile Include="Contabilidad\ContabilidadAsientoModelo.vb" />
+    <Compile Include="Contabilidad\ContabilidadAsientoTmp.vb" />
+    <Compile Include="Contabilidad\ContabilidadCentroCosto.vb" />
+    <Compile Include="Contabilidad\ContabilidadCuenta.vb" />
+    <Compile Include="Contabilidad\ContabilidadCuentaRubro.vb" />
+    <Compile Include="Contabilidad\ContabilidadEjercicio.vb" />
+    <Compile Include="Contabilidad\ContabilidadPlan.vb" />
+    <Compile Include="Contabilidad\ContabilidadPlanCuenta.vb" />
+    <Compile Include="Contabilidad\ContabilidadProceso.vb" />
+    <Compile Include="Contabilidad\ContabilidadReporte.vb" />
+    <Compile Include="Caja\CajaNombre.vb" />
+    <Compile Include="Caja\CajaUsuario.vb" />
+    <Compile Include="Archivos\Actividad.vb" />
+    <Compile Include="Contabilidad\ucCuentaDHvb.vb" />
+    <Compile Include="CRM\Version.vb" />
+    <Compile Include="CRM\CRMCategoriaNovedad.vb" />
+    <Compile Include="CRM\CRMClienteInterlocutor.vb" />
+    <Compile Include="CRM\CRMEntidad.vb" />
+    <Compile Include="CRM\CRMEstadoNovedad.vb" />
+    <Compile Include="CRM\CRMMedioComunicacionNovedad.vb" />
+    <Compile Include="CRM\CRMMetodoResolucionNovedad.vb" />
+    <Compile Include="CRM\CRMNovedad.vb" />
+    <Compile Include="CRM\CRMNovedadSeguimiento.vb" />
+    <Compile Include="CRM\CRMNovedadSeguimientoAdjunto.vb" />
+    <Compile Include="CRM\CRMPrioridadNovedad.vb" />
+    <Compile Include="CRM\CRMProspectoInterlocutor.vb" />
+    <Compile Include="CRM\CRMProveedorInterlocutor.vb" />
+    <Compile Include="CRM\CRMTipoNovedad.vb" />
+    <Compile Include="CRM\CRMTipoNovedadDinamico.vb" />
+    <Compile Include="CRM\Aplicacion.vb" />
+    <Compile Include="CRM\Proyecto.vb" />
+    <Compile Include="CRM\VersionCliente.vb" />
+    <Compile Include="CRM\VersionScript.vb" />
+    <Compile Include="CRM\VersionScriptEjecucion.vb" />
+    <Compile Include="CtaCteClientes\CobranzasMovil\MovilRuta.vb" />
+    <Compile Include="CtaCteClientes\CobranzasMovil\MovilRutaCliente.vb" />
+    <Compile Include="CtaCteClientes\CobranzasMovil\MovilRutaListaDePrecios.vb" />
+    <Compile Include="Dominios\Carta.vb" />
+    <Compile Include="Dominios\ClienteDeuda.vb" />
+    <Compile Include="Extensiones\DataTableExtensions.vb" />
+    <Compile Include="Extensiones\DateTimeExtensions.vb" />
+    <Compile Include="Extensiones\DoubleExtensions.vb" />
+    <Compile Include="Extensiones\Encoders\BarcodeExtensions.vb" />
+    <Compile Include="Extensiones\ImageExtensions.vb" />
+    <Compile Include="Extensiones\NumericExtensions.vb" />
+    <Compile Include="Extensiones\ObjectExtensions.vb" />
+    <Compile Include="Extensiones\StringBuilderExtensions.vb" />
+    <Compile Include="Extensiones\StringExtensions.vb" />
+    <Compile Include="Fichas\Comprobantes.vb" />
+    <Compile Include="Fichas\Ficha.vb" />
+    <Compile Include="Fichas\FichaFormaPago.vb" />
+    <Compile Include="Fichas\FichaPago.vb" />
+    <Compile Include="Fichas\FichaPagoAjuste.vb" />
+    <Compile Include="Fichas\FichaPagoDetalle.vb" />
+    <Compile Include="Fichas\FichaProducto.vb" />
+    <Compile Include="FiltrosReportes\InfCobranzasRealizadas.vb" />
+    <Compile Include="Filtros\ClientesABMFiltros.vb" />
+    <Compile Include="Filtros\GetPorRangoFechasFiltros.vb" />
+    <Compile Include="Extensiones\GeneralExtensions.vb" />
+    <Compile Include="Cargos\LiquidacionObservacion.vb" />
+    <Compile Include="Impuestos\OrigenesPorcImpInt.vb" />
+    <Compile Include="JSonEntidades\Archivos\ClienteJSon.vb" />
+    <Compile Include="JSonEntidades\Archivos\LocalidadJSon.vb" />
+    <Compile Include="JSonEntidades\Archivos\MarcaJSon.vb" />
+    <Compile Include="JSonEntidades\Archivos\ProductoJSon.vb" />
+    <Compile Include="JSonEntidades\Archivos\ProductoSucursalJSon.vb" />
+    <Compile Include="JSonEntidades\Archivos\ProductoSucursalPrecioJSon.vb" />
+    <Compile Include="JSonEntidades\Archivos\ProveedorJSon.vb" />
+    <Compile Include="JSonEntidades\Archivos\RubroCompraJson.vb" />
+    <Compile Include="JSonEntidades\Archivos\RubroJSon.vb" />
+    <Compile Include="JSonEntidades\Archivos\SubRubroJSon.vb" />
+    <Compile Include="JSonEntidades\Archivos\SubSubRubroJSon.vb" />
+    <Compile Include="JSonEntidades\AyudanteJson.vb" />
+    <Compile Include="JSonEntidades\CobranzasMovil\Clientes.vb" />
+    <Compile Include="JSonEntidades\CobranzasMovil\Cobranzas.vb" />
+    <Compile Include="JSonEntidades\CobranzasMovil\CuentasCorrientes.vb" />
+    <Compile Include="JSonEntidades\CobranzasMovil\CuentasCorrientesDebeHaber.vb" />
+    <Compile Include="JSonEntidades\CobranzasMovil\Dispositivos.vb" />
+    <Compile Include="JSonEntidades\CobranzasMovil\DispositivosRutas.vb" />
+    <Compile Include="JSonEntidades\CobranzasMovil\Empresas.vb" />
+    <Compile Include="JSonEntidades\CobranzasMovil\EmpresasConfiguraciones.vb" />
+    <Compile Include="JSonEntidades\CobranzasMovil\Productos.vb" />
+    <Compile Include="JSonEntidades\CobranzasMovil\ProductosPrecios.vb" />
+    <Compile Include="JSonEntidades\CobranzasMovil\Rubros.vb" />
+    <Compile Include="JSonEntidades\CobranzasMovil\RutaListsDePrecios.vb" />
+    <Compile Include="JSonEntidades\CobranzasMovil\Rutas.vb" />
+    <Compile Include="JSonEntidades\CobranzasMovil\RutasClientes.vb" />
+    <Compile Include="JSonEntidades\JsonExtensions.vb" />
+    <Compile Include="JSonEntidades\MonedaDolar.vb" />
+    <Compile Include="JSonEntidades\Pedidos\PedidoJSon.vb" />
+    <Compile Include="JSonEntidades\Pedidos\PedidoProductoJSon.vb" />
+    <Compile Include="JSonEntidades\Pedidos\PedidoWeb.vb" />
+    <Compile Include="JSonEntidades\Pedidos\PedidoWebDetalle.vb" />
+    <Compile Include="JSonEntidades\Pedidos\PedidoWebEstadoResponse.vb" />
+    <Compile Include="JSonEntidades\SiMovilPedidos\PedidoSiMovilJSon.vb" />
+    <Compile Include="JSonEntidades\SiMovilPedidos\PedidoProductoSiMovilJSon.vb" />
+    <Compile Include="JSonEntidades\SSSServicioWeb\Dispositivo.vb" />
+    <Compile Include="JSonEntidades\SSSServicioWeb\Ejecuciones.vb" />
+    <Compile Include="JSonEntidades\SSSServicioWeb\Parametro.vb" />
+    <Compile Include="JSonEntidades\SSSServicioWeb\Sucesos.vb" />
+    <Compile Include="Logistica\ArchivoPDA.vb" />
+    <Compile Include="Logistica\CantidadLineas.vb" />
+    <Compile Include="Logistica\DataSets\DsOrganizarEntregas.vb">
+      <DependentUpon>DsOrganizarEntregas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistica\DataSets\DsOrganizarEntregas1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsOrganizarEntregas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistica\GenerarArchivo.vb" />
+    <Compile Include="Logistica\OrganizarEntregas.vb" />
+    <Compile Include="PedidosProveedores\PedidoEstadoProveedor.vb" />
+    <Compile Include="PedidosProveedores\PedidoObservacionProveedor.vb" />
+    <Compile Include="PedidosProveedores\PedidoProductoProveedor.vb" />
+    <Compile Include="Pedidos\DataSets\DsInfPedidosFacturados.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsInfPedidosFacturados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos\DataSets\DsInfPedidosFacturados.vb">
+      <DependentUpon>DsInfPedidosFacturados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos\DataSets\DsPreventa.vb">
+      <DependentUpon>DsPreventa.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos\DataSets\DsPreventa1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsPreventa.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos\OrdenCompraPedido.vb" />
+    <Compile Include="Pedidos\OrdenCompra.vb" />
+    <Compile Include="Pedidos\PedidoClienteContacto.vb" />
+    <Compile Include="Pedidos\PedidoEstado.vb" />
+    <Compile Include="Pedidos\PedidoObservacion.vb" />
+    <Compile Include="Pedidos\PedidoProducto.vb" />
+    <Compile Include="Pedidos\PedidoProductoFormula.vb" />
+    <Compile Include="Pedidos\PreVenta.vb" />
+    <Compile Include="Precios\ClienteDescuentoProducto.vb" />
+    <Compile Include="Precios\FormatoEtiqueta.vb" />
+    <Compile Include="Precios\HistorialPrecio.vb" />
+    <Compile Include="Precios\PreciosProducto.vb" />
+    <Compile Include="Procesos\Plantilla.vb" />
+    <Compile Include="Produccion\CriticidadOrdenProduccion.vb" />
+    <Compile Include="Produccion\EstadoOrdenProduccion.vb" />
+    <Compile Include="Produccion\OrdenCompraOP.vb" />
+    <Compile Include="Produccion\OrdenCompraOrdenProduccion.vb" />
+    <Compile Include="Produccion\OrdenProduccion.vb" />
+    <Compile Include="Produccion\OrdenProduccionEstado.vb" />
+    <Compile Include="Produccion\OrdenProduccionProducto.vb" />
+    <Compile Include="Produccion\OrdenProduccionObservacion.vb" />
+    <Compile Include="Produccion\ProduccionFormas.vb" />
+    <Compile Include="Produccion\ProduccionProceso.vb" />
+    <Compile Include="Produccion\ProductoFormula.vb" />
+    <Compile Include="RegistracionPagos.vb" />
+    <Compile Include="Seguridad\Bitacora.vb" />
+    <Compile Include="Seguridad\Dispositivo.vb" />
+    <Compile Include="Seguridad\FuncionesDocumentos.vb" />
+    <Compile Include="Seguridad\UsuarioClave.vb" />
+    <Compile Include="Service\RecepcionEstado.vb" />
+    <Compile Include="Service\RecepcionEstadoF.vb" />
+    <Compile Include="Service\RecepcionNota.vb" />
+    <Compile Include="Service\RecepcionNotaEstado.vb" />
+    <Compile Include="Service\RecepcionNotaEstadoF.vb" />
+    <Compile Include="Service\RecepcionNotaF.vb" />
+    <Compile Include="Service\RecepcionNotaProveedor.vb" />
+    <Compile Include="Service\RecepcionNotaProveedorF.vb" />
+    <Compile Include="Stock\ProductosSinStock.vb" />
+    <Compile Include="Sueldos\SueldosCategoria.vb" />
+    <Compile Include="Sueldos\SueldosCierreLiqDatos.vb" />
+    <Compile Include="Sueldos\SueldosCierreLiquidacion.vb" />
+    <Compile Include="Sueldos\SueldosCierrePuntero.vb" />
+    <Compile Include="Sueldos\SueldosConcepto.vb" />
+    <Compile Include="Sueldos\SueldosEstadoCivil.vb" />
+    <Compile Include="Sueldos\SueldosLiquidacionActual.vb" />
+    <Compile Include="Sueldos\SueldosLugarActividad.vb" />
+    <Compile Include="Sueldos\SueldosMotivoBaja.vb" />
+    <Compile Include="Sueldos\SueldosObraSocial.vb" />
+    <Compile Include="Sueldos\SueldosPersonaCodigo.vb" />
+    <Compile Include="Sueldos\SueldosPersonal.vb" />
+    <Compile Include="Sueldos\SueldosPersonalFamiliar.vb" />
+    <Compile Include="Sueldos\SueldosPersonalHijo.vb" />
+    <Compile Include="Sueldos\SueldosQuePideConcepto.vb" />
+    <Compile Include="Sueldos\SueldosTipoConcepto.vb" />
+    <Compile Include="Sueldos\SueldosTipoRecibo.vb" />
+    <Compile Include="Sueldos\SueldosTiposVinculoFamiliar.vb" />
+    <Compile Include="Archivos\TipoComprobanteProducto.vb" />
+    <Compile Include="Traduccion.vb" />
+    <Compile Include="PedidosProveedores\EstadoPedidoProveedor.vb" />
+    <Compile Include="PedidosProveedores\PedidoProveedor.vb" />
+    <Compile Include="CtaCteProveedores\CuentaCorrienteProvRetencion.vb" />
+    <Compile Include="Pedidos\CriticidadPedido.vb" />
+    <Compile Include="Pedidos\EstadoPedido.vb" />
+    <Compile Include="Pedidos\Pedido.vb" />
+    <Compile Include="AFIP\RetencionCompra.vb" />
+    <Compile Include="Turnos\Antecedente.vb" />
+    <Compile Include="Turnos\CalendarioExcepcion.vb" />
+    <Compile Include="Turnos\CalendarioUsuario.vb" />
+    <Compile Include="Turnos\Calendario.vb" />
+    <Compile Include="Turnos\CalendarioHorario.vb" />
+    <Compile Include="Turnos\ClienteAntecedente.vb" />
+    <Compile Include="Turnos\ClienteHistoria.vb" />
+    <Compile Include="Turnos\TipoAntecedente.vb" />
+    <Compile Include="Turnos\TipoCalendario.vb" />
+    <Compile Include="Turnos\TipoTurno.vb" />
+    <Compile Include="Turnos\TurnoCalendario.vb" />
+    <Compile Include="Turnos\TurnosCalendariosProductos.vb" />
+    <Compile Include="Ventas\EstadoVenta.vb" />
+    <Compile Include="Ventas\IVentaProducto.vb" />
+    <Compile Include="Ventas\Reparto.vb" />
+    <Compile Include="Ventas\RepartoComprobante.vb" />
+    <Compile Include="Ventas\RepartoComprobanteProducto.vb" />
+    <Compile Include="Ventas\RepartoGasto.vb" />
+    <Compile Include="Ventas\RepartoProductoSinDescargar.vb" />
+    <Compile Include="Ventas\Venta01.vb" />
+    <Compile Include="Ventas\VentaAdjunto.vb" />
+    <Compile Include="Ventas\VentaCajero.vb" />
+    <Compile Include="Ventas\VentaClienteContacto.vb" />
+    <Compile Include="Ventas\VentaColaImpresion.vb" />
+    <Compile Include="Ventas\VentaColaImpresionComprobante.vb" />
+    <Compile Include="Ventas\VentaInvocado.vb" />
+    <Compile Include="Ventas\VentaDespacho.vb" />
+    <Compile Include="Ventas\VentaPeriodo.vb" />
+    <Compile Include="Seguridad\UsuarioAcceso.vb" />
+    <Compile Include="FiltroValor.vb" />
+    <Compile Include="Compras\ProductoProveedor.vb" />
+    <Compile Include="Configuraciones\ParametroImagen.vb" />
+    <Compile Include="AFIP\Regimen.vb" />
+    <Compile Include="AFIP\Retencion.vb" />
+    <Compile Include="Produccion\ProduccionProductoComp.vb" />
+    <Compile Include="Archivos\Observacion.vb" />
+    <Compile Include="Produccion\ProduccionProducto.vb" />
+    <Compile Include="Produccion\Produccion.vb" />
+    <Compile Include="AFIP\PeriodoFiscal.vb" />
+    <Compile Include="Produccion\ProductoComponente.vb" />
+    <Compile Include="Configuraciones\SemaforoVentaUtilidad.vb" />
+    <Compile Include="Archivos\Tarjeta.vb" />
+    <Compile Include="Ventas\VentaProductoComprarer.vb" />
+    <Compile Include="Ventas\VentaProductoFormula.vb" />
+    <Compile Include="Ventas\VentaProductoFormulaLote.vb" />
+    <Compile Include="Ventas\VentaProductoFormulaNroSerie.vb" />
+    <Compile Include="Ventas\VentaProductoLote.vb" />
+    <Compile Include="AFIP\Impuesto.vb" />
+    <Compile Include="Archivos\ProductoLote.vb" />
+    <Compile Include="Configuraciones\PC.vb" />
+    <Compile Include="Archivos\ProductoNroSerie.vb" />
+    <Compile Include="Sistema.vb" />
+    <Compile Include="Publicos.vb" />
+    <Compile Include="AFIP\TipoImpuesto.vb" />
+    <Compile Include="Ventas\VentaImpuesto.vb" />
+    <Compile Include="Ventas\VentaObservacion.vb" />
+    <Compile Include="Archivos\Modelo.vb" />
+    <Compile Include="Archivos\SubRubro.vb" />
+    <Compile Include="Archivos\Transportista.vb" />
+    <Compile Include="Archivos\UnidadDeMedida.vb" />
+    <Compile Include="Banco\Deposito.vb" />
+    <Compile Include="CtaCteProveedores\CuentaCorrienteProv.vb" />
+    <Compile Include="CtaCteProveedores\CuentaCorrienteProvPago.vb" />
+    <Compile Include="Banco\CuentaBancariaClase.vb" />
+    <Compile Include="Archivos\Cliente.vb" />
+    <Compile Include="Compras\Compra.vb" />
+    <Compile Include="Compras\CompraNumero.vb" />
+    <Compile Include="Compras\CompraProducto.vb" />
+    <Compile Include="CtaCteClientes\CuentaCorriente.vb" />
+    <Compile Include="CtaCteClientes\CuentaCorrientePago.vb" />
+    <Compile Include="Caja\CuentaDeCaja.vb" />
+    <Compile Include="Banco\CuentaBancaria.vb" />
+    <Compile Include="Banco\CuentaBanco.vb" />
+    <Compile Include="Archivos\Empleado.vb" />
+    <Compile Include="Entidad.vb" />
+    <Compile Include="EntidadException.vb" />
+    <Compile Include="Ventas\Facturable.vb" />
+    <Compile Include="Seguridad\Funcion.vb" />
+    <Compile Include="General.vb" />
+    <Compile Include="Configuraciones\Impresora.vb" />
+    <Compile Include="Banco\LibroBanco.vb" />
+    <Compile Include="Precios\ListaDePrecios.vb" />
+    <Compile Include="Archivos\Localidad.vb" />
+    <Compile Include="Archivos\Marca.vb" />
+    <Compile Include="Archivos\Moneda.vb" />
+    <Compile Include="Stock\MovimientoNumero.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Configuraciones\Parametro.vb" />
+    <Compile Include="Archivos\Producto.vb" />
+    <Compile Include="Archivos\ProductoSucursal.vb" />
+    <Compile Include="Precios\ProductoSucursalPrecio.vb" />
+    <Compile Include="Archivos\Proveedor.vb" />
+    <Compile Include="Archivos\Provincia.vb" />
+    <Compile Include="Seguridad\Rol.vb" />
+    <Compile Include="Seguridad\RolFuncion.vb" />
+    <Compile Include="Archivos\Rubro.vb" />
+    <Compile Include="Compras\RubroCompra.vb" />
+    <Compile Include="SincronizaRegistro.vb" />
+    <Compile Include="Archivos\Sucursal.vb" />
+    <Compile Include="Procesos\Tarea.vb" />
+    <Compile Include="Archivos\TipoComprobante.vb" />
+    <Compile Include="Configuraciones\TipoComprobanteLetra.vb" />
+    <Compile Include="Archivos\TipoDocumento.vb" />
+    <Compile Include="Stock\TipoMovimiento.vb" />
+    <Compile Include="Seguridad\Usuario.vb" />
+    <Compile Include="Seguridad\UsuarioRol.vb" />
+    <Compile Include="Ventas\Venta.vb" />
+    <Compile Include="Ventas\VentaFormaPago.vb" />
+    <Compile Include="Ventas\VentaNumero.vb" />
+    <Compile Include="Ventas\VentaProducto.vb" />
+    <Compile Include="Ventas\VentasEmbarcacion.vb" />
+    <Compile Include="Ventas\VentasExportacionEmbarques.vb" />
+    <Compile Include="Ventas\VentasFormasPagoSucursales.vb" />
+    <Compile Include="Ventas\VentaProductoNroSerie.vb" />
+    <Compile Include="Ventas\VentaTarjeta.vb" />
+    <Compile Include="Archivos\ZonaGeografica.vb" />
+    <Compile Include="Ventas\VentaTransferencia.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="Logistica\DataSets\DsOrganizarEntregas.xsc">
+      <DependentUpon>DsOrganizarEntregas.xsd</DependentUpon>
+    </None>
+    <None Include="Logistica\DataSets\DsOrganizarEntregas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsOrganizarEntregas1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistica\DataSets\DsOrganizarEntregas.xss">
+      <DependentUpon>DsOrganizarEntregas.xsd</DependentUpon>
+    </None>
+    <None Include="Logistica\DataSets\dtsRegistracionPagos.xsc">
+      <DependentUpon>dtsRegistracionPagos.xsd</DependentUpon>
+    </None>
+    <None Include="Logistica\DataSets\dtsRegistracionPagos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsRegistracionPagos.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistica\DataSets\dtsRegistracionPagos.xss">
+      <DependentUpon>dtsRegistracionPagos.xsd</DependentUpon>
+    </None>
+    <None Include="Logistica\DataSets\dtsRegistracionPagosV2.xsc">
+      <DependentUpon>dtsRegistracionPagosV2.xsd</DependentUpon>
+    </None>
+    <None Include="Logistica\DataSets\dtsRegistracionPagosV2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsRegistracionPagosV2.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Logistica\DataSets\dtsRegistracionPagosV2.xss">
+      <DependentUpon>dtsRegistracionPagosV2.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Pedidos\DataSets\DsInfPedidosFacturados.xsc">
+      <DependentUpon>DsInfPedidosFacturados.xsd</DependentUpon>
+    </None>
+    <None Include="Pedidos\DataSets\DsInfPedidosFacturados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsInfPedidosFacturados.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Pedidos\DataSets\DsInfPedidosFacturados.xss">
+      <DependentUpon>DsInfPedidosFacturados.xsd</DependentUpon>
+    </None>
+    <None Include="Pedidos\DataSets\DsPreventa.xsc">
+      <DependentUpon>DsPreventa.xsd</DependentUpon>
+    </None>
+    <None Include="Pedidos\DataSets\DsPreventa.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsPreventa1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Pedidos\DataSets\DsPreventa.xss">
+      <DependentUpon>DsPreventa.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Ventas\Interfaces\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

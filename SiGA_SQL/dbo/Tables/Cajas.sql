@@ -1,0 +1,35 @@
+﻿CREATE TABLE [dbo].[Cajas] (
+    [IdSucursal]                 INT             NOT NULL,
+    [IdCaja]                     INT             CONSTRAINT [DF_Cajas_IdCaja] DEFAULT ((1)) NOT NULL,
+    [NumeroPlanilla]             INT             NOT NULL,
+    [FechaPlanilla]              DATETIME        NOT NULL,
+    [PesosSaldoInicial]          DECIMAL (10, 2) NOT NULL,
+    [PesosSaldoFinal]            DECIMAL (10, 2) NOT NULL,
+    [DolaresSaldoInicial]        DECIMAL (10, 2) NOT NULL,
+    [DolaresSaldoFinal]          DECIMAL (10, 2) NOT NULL,
+    [EurosSaldoInicial]          DECIMAL (10, 2) NOT NULL,
+    [EurosSaldoFinal]            DECIMAL (10, 2) NOT NULL,
+    [ChequesSaldoInicial]        DECIMAL (10, 2) NOT NULL,
+    [ChequesSaldoFinal]          DECIMAL (10, 2) NOT NULL,
+    [TarjetasSaldoInicial]       DECIMAL (10, 2) NOT NULL,
+    [TarjetasSaldoFinal]         DECIMAL (10, 2) NOT NULL,
+    [TicketsSaldoInicial]        DECIMAL (10, 2) NOT NULL,
+    [TicketsSaldoFinal]          DECIMAL (10, 2) NOT NULL,
+    [PesosSaldoFinalDigit]       DECIMAL (10, 2) NOT NULL,
+    [DolaresSaldoFinalDigit]     DECIMAL (10, 2) NOT NULL,
+    [ChequesSaldoFinalDigit]     DECIMAL (10, 2) NOT NULL,
+    [TarjetasSaldoFinalDigit]    DECIMAL (10, 2) NOT NULL,
+    [TicketsSaldoFinalDigit]     DECIMAL (10, 2) NOT NULL,
+    [BancosSaldoInicial]         DECIMAL (10, 2) NOT NULL,
+    [BancosSaldoFinal]           DECIMAL (10, 2) NOT NULL,
+    [BancosSaldoFinalDigit]      DECIMAL (10, 2) NOT NULL,
+    [RetencionesSaldoInicial]    DECIMAL (10, 2) NOT NULL,
+    [RetencionesSaldoFinal]      DECIMAL (10, 2) NOT NULL,
+    [RetencionesSaldoFinalDigit] DECIMAL (10, 2) NOT NULL,
+    CONSTRAINT [PK_Cajas] PRIMARY KEY CLUSTERED ([IdSucursal] ASC, [IdCaja] ASC, [NumeroPlanilla] ASC),
+    CONSTRAINT [FK_Cajas_CajasNombres] FOREIGN KEY ([IdSucursal], [IdCaja]) REFERENCES [dbo].[CajasNombres] ([IdSucursal], [IdCaja]),
+    CONSTRAINT [FK_Cajas_Sucursales] FOREIGN KEY ([IdSucursal]) REFERENCES [dbo].[Sucursales] ([IdSucursal])
+);
+
+
+

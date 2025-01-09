@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DtsControlDeCalidad" targetNamespace="http://tempuri.org/DtsControlDeCalidad.xsd" xmlns:mstns="http://tempuri.org/DtsControlDeCalidad.xsd" xmlns="http://tempuri.org/DtsControlDeCalidad.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DtsControlDeCalidad" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DtsControlDeCalidad" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DtsControlDeCalidad">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtAtributos" msprop:Generator_RowEvHandlerName="dtAtributosRowChangeEventHandler" msprop:Generator_RowDeletedName="dtAtributosRowDeleted" msprop:Generator_RowDeletingName="dtAtributosRowDeleting" msprop:Generator_RowEvArgName="dtAtributosRowChangeEvent" msprop:Generator_TablePropName="dtAtributos" msprop:Generator_RowChangedName="dtAtributosRowChanged" msprop:Generator_UserTableName="dtAtributos" msprop:Generator_RowChangingName="dtAtributosRowChanging" msprop:Generator_RowClassName="dtAtributosRow" msprop:Generator_TableClassName="dtAtributosDataTable" msprop:Generator_TableVarName="tabledtAtributos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdListaControl" msprop:Generator_ColumnPropNameInTable="IdListaControlColumn" msprop:Generator_ColumnPropNameInRow="IdListaControl" msprop:Generator_UserColumnName="IdListaControl" msprop:Generator_ColumnVarNameInTable="columnIdListaControl" type="xs:int" minOccurs="0" />
+              <xs:element name="NombreListaControlItem" msprop:Generator_ColumnPropNameInTable="NombreListaControlItemColumn" msprop:Generator_ColumnPropNameInRow="NombreListaControlItem" msprop:Generator_UserColumnName="NombreListaControlItem" msprop:Generator_ColumnVarNameInTable="columnNombreListaControlItem" type="xs:string" minOccurs="0" />
+              <xs:element name="NivelInspeccion" msprop:Generator_ColumnPropNameInTable="NivelInspeccionColumn" msprop:Generator_ColumnPropNameInRow="NivelInspeccion" msprop:Generator_UserColumnName="NivelInspeccion" msprop:Generator_ColumnVarNameInTable="columnNivelInspeccion" type="xs:string" minOccurs="0" />
+              <xs:element name="ValorAQL" msprop:Generator_ColumnPropNameInTable="ValorAQLColumn" msprop:Generator_ColumnPropNameInRow="ValorAQL" msprop:Generator_UserColumnName="ValorAQL" msprop:Generator_ColumnVarNameInTable="columnValorAQL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TamanoMuestreo" msprop:Generator_ColumnPropNameInTable="TamanoMuestreoColumn" msprop:Generator_ColumnPropNameInRow="TamanoMuestreo" msprop:Generator_UserColumnName="TamanoMuestreo" msprop:Generator_ColumnVarNameInTable="columnTamanoMuestreo" type="xs:int" minOccurs="0" />
+              <xs:element name="CantidadAceptacion" msprop:Generator_ColumnPropNameInTable="CantidadAceptacionColumn" msprop:Generator_ColumnPropNameInRow="CantidadAceptacion" msprop:Generator_UserColumnName="CantidadAceptacion" msprop:Generator_ColumnVarNameInTable="columnCantidadAceptacion" type="xs:int" minOccurs="0" />
+              <xs:element name="CantidadRechazo" msprop:Generator_ColumnPropNameInTable="CantidadRechazoColumn" msprop:Generator_ColumnPropNameInRow="CantidadRechazo" msprop:Generator_UserColumnName="CantidadRechazo" msprop:Generator_ColumnVarNameInTable="columnCantidadRechazo" type="xs:int" minOccurs="0" />
+              <xs:element name="Observacion" msprop:Generator_ColumnPropNameInRow="Observacion" msprop:Generator_ColumnPropNameInTable="ObservacionColumn" msprop:Generator_ColumnVarNameInTable="columnObservacion" msprop:Generator_UserColumnName="Observacion" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

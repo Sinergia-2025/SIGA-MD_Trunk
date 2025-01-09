@@ -1,0 +1,28 @@
+--PARA PLANES DE CUENTA CON FORMATO 0.00.00.000
+
+--PRIMERO EVALUO LAS CUENTAS DEL ULTIMO NIVEL, COMO SON 3 CEROS
+--SE LOS SACO Y SE LO PONGO COMO PADRE
+--UPDATE ContabilidadCuentas
+--   SET IdCuentaPadre = ROUND(IdCuenta / 1000, 0, 1) * 1000
+-- WHERE IdCuenta - ROUND(IdCuenta / 1000, 0, 1) * 1000 <> 0
+--   AND IdCuentaPadre IS NULL
+--;
+
+--LUEGO EVALUO LAS CUENTAS DEL 3er NIVEL, COMO SON 2 CEROS
+--SE LOS SACO Y SE LO PONGO COMO PADRE
+--UPDATE ContabilidadCuentas
+--   SET IdCuentaPadre = ROUND(IdCuenta / 100000, 0, 1) * 100000
+-- WHERE IdCuenta - ROUND(IdCuenta / 100000, 0, 1) * 100000 <> 0
+--   AND IdCuenta - ROUND(IdCuenta / 1000, 0, 1) * 1000 = 0
+--   AND IdCuentaPadre IS NULL
+--;
+
+--POR ULTIMO EVALUO LAS CUENTAS DEL 2er NIVEL, COMO SON 2 CEROS
+--SE LOS SACO Y SE LO PONGO COMO PADRE
+--UPDATE ContabilidadCuentas
+--   SET IdCuentaPadre = ROUND(IdCuenta / 10000000, 0, 1) * 10000000
+-- WHERE IdCuenta - ROUND(IdCuenta / 10000000, 0, 1) * 10000000 <> 0
+--   AND IdCuenta - ROUND(IdCuenta / 100000, 0, 1) * 100000 = 0
+--   AND IdCuenta - ROUND(IdCuenta / 1000, 0, 1) * 1000 = 0
+--   AND IdCuentaPadre IS NULL
+--;

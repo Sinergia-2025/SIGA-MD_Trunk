@@ -1,0 +1,1508 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D26A06BB-1AFF-42F0-89E3-F81D9006CB0C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Eniac.Reglas</RootNamespace>
+    <AssemblyName>Eniac.Reglas</AssemblyName>
+    <MyType>Windows</MyType>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Eniac.Reglas.xml</DocumentationFile>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <DefineConstants>SYNCTIENDAWEB="TRUE"</DefineConstants>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Dlls\</OutputPath>
+    <DocumentationFile>Eniac.Reglas.xml</DocumentationFile>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-Parametros|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug-Parametros\</OutputPath>
+    <DocumentationFile>Eniac.Reglas.xml</DocumentationFile>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_ConParametros|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug_ConParametros\</OutputPath>
+    <DocumentationFile>Eniac.Reglas.xml</DocumentationFile>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Eniac.Ayudantes, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\Eniac.Ayudantes.dll</HintPath>
+    </Reference>
+    <Reference Include="Eniac.Datos, Version=4.0.1.5, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\Eniac.Datos.dll</HintPath>
+    </Reference>
+    <Reference Include="FSharp.Core, Version=4.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\ScrapySharp.2.2.63\lib\net40\FSharp.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\ScrapySharp.2.2.63\lib\net40\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Shared.v13.1, Version=13.1.20131.2027, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinCalcManager.v13.1, Version=13.1.20131.2027, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.v13.1, Version=13.1.20131.2027, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Interop.MSScriptControl">
+      <HintPath>..\Dlls\Interop.MSScriptControl.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="LibreriaFiscalV2">
+      <HintPath>..\Dlls\LibreriaFiscalV2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ScrapySharp, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ScrapySharp.2.2.63\lib\net40\ScrapySharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ScrapySharp.Core, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ScrapySharp.2.2.63\lib\net40\ScrapySharp.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Soporte.Entidades">
+      <HintPath>..\Dlls\Soporte.Entidades.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.IO, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Threading.Tasks, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="actual = Eniac.Entidades.Usuario.Actual" />
+    <Import Include="Eniac.Entidades.Extensiones" />
+    <Import Include="Eniac.Reglas.Extensions" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Text" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GlobalAssembyInfo.vb">
+      <Link>GlobalAssembyInfo.vb</Link>
+    </Compile>
+    <Compile Include="Administracion\AreasComunes.vb" />
+    <Compile Include="Administracion\Camas.vb" />
+    <Compile Include="Administracion\Casilleros.vb" />
+    <Compile Include="Administracion\CategoriasAcciones.vb" />
+    <Compile Include="Administracion\CategoriasCamas.vb" />
+    <Compile Include="Administracion\CategoriasEmbarcaciones.vb" />
+    <Compile Include="Administracion\CategoriasImagenes.vb" />
+    <Compile Include="Administracion\MarcasEmbarcaciones.vb" />
+    <Compile Include="Administracion\MarcasMotores.vb" />
+    <Compile Include="Administracion\ModelosEmbarcaciones.vb" />
+    <Compile Include="Administracion\ModelosMotores.vb" />
+    <Compile Include="Administracion\TiposEmbarcaciones.vb" />
+    <Compile Include="Administracion\TiposMatriculas.vb" />
+    <Compile Include="Administracion\TiposMotores.vb" />
+    <Compile Include="Administracion\TiposNaves.vb" />
+    <Compile Include="Administracion\TiposSociedades.vb" />
+    <Compile Include="Administracion\TiposTimoneles.vb" />
+    <Compile Include="AFIP\AFIPBFE.vb" />
+    <Compile Include="AFIP\AFIPConceptosCM05.vb" />
+    <Compile Include="AFIP\AFIPFEX.vb" />
+    <Compile Include="AFIP\AFIPIncoterms.vb" />
+    <Compile Include="AFIP\AFIPPN3.vb" />
+    <Compile Include="AFIP\AFIPPN4.vb" />
+    <Compile Include="AFIP\AFIPReferenciasTransferencias.vb" />
+    <Compile Include="AFIP\AFIPTiposComprobantes.vb" />
+    <Compile Include="AFIP\AFIPTiposDocumentos.vb" />
+    <Compile Include="AFIP\AFIPWSAA.vb" />
+    <Compile Include="AFIP\RegimenesPercepciones.vb" />
+    <Compile Include="AFIP\RegimenesPercepcionesAlicuotas.vb" />
+    <Compile Include="Archivos\CategoriasMercadoLibre.vb" />
+    <Compile Include="Archivos\EmpleadosComisionesProductosPrecios.vb" />
+    <Compile Include="Archivos\EstadosCiviles.vb" />
+    <Compile Include="Archivos\PlazosEntregas.vb" />
+    <Compile Include="Archivos\ProductosDepositos.vb" />
+    <Compile Include="Archivos\ProductosSucursales03_ImportarStockLotes.vb" />
+    <Compile Include="Archivos\ProductosUbicaciones.vb" />
+    <Compile Include="Archivos\ProductosSucursales02_SimovilOficina.vb" />
+    <Compile Include="Archivos\Sucursales01_VincularDesvincular.vb" />
+    <Compile Include="Archivos\Sucursales_Vinculacion.vb" />
+    <Compile Include="Archivos\TiposObservaciones.vb" />
+    <Compile Include="Archivos\UnidadesDeMedidasConversiones.vb" />
+    <Compile Include="Archivos\VehiculosClientes.vb" />
+    <Compile Include="Ayudante\CreaConexionExcel.vb" />
+    <Compile Include="Ayudante\DigitosVerificadores\DVSIRPLUS.vb" />
+    <Compile Include="Banco\DebitosDirectos\SIRPLUS.vb" />
+    <Compile Include="Ayudante\SeleccionMultipleUbicaciones.vb" />
+    <Compile Include="Administracion\Sectores.vb" />
+    <Compile Include="Archivos\ProductosLinks.vb" />
+    <Compile Include="Calidad\CalidadListasControlProductos.vb" />
+    <Compile Include="Calidad\CalidadListasControlTipos.vb" />
+    <Compile Include="Calidad\CalidadListasControl.vb" />
+    <Compile Include="Calidad\CalidadListaControlItemGrupo.vb" />
+    <Compile Include="Calidad\CalidadListasControlItemsSubGrupos.vb" />
+    <Compile Include="Calidad\CalidadListasControlItems.vb" />
+    <Compile Include="Calidad\CalidadListasControlConfig.vb" />
+    <Compile Include="Calidad\CalidadOrdenDeControl.vb" />
+    <Compile Include="Calidad\CalidadOrdenDeControlItems.vb" />
+    <Compile Include="Calidad\EstadosOrdenesCalidad.vb" />
+    <Compile Include="Compras\Compras01_CrearCompra.vb" />
+    <Compile Include="Compras\ComprasRetenciones.vb" />
+    <Compile Include="Compras\ComprasTarjetas.vb" />
+    <Compile Include="Compras\ComprasTransferencias.vb" />
+    <Compile Include="Concesionarios\ConcesionarioDistribucionEjes.vb" />
+    <Compile Include="Concesionarios\ConcesionarioOperacionesAdicionales.vb" />
+    <Compile Include="Concesionarios\ConcesionarioOperacionesCheques.vb" />
+    <Compile Include="Concesionarios\ConcesionarioOperacionesTarjetas.vb" />
+    <Compile Include="Concesionarios\ConcesionarioOperacionesVehiculosPagos.vb" />
+    <Compile Include="Concesionarios\ConcesionarioSubTiposUnidades.vb" />
+    <Compile Include="Concesionarios\ConcesionarioTiposUnidades.vb" />
+    <Compile Include="Archivos\EstadosVehiculos.vb" />
+    <Compile Include="Archivos\MarcasVehiculos.vb" />
+    <Compile Include="Archivos\ModelosVehiculos.vb" />
+    <Compile Include="Archivos\Nacionalidades.vb" />
+    <Compile Include="Archivos\ProductosSucursalesAtributos.vb" />
+    <Compile Include="Archivos\Vehiculos.vb" />
+    <Compile Include="Ayudante\Cache\Archivos\CacheIntereses.vb" />
+    <Compile Include="Ayudante\Cache\Turismo\CacheTurismoTipoViaje.vb" />
+    <Compile Include="Ayudante\CheckNetFrameworkVersion.vb" />
+    <Compile Include="BaseT.vb" />
+    <Compile Include="AFIP\CategoriasFiscalesConfiguraciones.vb" />
+    <Compile Include="AFIP\EscalasRetGanancias.vb" />
+    <Compile Include="AFIP\PadronesAGIP.vb" />
+    <Compile Include="AFIP\PadronesARBA.vb" />
+    <Compile Include="AFIP\TiposDeExension.vb" />
+    <Compile Include="AFIP\PercepcionVentas.vb" />
+    <Compile Include="Alertas.vb" />
+    <Compile Include="Alquileres\Alquileres.vb" />
+    <Compile Include="Alquileres\AlquileresEstadosContratos.vb" />
+    <Compile Include="Alquileres\AlquileresTarifasProductos.vb" />
+    <Compile Include="Archivos\Auditorias.vb" />
+    <Compile Include="Archivos\ArchivosImportados.vb" />
+    <Compile Include="Archivos\CalendariosSucursales.vb" />
+    <Compile Include="Archivos\Calles.vb" />
+    <Compile Include="Archivos\Categorias01_SiSeN.vb" />
+    <Compile Include="Archivos\CategoriasDescuentosSubSubRubros.vb" />
+    <Compile Include="Archivos\CategoriasDescuentosSubRubros.vb" />
+    <Compile Include="Archivos\CategoriasDescuentosRubros.vb" />
+    <Compile Include="Archivos\Clientes01.vb" />
+    <Compile Include="Archivos\Clientes01_RestService.vb" />
+    <Compile Include="Archivos\ClientesActualizaciones.vb" />
+    <Compile Include="Archivos\ClientesActualizacionesSucesos.vb" />
+    <Compile Include="Archivos\ClientesAdjuntos.vb" />
+    <Compile Include="Archivos\ClientesBackups.vb" />
+    <Compile Include="Archivos\ClientesContactos.vb" />
+    <Compile Include="Archivos\ClientesAplicacionesModulos.vb" />
+    <Compile Include="Archivos\ClientesDispositivos.vb" />
+    <Compile Include="Archivos\ClientesParametros.vb" />
+    <Compile Include="Concesionarios\ConcesionariosAdicionales.vb" />
+    <Compile Include="Archivos\EmpleadosSucursales.vb" />
+    <Compile Include="Archivos\ContactosDirecciones.vb" />
+    <Compile Include="Archivos\Contactos.vb" />
+    <Compile Include="Archivos\ClientesDirecciones.vb" />
+    <Compile Include="Archivos\EmpleadosComisionesMarcasPrecios.vb" />
+    <Compile Include="Archivos\EmpleadosComisionesRubrosPrecios.vb" />
+    <Compile Include="Archivos\AplicacionesModulos.vb" />
+    <Compile Include="Archivos\EmpleadosObjetivos.vb" />
+    <Compile Include="Archivos\EstadosTurnos.vb" />
+    <Compile Include="Archivos\Empresas.vb" />
+    <Compile Include="Archivos\EstadosClientes.vb" />
+    <Compile Include="Archivos\EstadosVisitas.vb" />
+    <Compile Include="Archivos\Feriados.vb" />
+    <Compile Include="Archivos\AplicacionesEdiciones.vb" />
+    <Compile Include="Archivos\Intereses.vb" />
+    <Compile Include="Archivos\AplicacionesEdicionesModulos.vb" />
+    <Compile Include="Archivos\InteresesDias.vb" />
+    <Compile Include="Archivos\Localidades01_RestService.vb" />
+    <Compile Include="Archivos\Marcas01_RestService.vb" />
+    <Compile Include="Archivos\MotivosDevoluciones.vb" />
+    <Compile Include="Archivos\Numeradores.vb" />
+    <Compile Include="Archivos\Productos01_RestService.vb" />
+    <Compile Include="Archivos\ProductosSucursales01_RestService.vb" />
+    <Compile Include="Archivos\Proveedores01_RestService.vb" />
+    <Compile Include="Archivos\Rubros01_RestService.vb" />
+    <Compile Include="Archivos\SubRubros01_RestService.vb" />
+    <Compile Include="Archivos\SubSubRubros01_RestService.vb" />
+    <Compile Include="Archivos\TiposVehiculos.vb" />
+    <Compile Include="Archivos\Paises.vb" />
+    <Compile Include="Archivos\PlanesTarjetas.vb" />
+    <Compile Include="Archivos\ProductosClientes.vb" />
+    <Compile Include="Archivos\Productos001.vb" />
+    <Compile Include="Archivos\ProductosIdentificaciones.vb" />
+    <Compile Include="Archivos\ProductosOfertas.vb" />
+    <Compile Include="Archivos\ProductosWeb.vb" />
+    <Compile Include="Archivos\ProductosWebArchivo.vb" />
+    <Compile Include="Archivos\SubRubrosComisionesPorDescuento.vb" />
+    <Compile Include="Archivos\RubrosComisionesPorDescuento.vb" />
+    <Compile Include="Archivos\SubSubRubros.vb" />
+    <Compile Include="Archivos\TiposComprobantesProductos.vb" />
+    <Compile Include="Archivos\TiposAdjuntos.vb" />
+    <Compile Include="Archivos\TiposClientes.vb" />
+    <Compile Include="Archivos\TiposContactos.vb" />
+    <Compile Include="Archivos\TiposDirecciones.vb" />
+    <Compile Include="Archivos\Textos.vb" />
+    <Compile Include="Archivos\MediosdePago.vb" />
+    <Compile Include="Ayudante\BusquedaCacheadaCommon.vb" />
+    <Compile Include="Ayudante\BusquedaCacheadaCRMCategoriaNovedad.vb" />
+    <Compile Include="Ayudante\BusquedaCacheadaCRMEstadoNovedad.vb" />
+    <Compile Include="Ayudante\BusquedaCacheadaCRMMedioComunicacionNovedad.vb" />
+    <Compile Include="Ayudante\BusquedaCacheadaCRMPrioridadNovedad.vb" />
+    <Compile Include="Ayudante\BusquedaCacheadaCRMTipoComentarioNovedad.vb" />
+    <Compile Include="Ayudante\BusquedaCacheadaCRMTipoNovedad.vb" />
+    <Compile Include="Ayudante\BusquedaCacheadaMetodoResolucionNovedad.vb" />
+    <Compile Include="Ayudante\BusquedasCacheadas.vb" />
+    <Compile Include="Ayudante\Cache\Archivos\CacheEmbarcacionSiga.vb" />
+    <Compile Include="Ayudante\Cache\Archivos\CacheTiposVehiculos.vb" />
+    <Compile Include="Ayudante\Cache\CacheHandlers\CacheHandlerCommon.vb" />
+    <Compile Include="Ayudante\Cache\CacheHandlers\CRMCacheHandler.vb" />
+    <Compile Include="Ayudante\Cache\CacheHandlers\SeguridadCacheHandler.vb" />
+    <Compile Include="Ayudante\Cache\CacheHandlers\TurnosCacheHandler.vb" />
+    <Compile Include="Ayudante\Cache\Seguridad\CacheUsuarios.vb" />
+    <Compile Include="Ayudante\Cache\Turismo\CacheTurismoCursos.vb" />
+    <Compile Include="Ayudante\Cache\Turismo\CacheTurismoTurnos.vb" />
+    <Compile Include="Ayudante\Cache\Turnos\CacheCalendarios.vb" />
+    <Compile Include="Ayudante\Cache\Turnos\CacheTiposTurnos.vb" />
+    <Compile Include="Ayudante\Cache\Turnos\CacheTurnosEstados.vb" />
+    <Compile Include="Ayudante\CompresionArchivos.vb" />
+    <Compile Include="Ayudante\DigitosVerificadores\ICalculoDigitosVerificadores.vb" />
+    <Compile Include="Ayudante\DigitosVerificadores\IDAutomationHL25.vb" />
+    <Compile Include="Ayudante\Validadores.vb" />
+    <Compile Include="Ayudante\VerificarTablasEspejo.vb" />
+    <Compile Include="Banco\DebitosDirectos\RoelaSiro.vb" />
+    <Compile Include="Banco\DepositosCuentasBancos.vb" />
+    <Compile Include="Banco\DepositosTarjetasCupones.vb" />
+    <Compile Include="Caja\Chequeras.vb" />
+    <Compile Include="Caja\ChequesHistorial.vb" />
+    <Compile Include="Caja\SituacionCheques.vb" />
+    <Compile Include="Caja\SituacionCupones.vb" />
+    <Compile Include="Caja\TarjetasCupones.vb" />
+    <Compile Include="Caja\TarjetasCuponesHistorial.vb" />
+    <Compile Include="Caja\TiposCheques.vb" />
+    <Compile Include="Cargos\CargosClientes.vb" />
+    <Compile Include="Cargos\Cargos.vb" />
+    <Compile Include="Cargos\CargosClientesObservaciones.vb" />
+    <Compile Include="Cargos\ComprasLiquidacion.vb" />
+    <Compile Include="Cargos\Liquidaciones.vb" />
+    <Compile Include="Cargos\LiquidacionesCargos.vb" />
+    <Compile Include="Cargos\LiquidacionesObservaciones.vb" />
+    <Compile Include="Compras\Aduanas.vb" />
+    <Compile Include="Compras\AduanasAgentesTransporte.vb" />
+    <Compile Include="Compras\AduanasDespachantes.vb" />
+    <Compile Include="Compras\AduanasDestinaciones.vb" />
+    <Compile Include="Compras\ComprasCheques.vb" />
+    <Compile Include="Compras\ComprasExportarDatos.vb" />
+    <Compile Include="Compras\ComprasImpuestos.vb" />
+    <Compile Include="Compras\ComprasObservaciones.vb" />
+    <Compile Include="Compras\ComprasProductosNrosSerie.vb" />
+    <Compile Include="Compras\Conceptos.vb" />
+    <Compile Include="Compras\ProductosConceptos.vb" />
+    <Compile Include="Compras\RubrosCompras01_RestService.vb" />
+    <Compile Include="Compras\RubrosConceptos.vb" />
+    <Compile Include="Concesionarios\ConcesionarioOperaciones.vb" />
+    <Compile Include="Configuraciones\ArchivosAImprimir.vb" />
+    <Compile Include="Banco\Bancos.vb" />
+    <Compile Include="Base.vb" />
+    <Compile Include="Caja\CajaDetalles.vb" />
+    <Compile Include="Caja\Cajas.vb" />
+    <Compile Include="Archivos\Categorias.vb" />
+    <Compile Include="AFIP\CategoriasFiscales.vb" />
+    <Compile Include="Caja\Cheques.vb" />
+    <Compile Include="Configuraciones\ConfiguracionesAplicacion.vb" />
+    <Compile Include="Configuraciones\ImpresorasExtracciones.vb" />
+    <Compile Include="Configuraciones\ParametrosArchivos.vb" />
+    <Compile Include="Configuraciones\ParametrosCache.vb" />
+    <Compile Include="Configuraciones\ParametrosSucursales.vb" />
+    <Compile Include="Configuraciones\PersonalizacionDeInformes.vb" />
+    <Compile Include="Configuraciones\ScriptsAdmin.vb" />
+    <Compile Include="Configuraciones\TareasProgramadas.vb" />
+    <Compile Include="Configuraciones\TareasProgramadasHorarios.vb" />
+    <Compile Include="Configuraciones\TiposImpresionesFiscales.vb" />
+    <Compile Include="Configuraciones\Traducciones.vb" />
+    <Compile Include="Contabilidad\Contabilidad.vb" />
+    <Compile Include="Contabilidad\Contabilidad02_CuentasCorrientes.vb" />
+    <Compile Include="Contabilidad\Contabilidad03_Compras.vb" />
+    <Compile Include="Contabilidad\Contabilidad04_CuentasCorrientesProv.vb" />
+    <Compile Include="Contabilidad\Contabilidad05_CajasDetalle.vb" />
+    <Compile Include="Contabilidad\Contabilidad06_LibrosBancos.vb" />
+    <Compile Include="Contabilidad\Contabilidad07_Depositos.vb" />
+    <Compile Include="Contabilidad\ContabilidadAsientosTmp.vb" />
+    <Compile Include="Contabilidad\ContabilidadEstadosAsientos.vb" />
+    <Compile Include="Contabilidad\ContabilidadException.vb" />
+    <Compile Include="Contabilidad\ContabilidadPublicos.vb" />
+    <Compile Include="Contabilidad\Contabilidad01_Ventas.vb" />
+    <Compile Include="Contabilidad\ucCuentasDH.vb" />
+    <Compile Include="CRM\CRMCiclosPlanificacion.vb" />
+    <Compile Include="CRM\CRMCiclosPlanificacionNovedades.vb" />
+    <Compile Include="CRM\CRMEstadosCiclosPlanificacion.vb" />
+    <Compile Include="CRM\CRMMotivosNovedades.vb" />
+    <Compile Include="CRM\CRMNovedadesCambiosEstados.vb" />
+    <Compile Include="CRM\CRMNovedadesProductosNrosSerie.vb" />
+    <Compile Include="CRM\CRMNovedadesProductosLotes.vb" />
+    <Compile Include="CRM\CRMNovedadesProductos.vb" />
+    <Compile Include="CRM\CRMTiposCategoriasNovedades.vb" />
+    <Compile Include="CRM\CRMTiposEstadosNovedades.vb" />
+    <Compile Include="CRM\CRMTiposNovedadesObjetivos.vb" />
+    <Compile Include="CRM\CRMTiposNovedadesObjetivosUsuarios.vb" />
+    <Compile Include="CRM\Proyectos01_Informes.vb" />
+    <Compile Include="CRM\ProyectosEstados.vb" />
+    <Compile Include="CRM\RestService\CRMCategoriasNovedades01_RestService.vb" />
+    <Compile Include="CRM\Clasificaciones.vb" />
+    <Compile Include="CRM\CRMEnvioMasivoNovedadesMails.vb" />
+    <Compile Include="CRM\CRMTiposComentariosNovedades.vb" />
+    <Compile Include="CRM\RestService\CRMEstadosNovedades01_RestService.vb" />
+    <Compile Include="CRM\RestService\CRMMediosComunicacionesNovedades01_RestService.vb" />
+    <Compile Include="CRM\RestService\CRMMetodosResolucionesNovedades01_RestService.vb" />
+    <Compile Include="CRM\RestService\CRMMotivosNovedades01_RestService.vb" />
+    <Compile Include="CRM\RestService\CRMNovedades01_RestService.vb" />
+    <Compile Include="CRM\RestService\CRMNovedadesSeguimiento01_RestService.vb" />
+    <Compile Include="CRM\RestService\CRMPrioridadesNovedades01_RestService.vb" />
+    <Compile Include="CRM\RestService\CRMTiposComentariosNovedades01_RestService.vb" />
+    <Compile Include="CRM\SolicitarSoporte.vb" />
+    <Compile Include="CRM\SubirScriptVersion.vb" />
+    <Compile Include="CRM\Versiones.vb" />
+    <Compile Include="CRM\CRMCategoriasNovedades.vb" />
+    <Compile Include="CRM\CRMClientesInterlocutores.vb" />
+    <Compile Include="CRM\CRMEstadosNovedades.vb" />
+    <Compile Include="CRM\CRMMediosComunicacionesNovedades.vb" />
+    <Compile Include="CRM\CRMMetodosResolucionesNovedades.vb" />
+    <Compile Include="CRM\CRMNovedades.vb" />
+    <Compile Include="CRM\CRMNovedadesSeguimiento.vb" />
+    <Compile Include="CRM\CRMNovedadesSeguimientoAdjuntos.vb" />
+    <Compile Include="CRM\CRMPrioridadesNovedades.vb" />
+    <Compile Include="CRM\CRMProspectosInterlocutores.vb" />
+    <Compile Include="CRM\CRMProveedoresInterlocutores.vb" />
+    <Compile Include="CRM\CRMTiposNovedades.vb" />
+    <Compile Include="CRM\CRMTiposNovedadesDinamicos.vb" />
+    <Compile Include="CRM\Aplicaciones.vb" />
+    <Compile Include="CRM\Proyectos.vb" />
+    <Compile Include="CRM\VersionesScripts.vb" />
+    <Compile Include="CtaCteClientes\CuentasCorrientesComisionesPremios.vb" />
+    <Compile Include="CtaCteProveedores\CuentasCorrientesProvTransferencias.vb" />
+    <Compile Include="Extensions\IReservaStockExtensions.vb" />
+    <Compile Include="Extensions\UnidadDeMedidaConversionExtensiones.vb" />
+    <Compile Include="Procesos\ImportarWebSiExport.vb" />
+    <Compile Include="Produccion\MRP\OrdenesProduccionMRPOperaciones01_TalleresExternos.vb" />
+    <Compile Include="CtaCteClientes\CuentasCorrientes04_EstadoSituacionCrediticia.vb" />
+    <Compile Include="Publicos12_Precios.vb" />
+    <Compile Include="PedidosProveedores\EstadosPedidosProveedoresRoles.vb" />
+    <Compile Include="PedidosProveedores\PedidosEstadosProveedores01_AdminV2.vb" />
+    <Compile Include="Pedidos\EstadosPedidosRoles.vb" />
+    <Compile Include="Produccion\MRP\MRPAQLA.vb" />
+    <Compile Include="Produccion\MRP\MRPAQLB.vb" />
+    <Compile Include="Produccion\MRP\MRPCentrosProductoresCategoriasEmpleados.vb" />
+    <Compile Include="Produccion\MRP\MRPConceptosNoProductivos.vb" />
+    <Compile Include="Produccion\MRP\NovedadesProduccionMRP.vb" />
+    <Compile Include="Produccion\MRP\NovedadesProduccionMRPProductos.vb" />
+    <Compile Include="Produccion\MRP\NovedadesProduccionMRPProductosLotes.vb" />
+    <Compile Include="Produccion\MRP\NovedadesProduccionMRPTiempos.vb" />
+    <Compile Include="Produccion\MRP\OrdenesProduccionMRP.vb" />
+    <Compile Include="Produccion\MRP\OrdenesProduccionMRPCategoriasEmpleados.vb" />
+    <Compile Include="Produccion\MRP\OrdenesProduccionMRPProductos.vb" />
+    <Compile Include="Produccion\MRP\OrdenesProduccionMRPOperaciones.vb" />
+    <Compile Include="Produccion\OrdenesProduccionEstados01_AdminV2.vb" />
+    <Compile Include="Produccion\ProduccionProductosCompLotes.vb" />
+    <Compile Include="Produccion\ProduccionProductosComponentesNrosSerie.vb" />
+    <Compile Include="Produccion\ProduccionProductosNrosSerie.vb" />
+    <Compile Include="Publicos13_Archivos.vb" />
+    <Compile Include="Seguridad\BuscadoresCampos.vb" />
+    <Compile Include="Seguridad\FuncionesVinculadas.vb" />
+    <Compile Include="ServiciosRest\Concesionarios\EventArgs\SincronizacionMoviErrorEventArgs.vb" />
+    <Compile Include="ServiciosRest\Concesionarios\EventArgs\SincronizacionMoviEstadoEventArgs.vb" />
+    <Compile Include="ServiciosRest\Concesionarios\EventArgs\SincronizacionMoviEventArgs.vb" />
+    <Compile Include="ServiciosRest\Concesionarios\EventArgs\SincronizacionMoviProcesoFinalizadoEventArgs.vb" />
+    <Compile Include="ServiciosRest\Concesionarios\SincronizacionMovil.vb" />
+    <Compile Include="ServiciosRest\CotizacionMonedas\CotizacionMonedasAFIPExportacion.vb" />
+    <Compile Include="PedidosProveedores\RequerimientosCompras.vb" />
+    <Compile Include="PedidosProveedores\RequerimientosComprasProductos.vb" />
+    <Compile Include="PedidosProveedores\RequerimientosComprasProductosAsignaciones.vb" />
+    <Compile Include="Produccion\MRP\MRPCentrosProductores.vb" />
+    <Compile Include="Produccion\MRP\MRPProcesosProductivos.vb" />
+    <Compile Include="Produccion\MRP\MRPProcesosProductivosCategoriasEmpleados.vb" />
+    <Compile Include="Produccion\MRP\MRPProcesosProductivosOperaciones.vb" />
+    <Compile Include="Produccion\MRP\MRPProcesosProductivosProductos.vb" />
+    <Compile Include="Produccion\MRP\MRPTareas.vb" />
+    <Compile Include="ServiciosRest\Gestion\SincronizarGestion.vb" />
+    <Compile Include="ServiciosRest\Gestion\SincronizarGestion01_UploadFile.vb" />
+    <Compile Include="ServiciosRest\Pedidos\SincronizacionTALKIU.vb" />
+    <Compile Include="SimovilOficina\VincularSimovilOficina.vb" />
+    <Compile Include="CtaCteClientes\CobranzasMovil\Cobranzas.vb" />
+    <Compile Include="CtaCteClientes\CobranzasMovil\MovilRutasClientes.vb" />
+    <Compile Include="CtaCteClientes\CobranzasMovil\MovilRutas.vb" />
+    <Compile Include="CtaCteClientes\CobranzasMovil\MovilRutasListasDePrecios.vb" />
+    <Compile Include="CtaCteClientes\CtaCteClienteRecibo.vb" />
+    <Compile Include="CtaCteClientes\CuentasCorrientes01.vb" />
+    <Compile Include="CtaCteClientes\CuentasCorrientes02_SiSeN.vb" />
+    <Compile Include="CtaCteClientes\CuentasCorrientes03_DebitosAutomaticos.vb" />
+    <Compile Include="CtaCteClientes\CuentasCorrientesAntiguedadesSaldosConfig.vb" />
+    <Compile Include="CtaCteClientes\CuentasCorrientesAntiguedadesSaldosRangos.vb" />
+    <Compile Include="CtaCteClientes\CuentasCorrientesPagos01.vb" />
+    <Compile Include="CtaCteClientes\CuentasCorrientesTransferencias.vb" />
+    <Compile Include="CtaCteProveedores\CalculosPagoProv.vb" />
+    <Compile Include="DashBoards\DashBoardsPaneles.vb" />
+    <Compile Include="DashBoards\DashBoardsRefresh.vb" />
+    <Compile Include="DashBoards\DashBoardTableros.vb" />
+    <Compile Include="DashBoards\DashBordsModelos.vb" />
+    <Compile Include="DashBoards\DashBordsTipos.vb" />
+    <Compile Include="Dominios\Cartas.vb" />
+    <Compile Include="Dominios\ClientesDeudas.vb" />
+    <Compile Include="Embarcaciones\Destinos.vb" />
+    <Compile Include="Embarcaciones\Embarcaciones.vb" />
+    <Compile Include="Embarcaciones\EmbarcacionesClientes.vb" />
+    <Compile Include="Embarcaciones\GruposCamas.vb" />
+    <Compile Include="Embarcaciones\Naves.vb" />
+    <Compile Include="Embarcaciones\Reservas.vb" />
+    <Compile Include="Extensions\AFIPFEExtensions.vb" />
+    <Compile Include="Extensions\ContabilidadAsientoExtensions.vb" />
+    <Compile Include="Extensions\IMovimientoConAtributosExtensions.vb" />
+    <Compile Include="Extensions\PaqueteFiscalExtensions.vb" />
+    <Compile Include="Extensions\TipoComprobanteExtensions.vb" />
+    <Compile Include="Extensions\VentaExtensions.vb" />
+    <Compile Include="Importaciones\ImportarPreciosExcel.vb" />
+    <Compile Include="Logistica\RegistracionPagosMedioPago.vb" />
+    <Compile Include="Pedidos\EstadosPedidosSucursales.vb" />
+    <Compile Include="Pedidos\Tiendas Web\PedidosProductosTiendasWeb.vb" />
+    <Compile Include="Pedidos\Tiendas Web\PedidosTiendasWeb.vb" />
+    <Compile Include="Procesos\Documentos.vb" />
+    <Compile Include="Procesos\FechasSincronizaciones.vb" />
+    <Compile Include="Produccion\EstadosOrdenesProduccionSucursales.vb" />
+    <Compile Include="Produccion\EstructuraProductos.vb" />
+    <Compile Include="Produccion\MRP\MRPCategoriasEmpleados.vb" />
+    <Compile Include="Produccion\MRP\MRPNormasFabricacion.vb" />
+    <Compile Include="Produccion\MRP\MRPSecciones.vb" />
+    <Compile Include="Produccion\OrdenesProduccionProductosFormulas.vb" />
+    <Compile Include="Produccion\ProduccionModelosFormas.vb" />
+    <Compile Include="Produccion\ProduccionModelosFormasVariables.vb" />
+    <Compile Include="Publicos00_Enum.vb" />
+    <Compile Include="Publicos06_Generales.vb" />
+    <Compile Include="Publicos07_CtaCteProv.vb" />
+    <Compile Include="Publicos08_FacturaElectronica.vb" />
+    <Compile Include="Publicos09_Produccion.vb" />
+    <Compile Include="Publicos10_Logistica.vb" />
+    <Compile Include="Publicos11_Modulos.vb" />
+    <Compile Include="Publicos12_Pedidos.vb" />
+    <Compile Include="Seguridad\TiposUsuarios.vb" />
+    <Compile Include="ServiciosRest\TiendasWeb\EventArgs\SincronizacionTiendaWebErrorEventArgs.vb" />
+    <Compile Include="ServiciosRest\TiendasWeb\EventArgs\SincronizacionTiendaWebEstadoEventArgs.vb" />
+    <Compile Include="ServiciosRest\TiendasWeb\EventArgs\SincronizacionTiendaWebEventArgs.vb" />
+    <Compile Include="ServiciosRest\TiendasWeb\EventArgs\SincronizacionTiendaWebProcesoFinalizadoEventArgs.vb" />
+    <Compile Include="ServiciosRest\TiendasWeb\ImportacionPedidosTiendasWeb.vb" />
+    <Compile Include="ServiciosRest\TiendasWeb\SincronizacionArborea.vb" />
+    <Compile Include="ServiciosRest\TiendasWeb\SincronizacionMercadoLibre.vb" />
+    <Compile Include="ServiciosRest\TiendasWeb\SincronizacionMercadoLibreToken.vb" />
+    <Compile Include="ServiciosRest\TiendasWeb\SincronizacionTiendaNube.vb" />
+    <Compile Include="SimovilOficina\AjustesStock.vb" />
+    <Compile Include="Sistema\AlertasSistema.vb" />
+    <Compile Include="Sistema\AlertasSistemaCondiciones.vb" />
+    <Compile Include="Sistema\AlertasSistemaPermisos.vb" />
+    <Compile Include="Sistema\AlertasSistemaRoles.vb" />
+    <Compile Include="Sistema\AlertasSistemaUsuarios.vb" />
+    <Compile Include="Sistema\ControlSistema.vb" />
+    <Compile Include="Sistema\MensajeMailAgenda.vb" />
+    <Compile Include="Stock\AtributosProductos.vb" />
+    <Compile Include="Stock\GruposTiposAtributosProductos.vb" />
+    <Compile Include="Stock\MovimientosStockProductosLotes.vb" />
+    <Compile Include="Stock\MovimientosStockProductosNrosSerie.vb" />
+    <Compile Include="Stock\MovimientosStockProductos.vb" />
+    <Compile Include="Stock\MovimientosStock.vb" />
+    <Compile Include="Stock\SucursalesDepositos.vb" />
+    <Compile Include="Stock\SucursalesUbicaciones.vb" />
+    <Compile Include="Stock\SucursalesUbicacionesEstados.vb" />
+    <Compile Include="Stock\TiposAtributosProductos.vb" />
+    <Compile Include="Stock\SucursalesDepositosUsuarios.vb" />
+    <Compile Include="TablerosDeComando\TableroDeComando.vb" />
+    <Compile Include="Extensions\CategoriaFiscalExtensions.vb" />
+    <Compile Include="Extensions\ClienteExtensions.vb" />
+    <Compile Include="Extensions\TurnoSinergiaDTOExtensions.vb" />
+    <Compile Include="Fichas\ImportarFichas.vb" />
+    <Compile Include="FilterManager\FuncionesFiltros.vb" />
+    <Compile Include="FilterManager\FuncionesFiltrosControles.vb" />
+    <Compile Include="FilterManager\FuncionesFiltrosSucursales.vb" />
+    <Compile Include="FilterManager\FuncionesFiltrosUsuarios.vb" />
+    <Compile Include="FTP\BytesUploadedEventArgs.vb" />
+    <Compile Include="FTP\FtpFactory.vb" />
+    <Compile Include="Logistica\GenerarArchivos.vb" />
+    <Compile Include="Logistica\Listado.vb" />
+    <Compile Include="Logistica\OrganizarEntregas.vb" />
+    <Compile Include="Logistica\RegistracionPagos.vb" />
+    <Compile Include="Logistica\RegistracionPagos01.vb" />
+    <Compile Include="Logistica\RepartosCobranzas.vb" />
+    <Compile Include="Logistica\RepartosCobranzasCheques.vb" />
+    <Compile Include="Logistica\RepartosCobranzasComprobantes.vb" />
+    <Compile Include="Logistica\RepartosCobranzasNCAplicadas.vb" />
+    <Compile Include="Logistica\RepartosCobranzasProductos.vb" />
+    <Compile Include="Pedidos\PedidosLive.vb" />
+    <Compile Include="Pedidos\PedidosProductosFormulas.vb" />
+    <Compile Include="Pedidos\PreVenta01.vb" />
+    <Compile Include="Precios\FormatosEtiquetas.vb" />
+    <Compile Include="Precios\ProductosSucursalesPrecios01_RestService.vb" />
+    <Compile Include="Precios\ProveedoresComparar.vb" />
+    <Compile Include="Precios\ProveedoresProductosComparar.vb" />
+    <Compile Include="Produccion\OrdenesProduccionObservaciones.vb" />
+    <Compile Include="Publicos01_Facturacion.vb" />
+    <Compile Include="Publicos02_CtaCte.vb" />
+    <Compile Include="Publicos03_Compras.vb" />
+    <Compile Include="Publicos04_Sync.vb" />
+    <Compile Include="Publicos05_SiSeN.vb" />
+    <Compile Include="RepartosProductosSinDescargar.vb" />
+    <Compile Include="Seguridad\AplicacionesFunciones.vb" />
+    <Compile Include="Seguridad\Dispositivos.vb" />
+    <Compile Include="Seguridad\FuncionesDocumentos.vb" />
+    <Compile Include="Seguridad\TiposDocumentosFunciones.vb" />
+    <Compile Include="ServiciosRest\BaseRest.vb" />
+    <Compile Include="ServiciosRest\CobranzasMovil\Calendarios.vb" />
+    <Compile Include="ServiciosRest\CobranzasMovil\Clientes.vb" />
+    <Compile Include="ServiciosRest\CobranzasMovil\CuentasCorrientes.vb" />
+    <Compile Include="ServiciosRest\CobranzasMovil\Destinos.vb" />
+    <Compile Include="ServiciosRest\CobranzasMovil\Embarcaciones.vb" />
+    <Compile Include="ServiciosRest\CobranzasMovil\EmpresasConfiguraciones.vb" />
+    <Compile Include="ServiciosRest\CobranzasMovil\ProductosClientes.vb" />
+    <Compile Include="ServiciosRest\CobranzasMovil\Usuarios.vb" />
+    <Compile Include="ServiciosRest\HeadersDictionary.vb" />
+    <Compile Include="ServiciosRest\CobranzasMovil\Productos.vb" />
+    <Compile Include="ServiciosRest\CobranzasMovil\ProductosPrecios.vb" />
+    <Compile Include="ServiciosRest\CobranzasMovil\Rubros.vb" />
+    <Compile Include="ServiciosRest\CobranzasMovil\Rutas.vb" />
+    <Compile Include="ServiciosRest\CobranzasMovil\RutasClientes.vb" />
+    <Compile Include="ServiciosRest\CobranzasMovil\RutasListasDePrecios.vb" />
+    <Compile Include="ServiciosRest\CobranzasMovil\SincronizacionSubidaMovil.vb" />
+    <Compile Include="CtaCteClientes\CuentasCorrientesTarjetas.vb" />
+    <Compile Include="CtaCteProveedores\CuentasCorrientesProvRetenciones.vb" />
+    <Compile Include="Fichas\Comprobantes.vb" />
+    <Compile Include="Fichas\Fichas.vb" />
+    <Compile Include="Fichas\FichasFormasPago.vb" />
+    <Compile Include="Fichas\FichasPagos.vb" />
+    <Compile Include="Fichas\FichasPagosAjustes.vb" />
+    <Compile Include="Fichas\FichasPagosDetalle.vb" />
+    <Compile Include="Fichas\FichasProductos.vb" />
+    <Compile Include="Impuestos\CalculosImpositivos.vb" />
+    <Compile Include="Impuestos\IPercepcionIIBB.vb" />
+    <Compile Include="Impuestos\PercepcionesFabrica.vb" />
+    <Compile Include="Impuestos\PercepcionIIBBBuenosAires.vb" />
+    <Compile Include="Impuestos\PercepcionIIBBCaba.vb" />
+    <Compile Include="Impuestos\PercepcionIIBBEntreRios.vb" />
+    <Compile Include="Impuestos\PercepcionIIBBSantaFe.vb" />
+    <Compile Include="IReglaAdjuntos.vb" />
+    <Compile Include="PedidosProveedores\PedidosEstadosProveedores.vb" />
+    <Compile Include="PedidosProveedores\PedidosObservacionesProveedores.vb" />
+    <Compile Include="PedidosProveedores\PedidosProductosProveedores.vb" />
+    <Compile Include="PedidosProveedores\PedidosProveedores.vb" />
+    <Compile Include="Pedidos\PedidosClientesContactos.vb" />
+    <Compile Include="Precios\ProductosSucursalesPrecios.vb" />
+    <Compile Include="Procesos\Desatendidos.vb" />
+    <Compile Include="Produccion\ProduccionFormas.vb" />
+    <Compile Include="Produccion\ProduccionProcesos.vb" />
+    <Compile Include="Pedidos\PedidosObservaciones.vb" />
+    <Compile Include="Pedidos\PreVenta.vb" />
+    <Compile Include="Precios\PreciosCalculos.vb" />
+    <Compile Include="ServiciosRest\Archivos\BaseArchivosWeb.vb" />
+    <Compile Include="ServiciosRest\Archivos\ClientesWebSiga.vb" />
+    <Compile Include="ServiciosRest\ConsultaDolar.vb" />
+    <Compile Include="ntpHelper.vb" />
+    <Compile Include="PedidosProveedores\EstadosPedidosProveedores.vb" />
+    <Compile Include="Pedidos\CriticidadPedidos.vb" />
+    <Compile Include="Pedidos\OrdenesCompraPedidos.vb" />
+    <Compile Include="Pedidos\OrdenesCompra.vb" />
+    <Compile Include="Pedidos\EstadosPedidos.vb" />
+    <Compile Include="Pedidos\Pedidos1.vb" />
+    <Compile Include="Pedidos\PedidosEstados.vb" />
+    <Compile Include="Pedidos\PedidosProductos.vb" />
+    <Compile Include="Precios\ClientesDescuentosRubros.vb" />
+    <Compile Include="Precios\ClientesDescuentosSubRubros.vb" />
+    <Compile Include="Compras\ComprasNumeros.vb" />
+    <Compile Include="Precios\ClientesMarcasListasDePrecios.vb" />
+    <Compile Include="AFIP\AFIPFE.vb" />
+    <Compile Include="Archivos\CategoriasProveedores.vb" />
+    <Compile Include="Precios\ClientesDescuentosMarcas.vb" />
+    <Compile Include="Contabilidad\ContabilidadAsientos.vb" />
+    <Compile Include="Contabilidad\ContabilidadAsientosModelos.vb" />
+    <Compile Include="Contabilidad\ContabilidadCentrosCostos.vb" />
+    <Compile Include="Contabilidad\ContabilidadCuentas.vb" />
+    <Compile Include="Contabilidad\ContabilidadCuentasRubros.vb" />
+    <Compile Include="Contabilidad\ContabilidadEjercicios.vb" />
+    <Compile Include="Contabilidad\ContabilidadPlanes.vb" />
+    <Compile Include="Contabilidad\ContabilidadPlanesCuentas.vb" />
+    <Compile Include="Contabilidad\ContabilidadProcesos.vb" />
+    <Compile Include="Contabilidad\ContabilidadReportes.vb" />
+    <Compile Include="Caja\CajasNombres.vb" />
+    <Compile Include="Caja\CajasUsuarios.vb" />
+    <Compile Include="Archivos\Actividades.vb" />
+    <Compile Include="Archivos\ClientesActividades.vb" />
+    <Compile Include="EmpresaActividades.vb" />
+    <Compile Include="Precios\ClientesDescuentosProductos.vb" />
+    <Compile Include="Precios\HistorialConsultaProductos.vb" />
+    <Compile Include="Pedidos\Pedidos.vb" />
+    <Compile Include="AFIP\RetencionesCompras.vb" />
+    <Compile Include="Procesos\Plantillas.vb" />
+    <Compile Include="Produccion\CriticidadOrdenesProduccion.vb" />
+    <Compile Include="Produccion\EstadosOrdenesProduccion.vb" />
+    <Compile Include="Produccion\OrdenesProduccion.vb" />
+    <Compile Include="Produccion\OrdenesProduccionEstados.vb" />
+    <Compile Include="Produccion\OrdenesProduccionProductos.vb" />
+    <Compile Include="Produccion\ProductosFormulas.vb" />
+    <Compile Include="Seguridad\Buscadores.vb" />
+    <Compile Include="Seguridad\Bitacora.vb" />
+    <Compile Include="Seguridad\UsuariosClaves.vb" />
+    <Compile Include="Service\ProductosRecepcion.vb" />
+    <Compile Include="Service\ProductosRecepcionF.vb" />
+    <Compile Include="Service\RecepcionEstados.vb" />
+    <Compile Include="Service\RecepcionEstadosF.vb" />
+    <Compile Include="Service\RecepcionNotas.vb" />
+    <Compile Include="Service\RecepcionNotasEstados.vb" />
+    <Compile Include="Service\RecepcionNotasEstadosF.vb" />
+    <Compile Include="Service\RecepcionNotasF.vb" />
+    <Compile Include="Service\RecepcionNotasProveedores.vb" />
+    <Compile Include="Service\RecepcionNotasProveedoresF.vb" />
+    <Compile Include="ServiciosRest\CotizacionMonedas\CotizacionMonedas.vb" />
+    <Compile Include="ServiciosRest\CotizacionMonedas\CotizacionMonedasBancoNacion.vb" />
+    <Compile Include="ServiciosRest\CotizacionMonedas\CotizacionMonedasFactory.vb" />
+    <Compile Include="ServiciosRest\CotizacionMonedas\CotizacionMonedasGeekLab.vb" />
+    <Compile Include="ServiciosRest\CotizacionMonedas\CotizacionMonedaDesactivado.vb" />
+    <Compile Include="ServiciosRest\CotizacionMonedas\ICotizacionMonedas.vb" />
+    <Compile Include="ServiciosRest\ErrorResponse.vb" />
+    <Compile Include="ServiciosRest\Pedidos\BasePedidosWeb.vb" />
+    <Compile Include="ServiciosRest\Pedidos\PedidosSiGA.vb" />
+    <Compile Include="ServiciosRest\Pedidos\PedidosSiMovilPedidos.vb" />
+    <Compile Include="ServiciosRest\Pedidos\PedidosSiWeb.vb" />
+    <Compile Include="ServiciosRest\SincronizacionBase.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\Base\FullSync.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\CRM\SyncCRMCategoriasNovedades.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\CRM\SyncCRMEstadosNovedades.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\CRM\SyncCRMMediosComunicacionesNovedades.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\CRM\SyncCRMMetodosResolucionesNovedades.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\CRM\SyncCRMNovedades.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\CRM\SyncCRMNovedadesSeguimiento.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\CRM\SyncCRMPrioridadesNovedades.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\CRM\SyncCRMTiposComentariosNovedades.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\Exceptions\EnviarDatosException.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\Exceptions\RecibirDatosIncompletaException.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\Interfaces\ISyncBase.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\Interfaces\ISyncRegla.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\Base\SyncBase001.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\Base\SyncBaseCollection.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\Base\SyncBase.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\SyncClientes.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\SyncLocalidades.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\SyncMarcas.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\SyncProductos.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\SyncProductosSucursales.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\SyncProductosSucursalesPrecios.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\SyncProveedores.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\SyncRubros.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\SyncRubrosCompras.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\SyncSubRubros.vb" />
+    <Compile Include="ServiciosRest\Sincronizacion\SyncSubSubRubros.vb" />
+    <Compile Include="ServiciosRest\SSSServicioWeb\EjecucionActualizador.vb" />
+    <Compile Include="ServiciosRest\SSSServicioWeb\EjecucionBackup.vb" />
+    <Compile Include="ServiciosRest\Soporte\SincronizarTickets.vb" />
+    <Compile Include="ServiciosRest\NetExceptionHelper.vb" />
+    <Compile Include="ServiciosRest\SSSServicioWeb\EjecucionBase.vb" />
+    <Compile Include="ServiciosRest\Turismo\Cursos.vb" />
+    <Compile Include="ServiciosRest\Turismo\Establecimientos.vb" />
+    <Compile Include="ServiciosRest\Turismo\FormasPago.vb" />
+    <Compile Include="ServiciosRest\Turismo\Programas.vb" />
+    <Compile Include="ServiciosRest\Turismo\SincronizacionSubidaMovilTurismo.vb" />
+    <Compile Include="ServiciosRest\Turismo\SolicitudesReserva.vb" />
+    <Compile Include="ServiciosRest\Turismo\TiposVehiculos.vb" />
+    <Compile Include="ServiciosRest\Turismo\Turnos.vb" />
+    <Compile Include="ServiciosRest\Turismo\Usuarios.vb" />
+    <Compile Include="ServiciosRest\Turnos\SincronizarTurnos.vb" />
+    <Compile Include="ServiciosRest\Turnos\TurnoConverter.vb" />
+    <Compile Include="ServiciosRest\VersionesServiciosRest.vb" />
+    <Compile Include="Stock\MovimientosComprasProductosArchivo.vb" />
+    <Compile Include="Sueldos\SueldosCategorias.vb" />
+    <Compile Include="Sueldos\SueldosConceptos.vb" />
+    <Compile Include="Sueldos\SueldosEstadoCivil.vb" />
+    <Compile Include="Sueldos\SueldosLiquidacion.vb" />
+    <Compile Include="Sueldos\SueldosLugaresActividad.vb" />
+    <Compile Include="Sueldos\SueldosMotivosBaja.vb" />
+    <Compile Include="Sueldos\SueldosObraSocial.vb" />
+    <Compile Include="Sueldos\SueldosPersonal.vb" />
+    <Compile Include="Sueldos\SueldosPersonalCodigos.vb" />
+    <Compile Include="Sueldos\SueldosPersonalFamiliares.vb" />
+    <Compile Include="Sueldos\SueldosPersonalHijos.vb" />
+    <Compile Include="Sueldos\SueldosQuePideConcepto.vb" />
+    <Compile Include="Sueldos\SueldosTiposConceptos.vb" />
+    <Compile Include="Sueldos\SueldosTiposRecibos.vb" />
+    <Compile Include="Sueldos\SueldosTiposVinculoFamiliar.vb" />
+    <Compile Include="TablerosDeComando\TablerosControl.vb" />
+    <Compile Include="TablerosDeComando\TablerosControlPaneles.vb" />
+    <Compile Include="Turismo\CursosTurismo.vb" />
+    <Compile Include="Turismo\ReservasTurismoPasajeros.vb" />
+    <Compile Include="Turismo\ReservasTurismoProductos.vb" />
+    <Compile Include="Turismo\ReservasTurismoProductosFacturacion.vb" />
+    <Compile Include="Turismo\TurismoTiposViajes.vb" />
+    <Compile Include="Turismo\TurnosTurismo.vb" />
+    <Compile Include="Turismo\EstadosTurismo.vb" />
+    <Compile Include="Turismo\ReservasTurismo.vb" />
+    <Compile Include="Turnos\Antecedentes.vb" />
+    <Compile Include="Turnos\Calendarios.vb" />
+    <Compile Include="Turnos\CalendariosExcepciones.vb" />
+    <Compile Include="Turnos\CalendariosHorarios.vb" />
+    <Compile Include="Turnos\ClientesAntecedentes.vb" />
+    <Compile Include="Turnos\ClientesHistorias.vb" />
+    <Compile Include="Turnos\Handlers\ITurnosCalendariosHandler.vb" />
+    <Compile Include="Turnos\Handlers\TurnosCalendariosHandlerLocal.vb" />
+    <Compile Include="Turnos\Handlers\TurnosCalendariosHandlerRemoto.vb" />
+    <Compile Include="Turnos\TiposAntecedentes.vb" />
+    <Compile Include="Turnos\TiposCalendarios.vb" />
+    <Compile Include="Turnos\TiposTurnos.vb" />
+    <Compile Include="Turnos\TurnosCalendarios.vb" />
+    <Compile Include="Turnos\TurnosCalendariosProductos.vb" />
+    <Compile Include="Validaciones\Impositivo\IValidarDigitoVerificador.vb" />
+    <Compile Include="Validaciones\Impositivo\ValidarDigitoVerificador.vb" />
+    <Compile Include="Validaciones\Impositivo\ValidarDigitoVerificadorEsAR.vb" />
+    <Compile Include="Validaciones\Impositivo\IValidarIdFiscal.vb" />
+    <Compile Include="Validaciones\Impositivo\ValidarDigitoVerificadorEsPY.vb" />
+    <Compile Include="Validaciones\Impositivo\ValidarIdFiscal.vb" />
+    <Compile Include="Validaciones\Impositivo\ValidarIdFiscalEsAR.vb" />
+    <Compile Include="Validaciones\Impositivo\ValidarIdFiscalEsPY.vb" />
+    <Compile Include="Validaciones\IValidacion.vb" />
+    <Compile Include="Ventas\CalculosComisiones.vb" />
+    <Compile Include="Ventas\CalculosDescuentosRecargos.vb" />
+    <Compile Include="Ventas\EstadosVenta.vb" />
+    <Compile Include="Ventas\FacturacionComunes.vb" />
+    <Compile Include="Ventas\ImpresionFiscalV2\ImpresionFiscalV2Comunes.vb" />
+    <Compile Include="Ventas\ImpresionFiscalV2\ImpresionFiscalV2Factory.vb" />
+    <Compile Include="Ventas\ImpresionFiscalV2\InformeAFIPEpson.vb" />
+    <Compile Include="Ventas\ImpresionFiscalV2\InformeAFIPHasar.vb" />
+    <Compile Include="Ventas\ImpresionFiscalV2\Interfaces\IInformeAFIP.vb" />
+    <Compile Include="Ventas\ImpresionFiscalV2\Interfaces\IObtenerAuditoriaPorFecha.vb" />
+    <Compile Include="Ventas\ImpresionFiscalV2\Interfaces\IObtenerAuditoriaPorZeta.vb" />
+    <Compile Include="Ventas\ImpresionFiscalV2\ObtenerAuditoriaPorFechaEpson.vb" />
+    <Compile Include="Ventas\ImpresionFiscalV2\ObtenerAuditoriaPorFechaHasar.vb" />
+    <Compile Include="Ventas\ImpresionFiscalV2\ObtenerAuditoriaPorZetaEpson.vb" />
+    <Compile Include="Ventas\ImpresionFiscalV2\ObtenerAuditoriaPorZetaHasar.vb" />
+    <Compile Include="Ventas\Repartos.vb" />
+    <Compile Include="Ventas\RepartosComprobantes.vb" />
+    <Compile Include="Ventas\RepartosComprobantesProductos.vb" />
+    <Compile Include="Ventas\RepartosGastos.vb" />
+    <Compile Include="Ventas\Ventas01.vb" />
+    <Compile Include="Ventas\Ventas02.vb" />
+    <Compile Include="Ventas\Ventas03.vb" />
+    <Compile Include="Ventas\Ventas04.vb" />
+    <Compile Include="Ventas\Ventas05.vb" />
+    <Compile Include="Ventas\Ventas06.vb" />
+    <Compile Include="Ventas\Ventas07.vb" />
+    <Compile Include="Ventas\Ventas08.vb" />
+    <Compile Include="Ventas\Ventas09.vb" />
+    <Compile Include="Ventas\Ventas10.vb" />
+    <Compile Include="Ventas\Ventas11.vb" />
+    <Compile Include="Ventas\Ventas12.vb" />
+    <Compile Include="Ventas\Ventas13.vb" />
+    <Compile Include="Ventas\Ventas14.vb" />
+    <Compile Include="Ventas\VentasAdjuntos.vb" />
+    <Compile Include="Ventas\VentasCajeros.vb" />
+    <Compile Include="Ventas\VentasClientesContactos.vb" />
+    <Compile Include="Ventas\VentasColasImpresion.vb" />
+    <Compile Include="Ventas\VentasColasImpresionComprobantes.vb" />
+    <Compile Include="Ventas\VentasEnvioMasivoMails.vb" />
+    <Compile Include="Ventas\VentasExportacionEmbarques.vb" />
+    <Compile Include="Ventas\VentasExportarSellOut.vb" />
+    <Compile Include="Ventas\VentasExportarDatos.vb" />
+    <Compile Include="Ventas\VentasFormasPagoSucursales.vb" />
+    <Compile Include="Ventas\VentasInvocados.vb" />
+    <Compile Include="Ventas\VentasLive.vb" />
+    <Compile Include="Ventas\VentasPercepciones.vb" />
+    <Compile Include="Ventas\VentasPeriodos.vb" />
+    <Compile Include="Seguridad\UsuariosAccesos.vb" />
+    <Compile Include="FiltrosValores.vb" />
+    <Compile Include="Compras\ProductosProveedores.vb" />
+    <Compile Include="Configuraciones\ParametrosImagenes.vb" />
+    <Compile Include="AFIP\Regimenes.vb" />
+    <Compile Include="AFIP\Retenciones.vb" />
+    <Compile Include="CtaCteClientes\CuentasCorrientesRetenciones.vb" />
+    <Compile Include="Produccion\ProduccionProductosComp.vb" />
+    <Compile Include="Produccion\ProduccionProductos.vb" />
+    <Compile Include="Archivos\Observaciones.vb" />
+    <Compile Include="Produccion\Produccion.vb" />
+    <Compile Include="AFIP\PeriodosFiscales.vb" />
+    <Compile Include="Produccion\ProductosComponentes.vb" />
+    <Compile Include="Configuraciones\SemaforoVentasUtilidades.vb" />
+    <Compile Include="Archivos\Tarjetas.vb" />
+    <Compile Include="Ventas\VentasPirelli.vb" />
+    <Compile Include="Ventas\VentasProductosFormulasLotes.vb" />
+    <Compile Include="Ventas\VentasProductosFormulasNrosSerie.vb" />
+    <Compile Include="Ventas\VentasProductosNrosSerie.vb" />
+    <Compile Include="Ventas\VentasProductosFormulas.vb" />
+    <Compile Include="Ventas\VentasProductosLotes.vb" />
+    <Compile Include="AFIP\Impuestos.vb" />
+    <Compile Include="Archivos\ProductosNrosSerie.vb" />
+    <Compile Include="Archivos\ProductosLotes.vb" />
+    <Compile Include="Configuraciones\PCs.vb" />
+    <Compile Include="AFIP\TiposImpuestos.vb" />
+    <Compile Include="Ventas\VentasCheques.vb" />
+    <Compile Include="Caja\EstadosCheques.vb" />
+    <Compile Include="Ventas\VentasImpuestos.vb" />
+    <Compile Include="Ventas\VentasObservaciones.vb" />
+    <Compile Include="Archivos\Modelos.vb" />
+    <Compile Include="Archivos\SubRubros.vb" />
+    <Compile Include="Archivos\Transportistas.vb" />
+    <Compile Include="Archivos\UnidadesDeMedidas.vb" />
+    <Compile Include="Banco\DepositosCheques.vb" />
+    <Compile Include="Banco\Depositos.vb" />
+    <Compile Include="CtaCteProveedores\CuentasCorrientesProvCheques.vb" />
+    <Compile Include="CtaCteProveedores\CuentasCorrientesProvPagos.vb" />
+    <Compile Include="Banco\CuentasBancariasClase.vb" />
+    <Compile Include="Archivos\Clientes.vb" />
+    <Compile Include="Compras\Compras.vb" />
+    <Compile Include="Compras\ComprasProductos.vb" />
+    <Compile Include="Banco\CuentasBancarias.vb" />
+    <Compile Include="Banco\CuentasBancos.vb" />
+    <Compile Include="CtaCteClientes\CuentasCorrientes.vb" />
+    <Compile Include="CtaCteClientes\CuentasCorrientesCheques.vb" />
+    <Compile Include="CtaCteClientes\CuentasCorrientesPagos.vb" />
+    <Compile Include="CtaCteProveedores\CuentasCorrientesProv.vb" />
+    <Compile Include="Caja\CuentasDeCajas.vb" />
+    <Compile Include="Archivos\Empleados.vb" />
+    <Compile Include="Precios\HistorialPrecios.vb" />
+    <Compile Include="Configuraciones\Impresoras.vb" />
+    <Compile Include="Banco\LibroBancos.vb" />
+    <Compile Include="Precios\ListasDePrecios.vb" />
+    <Compile Include="Archivos\Localidades.vb" />
+    <Compile Include="Archivos\Marcas.vb" />
+    <Compile Include="Archivos\Monedas.vb" />
+    <Compile Include="Stock\MovimientosNumeros.vb" />
+    <Compile Include="Configuraciones\Parametros.vb" />
+    <Compile Include="Precios\PreciosCostoVenta.vb" />
+    <Compile Include="Archivos\Productos.vb" />
+    <Compile Include="Archivos\ProductosSucursales.vb" />
+    <Compile Include="Archivos\Proveedores.vb" />
+    <Compile Include="Archivos\Provincias.vb" />
+    <Compile Include="Publicos.vb" />
+    <Compile Include="Archivos\Rubros.vb" />
+    <Compile Include="Compras\RubrosCompras.vb" />
+    <Compile Include="Sincronizaciones.vb" />
+    <Compile Include="Stock\Stock.vb" />
+    <Compile Include="Archivos\Sucursales.vb" />
+    <Compile Include="Seguridad\Funciones.vb" />
+    <Compile Include="Generales.vb" />
+    <Compile Include="IEntidad.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Seguridad\Roles.vb" />
+    <Compile Include="Seguridad\RolesFunciones.vb" />
+    <Compile Include="Procesos\Tareas.vb" />
+    <Compile Include="Archivos\TiposComprobantes.vb" />
+    <Compile Include="Configuraciones\TiposComprobantesLetras.vb" />
+    <Compile Include="Archivos\TiposDocumento.vb" />
+    <Compile Include="Stock\TiposMovimientos.vb" />
+    <Compile Include="Seguridad\Usuarios.vb" />
+    <Compile Include="Seguridad\UsuariosRoles.vb" />
+    <Compile Include="Ventas\Ventas.vb" />
+    <Compile Include="Ventas\VentasFormasPago.vb" />
+    <Compile Include="Ventas\VentasNumeros.vb" />
+    <Compile Include="Ventas\VentasProductos.vb" />
+    <Compile Include="Ventas\VentasTransferencias.vb" />
+    <Compile Include="Web References\WSAA\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSActualiza\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSBFE\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSFEv1\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSFEXv1\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSFE\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\ZonaGeografica.vb" />
+    <Compile Include="Web References\WSPN4\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSPN3\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Web References\WSActualiza\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\WSActualiza\Version1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSActualiza\VersionCliente.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSActualiza\Versiones.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSActualiza\WSActualizador.wsdl" />
+    <None Include="Web References\WSActualiza\WSActualizador.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WSActualiza\WSActualizador0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WSActualiza\WSActualizador1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WSActualiza\WSActualizador2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WSActualiza\WSActualizador3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WSFEv1\FEPaisResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEXv1\DummyResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEXv1\FEXGetCMPResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEXv1\FEXResponseAuthorize.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEXv1\FEXResponseLast_CMP.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEXv1\FEXResponse_Cbte_Tipo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEXv1\FEXResponse_CheckPermiso.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEXv1\FEXResponse_Ctz.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEXv1\FEXResponse_DST_cuit.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEXv1\FEXResponse_DST_pais.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEXv1\FEXResponse_Idi.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEXv1\FEXResponse_Inc.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEXv1\FEXResponse_LastID.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEXv1\FEXResponse_Mon.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEXv1\FEXResponse_Mon_CON_COTIZACION.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEXv1\FEXResponse_Opc.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEXv1\FEXResponse_PtoVenta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEXv1\FEXResponse_Tex.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEXv1\FEXResponse_Umed.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEXv1\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\WSFEXv1\service.wsdl" />
+    <None Include="Web References\WSPN4\dummyReturn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSPN4\personaListReturn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSPN4\personaReturn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSPN4\PersonaServiceA5.wsdl" />
+    <None Include="Web References\WSPN4\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\WSPN3\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\WSPN3\select.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\WSAA\LoginCms.wsdl" />
+    <None Include="Web References\WSAA\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://awshomo.afip.gov.ar/padron-puc-ws/services/select.ContribuyenteNivel3SelectServiceImpl%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSPN3\</RelPath>
+      <UpdateFromURL>http://awshomo.afip.gov.ar/padron-puc-ws/services/select.ContribuyenteNivel3SelectServiceImpl%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Eniac_Reglas_WSPN3_ContribuyenteNivel3SelectServiceImplService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://wi531792.ferozo.com/actualizador/WSActualizador.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSActualiza\</RelPath>
+      <UpdateFromURL>http://wi531792.ferozo.com/actualizador/WSActualizador.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Eniac_Reglas_WSActualiza_WSActualizador</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://awshomo.afip.gov.ar/sr-padron/webservices/personaServiceA5%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSPN4\</RelPath>
+      <UpdateFromURL>https://awshomo.afip.gov.ar/sr-padron/webservices/personaServiceA5%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Eniac_Reglas_WSPN04_PersonaServiceA4</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://wsaahomo.afip.gov.ar/ws/services/LoginCms%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSAA\</RelPath>
+      <UpdateFromURL>https://wsaahomo.afip.gov.ar/ws/services/LoginCms%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Eniac_Reglas_WSSA1_LoginCMSService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://wswhomo.afip.gov.ar/wsbfe/service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSBFE\</RelPath>
+      <UpdateFromURL>https://wswhomo.afip.gov.ar/wsbfe/service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Eniac_Reglas_WSBFE_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://wswhomo.afip.gov.ar/wsfe/service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSFE\</RelPath>
+      <UpdateFromURL>https://wswhomo.afip.gov.ar/wsfe/service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Eniac_Reglas_WSFE_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://wswhomo.afip.gov.ar/wsfev1/service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSFEv1\</RelPath>
+      <UpdateFromURL>https://wswhomo.afip.gov.ar/wsfev1/service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Eniac_Reglas_WSFEv2_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://wswhomo.afip.gov.ar/wsfexv1/service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSFEXv1\</RelPath>
+      <UpdateFromURL>https://wswhomo.afip.gov.ar/wsfexv1/service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Eniac_Reglas_WSFEXv1_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\WSBFE\BFEGetCMPResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSBFE\BFEResponseAuthorize.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSBFE\BFEResponseLast_CMP.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSBFE\BFEResponse_LastID.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSBFE\BFEResponse_Mon.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSBFE\BFEResponse_NCM.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSBFE\BFEResponse_Tipo_Cbte.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSBFE\BFEResponse_Tipo_doc.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSBFE\BFEResponse_Tipo_IVA.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSBFE\BFEResponse_Umed.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSBFE\BFEResponse_Zon.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSBFE\DummyResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSBFE\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\WSBFE\service.wsdl" />
+    <None Include="Web References\WSFEv1\CbteTipoResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEv1\ConceptoTipoResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEv1\DocTipoResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEv1\DummyResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEv1\FECAEAGetResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEv1\FECAEAResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEv1\FECAEASinMovConsResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEv1\FECAEASinMovResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEv1\FECAEResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEv1\FECompConsultaResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEv1\FECotizacionResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEv1\FEPtoVentaResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEv1\FERecuperaLastCbteResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEv1\FERegXReqResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEv1\FETributoResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEv1\IvaTipoResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEv1\MonedaResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEv1\OpcionalTipoResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFEv1\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\WSFEv1\service.disco" />
+    <None Include="Web References\WSFEv1\service.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\WSFE\DummyResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFE\FEConsultaCAEResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFE\FERecuperaLastCMPResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFE\FERecuperaQTYResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFE\FEResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFE\FEUltNroResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSFE\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\WSFE\service.disco" />
+    <None Include="Web References\WSFE\service.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\WSBFE\service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Eniac.Entidades\3.Eniac.Entidades.vbproj">
+      <Project>{4421dc4f-ba75-475e-ae8c-77a60697fd67}</Project>
+      <Name>3.Eniac.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Eniac.SqlServer\000.Eniac.SqlServer.vbproj">
+      <Project>{8322a603-56ad-42dc-8ac3-a2b2ef8f483b}</Project>
+      <Name>000.Eniac.SqlServer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FTP\IFtp.vb" />
+    <Compile Include="FTP\SimpleFtp.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paper_clip_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\WSActualiza\WSActualizador.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Estadisticas\" />
+    <Folder Include="PedidosProveedores\InformesBejerman\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\WSFEXv1\service.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

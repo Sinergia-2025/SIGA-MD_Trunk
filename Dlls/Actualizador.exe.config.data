@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="My.MySettings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false"/>
+    </sectionGroup>
+  </configSections>
+  <connectionStrings>
+    <!--SiGA-->
+    <add name="CadenaConexion" connectionString="w3sFdDiSBkEZuYMA759UkJNiaXhpRECjXIqZ6BtengJ1FIGGMfaOfeM6ut3wpe0eeLruDUqpkWVrAoRGphiXtSBbYyK86RJKmDR3cgRfZ3qV9u8Sb1dyTZeJ/SwWml9Q6ybt0PxntbkH/SDXLU+zSbrmWucfHt0cbRxXOQ7hQDA=" providerName="System.Data.SqlClient"/>
+    <add name="CadenaSegura" connectionString="w3sFdDiSBkEZuYMA759UkJNiaXhpRECjXIqZ6BtengJ1FIGGMfaOfeM6ut3wpe0eeLruDUqpkWVrAoRGphiXtSBbYyK86RJKmDR3cgRfZ3qV9u8Sb1dyTZeJ/SwWml9Q6ybt0PxntbkH/SDXLU+zSbrmWucfHt0cbRxXOQ7hQDA=" providerName="System.Data.SqlClient"/>
+    <add name="CadenaMaster" connectionString="w3sFdDiSBkEZuYMA759UkJNiaXhpRECjXIqZ6BtengLGurRPl6/ubkWSolcANAAHXUm/gqDO656iPQC58nBZzShSlShoUIQ0kgVvo872NISdv5D76HcojbPh5OTSu8rXis8sZV1optgtIJwhcP+dTGg82/f/wRFeabuTvEyWhx8=" providerName="System.Data.SqlClient"/>
+  </connectionStrings>
+  <appSettings>
+    <!--Servidor de actualizaciones-->
+    <add key="Server" value="SINERGIA"/>
+    <!--URL donde residen los archivos MSI-->
+    <add key="AppToRun" value="Sinergia.exe"/>
+    <add key="AppParam" value=""/>
+    <!--Nombre aplicación-->
+    <add key="appName" value="SINERGIA"/>
+    <add key="ClientSettingsProvider.ServiceUri" value=""/>
+  </appSettings>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/>
+  </startup>
+  <applicationSettings>
+    <My.MySettings>
+      <setting name="Actualizador_WSActualiza_WSActualizador" serializeAs="String">
+        <value>http://sinergiamovil.com.ar/actualizador/WSActualizador.svc</value>
+      </setting>
+    </My.MySettings>
+  </applicationSettings>
+  <system.web>
+    <membership defaultProvider="ClientAuthenticationMembershipProvider">
+      <providers>
+        <add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri=""/>
+      </providers>
+    </membership>
+    <roleManager defaultProvider="ClientRoleProvider" enabled="true">
+      <providers>
+        <add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400"/>
+      </providers>
+    </roleManager>
+  </system.web>
+</configuration>

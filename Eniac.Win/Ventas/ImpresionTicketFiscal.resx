@@ -1,0 +1,1734 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cmbCajas.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="lblCaja.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblCaja.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCaja.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblCaja.Location" type="System.Drawing.Point, System.Drawing">
+    <value>813, 180</value>
+  </data>
+  <data name="lblCaja.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 13</value>
+  </data>
+  <data name="lblCaja.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lblCaja.Text" xml:space="preserve">
+    <value>Caja</value>
+  </data>
+  <data name="&gt;&gt;lblCaja.Name" xml:space="preserve">
+    <value>lblCaja</value>
+  </data>
+  <data name="&gt;&gt;lblCaja.Type" xml:space="preserve">
+    <value>Eniac.Controles.Label, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblCaja.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblCaja.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cmbCajas.Location" type="System.Drawing.Point, System.Drawing">
+    <value>847, 176</value>
+  </data>
+  <data name="cmbCajas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 21</value>
+  </data>
+  <data name="cmbCajas.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;cmbCajas.Name" xml:space="preserve">
+    <value>cmbCajas</value>
+  </data>
+  <data name="&gt;&gt;cmbCajas.Type" xml:space="preserve">
+    <value>Eniac.Controles.ComboBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbCajas.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbCajas.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ugDetalle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="Appearance2.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="UltraGridColumn1.Format" xml:space="preserve">
+    <value>dd/MM/yyyy HH:mm</value>
+  </data>
+  <data name="UltraGridColumn38.Header.Caption" xml:space="preserve">
+    <value>Comprobante</value>
+  </data>
+  <data name="Appearance3.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="UltraGridColumn4.Header.Caption" xml:space="preserve">
+    <value>L.</value>
+  </data>
+  <data name="Appearance4.TextHAlignAsString" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="UltraGridColumn5.Header.Caption" xml:space="preserve">
+    <value>Emi.</value>
+  </data>
+  <data name="Appearance5.TextHAlignAsString" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="UltraGridColumn6.Header.Caption" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="UltraGridColumn9.Header.Caption" xml:space="preserve">
+    <value>Nombre Cliente</value>
+  </data>
+  <data name="UltraGridColumn10.Header.Caption" xml:space="preserve">
+    <value>Categ. Fiscal</value>
+  </data>
+  <data name="UltraGridColumn11.Header.Caption" xml:space="preserve">
+    <value>F. de Pago</value>
+  </data>
+  <data name="Appearance6.TextHAlignAsString" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="UltraGridColumn41.Format" xml:space="preserve">
+    <value>N2</value>
+  </data>
+  <data name="UltraGridColumn41.Header.Caption" xml:space="preserve">
+    <value>Neto</value>
+  </data>
+  <data name="Appearance7.TextHAlignAsString" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="UltraGridColumn13.Format" xml:space="preserve">
+    <value>N2</value>
+  </data>
+  <data name="UltraGridColumn13.Header.Caption" xml:space="preserve">
+    <value>Impuestos</value>
+  </data>
+  <data name="Appearance8.TextHAlignAsString" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="UltraGridColumn27.Format" xml:space="preserve">
+    <value>N2</value>
+  </data>
+  <data name="UltraGridColumn27.Header.Caption" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="UltraGridColumn31.Header.Caption" xml:space="preserve">
+    <value>Vendedor</value>
+  </data>
+  <data name="UltraGridColumn32.Header.Caption" xml:space="preserve">
+    <value>Zona Geografica</value>
+  </data>
+  <data name="UltraGridColumn7.Header.Caption" xml:space="preserve">
+    <value>Localidad</value>
+  </data>
+  <data name="UltraGridColumn8.Header.Caption" xml:space="preserve">
+    <value>Provincia</value>
+  </data>
+  <data name="UltraGridColumn17.Format" xml:space="preserve">
+    <value>dd/MM/yyyy HH:mm</value>
+  </data>
+  <data name="UltraGridColumn17.Header.Caption" xml:space="preserve">
+    <value>Fecha Actualización</value>
+  </data>
+  <data name="UltraGridColumn18.Header.Caption" xml:space="preserve">
+    <value>Proveedor CyO</value>
+  </data>
+  <data name="Appearance9.TextHAlignAsString" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="UltraGridColumn19.Format" xml:space="preserve">
+    <value>N2</value>
+  </data>
+  <data name="UltraGridColumn19.Header.Caption" xml:space="preserve">
+    <value>Imp. Pesos</value>
+  </data>
+  <data name="Appearance10.TextHAlignAsString" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="UltraGridColumn20.Format" xml:space="preserve">
+    <value>N2</value>
+  </data>
+  <data name="UltraGridColumn20.Header.Caption" xml:space="preserve">
+    <value>Imp. Tickets</value>
+  </data>
+  <data name="Appearance11.TextHAlignAsString" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="UltraGridColumn21.Format" xml:space="preserve">
+    <value>N2</value>
+  </data>
+  <data name="UltraGridColumn21.Header.Caption" xml:space="preserve">
+    <value>Imp. Tarjetas</value>
+  </data>
+  <data name="Appearance12.TextHAlignAsString" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="UltraGridColumn22.Format" xml:space="preserve">
+    <value>N2</value>
+  </data>
+  <data name="UltraGridColumn22.Header.Caption" xml:space="preserve">
+    <value>Imp. Cheques</value>
+  </data>
+  <data name="Appearance13.TextHAlignAsString" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="UltraGridColumn24.Format" xml:space="preserve">
+    <value>N2</value>
+  </data>
+  <data name="UltraGridColumn24.Header.Caption" xml:space="preserve">
+    <value>Imp. Tr. Banc.</value>
+  </data>
+  <data name="UltraGridColumn25.Header.Caption" xml:space="preserve">
+    <value>Banco</value>
+  </data>
+  <data name="Appearance14.TextHAlignAsString" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="UltraGridColumn37.Header.Caption" xml:space="preserve">
+    <value>Percep.</value>
+  </data>
+  <data name="Appearance15.TextHAlignAsString" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="UltraGridColumn39.Header.Caption" xml:space="preserve">
+    <value>IVA</value>
+  </data>
+  <data name="Appearance16.TextHAlignAsString" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="UltraGridColumn40.Format" xml:space="preserve">
+    <value>N2</value>
+  </data>
+  <data name="UltraGridColumn40.Header.Caption" xml:space="preserve">
+    <value>Imp. Int.</value>
+  </data>
+  <data name="Appearance17.TextHAlignAsString" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="UltraGridColumn44.Header.Caption" xml:space="preserve">
+    <value>Cant. Reint. Imp.</value>
+  </data>
+  <data name="Appearance18.TextHAlignAsString" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="UltraGridColumn45.Header.Caption" xml:space="preserve">
+    <value>Número Comp. Fiscal</value>
+  </data>
+  <data name="Appearance19.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="UltraGridColumn14.Header.Caption" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="Appearance21.TextVAlignAsString" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="UltraGridColumn29.Header.Caption" xml:space="preserve">
+    <value>Imp. Fisc</value>
+  </data>
+  <data name="UltraGridColumn30.Header.Caption" xml:space="preserve">
+    <value>Ctrl. Info</value>
+  </data>
+  <data name="Appearance22.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="Appearance23.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="UltraGridColumn12.Header.Caption" xml:space="preserve">
+    <value>Error Imp.</value>
+  </data>
+  <data name="Appearance24.TextVAlignAsString" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="ugDetalle.DisplayLayout.GroupByBox.Prompt" xml:space="preserve">
+    <value>Arrastre un título de columna aquí para agrupar.</value>
+  </data>
+  <data name="Appearance33.TextHAlignAsString" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="ugDetalle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="ugDetalle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 202</value>
+  </data>
+  <data name="ugDetalle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>976, 326</value>
+  </data>
+  <data name="ugDetalle.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;ugDetalle.Name" xml:space="preserve">
+    <value>ugDetalle</value>
+  </data>
+  <data name="&gt;&gt;ugDetalle.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinGrid.UltraGrid, Infragistics4.Win.UltraWinGrid.v13.1, Version=13.1.20131.2027, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;ugDetalle.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ugDetalle.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="chbTodos.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="chbTodos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chbTodos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 176</value>
+  </data>
+  <data name="chbTodos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 18</value>
+  </data>
+  <data name="chbTodos.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="chbTodos.Text" xml:space="preserve">
+    <value>Chequear todos</value>
+  </data>
+  <data name="chbTodos.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;chbTodos.Name" xml:space="preserve">
+    <value>chbTodos</value>
+  </data>
+  <data name="&gt;&gt;chbTodos.Type" xml:space="preserve">
+    <value>Eniac.Controles.CheckBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;chbTodos.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chbTodos.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="stsStado.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>414, 17</value>
+  </metadata>
+  <data name="tspBarra.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 16</value>
+  </data>
+  <data name="tspBarra.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tssInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>905, 17</value>
+  </data>
+  <data name="tssRegistros.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 17</value>
+  </data>
+  <data name="tssRegistros.Text" xml:space="preserve">
+    <value>0 Registros</value>
+  </data>
+  <data name="stsStado.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 531</value>
+  </data>
+  <data name="stsStado.Size" type="System.Drawing.Size, System.Drawing">
+    <value>984, 22</value>
+  </data>
+  <data name="stsStado.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="stsStado.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;stsStado.Name" xml:space="preserve">
+    <value>stsStado</value>
+  </data>
+  <data name="&gt;&gt;stsStado.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;stsStado.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;stsStado.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="tstBarra.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>126, 17</value>
+  </metadata>
+  <data name="tsbRefrescar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        ixChghj/AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="tsbRefrescar.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tsbRefrescar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 26</value>
+  </data>
+  <data name="tsbRefrescar.Text" xml:space="preserve">
+    <value>&amp;Refrescar (F5)</value>
+  </data>
+  <data name="ToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 29</value>
+  </data>
+  <data name="tsbImprimirTickets.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tsbImprimirTickets.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 26</value>
+  </data>
+  <data name="tsbImprimirTickets.Text" xml:space="preserve">
+    <value>Imprimir Tickets Fiscales</value>
+  </data>
+  <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 29</value>
+  </data>
+  <data name="tsbSalir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        4UZl5Vqm5VMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="tsbSalir.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tsbSalir.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 26</value>
+  </data>
+  <data name="tsbSalir.Text" xml:space="preserve">
+    <value>&amp;Cerrar</value>
+  </data>
+  <data name="tsbSalir.ToolTipText" xml:space="preserve">
+    <value>Cerrar el formulario</value>
+  </data>
+  <data name="tstBarra.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tstBarra.Size" type="System.Drawing.Size, System.Drawing">
+    <value>984, 29</value>
+  </data>
+  <data name="tstBarra.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="tstBarra.Text" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="&gt;&gt;tstBarra.Name" xml:space="preserve">
+    <value>tstBarra</value>
+  </data>
+  <data name="&gt;&gt;tstBarra.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tstBarra.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tstBarra.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="grbFiltros.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="bscCodigoCliente.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblCodigoCliente.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCodigoCliente.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblCodigoCliente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>436, 9</value>
+  </data>
+  <data name="lblCodigoCliente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 13</value>
+  </data>
+  <data name="lblCodigoCliente.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="lblCodigoCliente.Text" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="&gt;&gt;lblCodigoCliente.Name" xml:space="preserve">
+    <value>lblCodigoCliente</value>
+  </data>
+  <data name="&gt;&gt;lblCodigoCliente.Type" xml:space="preserve">
+    <value>Eniac.Controles.Label, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblCodigoCliente.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;lblCodigoCliente.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="bscCodigoCliente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>439, 25</value>
+  </data>
+  <data name="bscCodigoCliente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 23</value>
+  </data>
+  <data name="bscCodigoCliente.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;bscCodigoCliente.Name" xml:space="preserve">
+    <value>bscCodigoCliente</value>
+  </data>
+  <data name="&gt;&gt;bscCodigoCliente.Type" xml:space="preserve">
+    <value>Eniac.Controles.Buscador, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bscCodigoCliente.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;bscCodigoCliente.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="bscCliente.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="bscCliente.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="bscCliente.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="lblNombre.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblNombre.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblNombre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>530, 10</value>
+  </data>
+  <data name="lblNombre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 13</value>
+  </data>
+  <data name="lblNombre.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="lblNombre.Text" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="&gt;&gt;lblNombre.Name" xml:space="preserve">
+    <value>lblNombre</value>
+  </data>
+  <data name="&gt;&gt;lblNombre.Type" xml:space="preserve">
+    <value>Eniac.Controles.Label, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblNombre.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;lblNombre.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="bscCliente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>533, 26</value>
+  </data>
+  <data name="bscCliente.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="bscCliente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 23</value>
+  </data>
+  <data name="bscCliente.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;bscCliente.Name" xml:space="preserve">
+    <value>bscCliente</value>
+  </data>
+  <data name="&gt;&gt;bscCliente.Type" xml:space="preserve">
+    <value>Eniac.Controles.Buscador, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bscCliente.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;bscCliente.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chbCliente.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chbCliente.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chbCliente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 26</value>
+  </data>
+  <data name="chbCliente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 17</value>
+  </data>
+  <data name="chbCliente.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="chbCliente.Text" xml:space="preserve">
+    <value>Cliente</value>
+  </data>
+  <data name="&gt;&gt;chbCliente.Name" xml:space="preserve">
+    <value>chbCliente</value>
+  </data>
+  <data name="&gt;&gt;chbCliente.Type" xml:space="preserve">
+    <value>Eniac.Controles.CheckBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;chbCliente.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;chbCliente.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="chbFormaPago.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chbFormaPago.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chbFormaPago.Location" type="System.Drawing.Point, System.Drawing">
+    <value>276, 112</value>
+  </data>
+  <data name="chbFormaPago.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 17</value>
+  </data>
+  <data name="chbFormaPago.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="chbFormaPago.Text" xml:space="preserve">
+    <value>Forma de Pago</value>
+  </data>
+  <data name="&gt;&gt;chbFormaPago.Name" xml:space="preserve">
+    <value>chbFormaPago</value>
+  </data>
+  <data name="&gt;&gt;chbFormaPago.Type" xml:space="preserve">
+    <value>Eniac.Controles.CheckBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;chbFormaPago.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;chbFormaPago.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cmbFormaPago.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cmbFormaPago.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cmbFormaPago.Location" type="System.Drawing.Point, System.Drawing">
+    <value>377, 110</value>
+  </data>
+  <data name="cmbFormaPago.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 21</value>
+  </data>
+  <data name="cmbFormaPago.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;cmbFormaPago.Name" xml:space="preserve">
+    <value>cmbFormaPago</value>
+  </data>
+  <data name="&gt;&gt;cmbFormaPago.Type" xml:space="preserve">
+    <value>Eniac.Controles.ComboBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbFormaPago.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;cmbFormaPago.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="chbVendedor.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chbVendedor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chbVendedor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 85</value>
+  </data>
+  <data name="chbVendedor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 17</value>
+  </data>
+  <data name="chbVendedor.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="chbVendedor.Text" xml:space="preserve">
+    <value>Vendedor</value>
+  </data>
+  <data name="&gt;&gt;chbVendedor.Name" xml:space="preserve">
+    <value>chbVendedor</value>
+  </data>
+  <data name="&gt;&gt;chbVendedor.Type" xml:space="preserve">
+    <value>Eniac.Controles.CheckBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;chbVendedor.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;chbVendedor.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="cmbVendedor.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cmbVendedor.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cmbVendedor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 83</value>
+  </data>
+  <data name="cmbVendedor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 21</value>
+  </data>
+  <data name="cmbVendedor.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;cmbVendedor.Name" xml:space="preserve">
+    <value>cmbVendedor</value>
+  </data>
+  <data name="&gt;&gt;cmbVendedor.Type" xml:space="preserve">
+    <value>Eniac.Controles.ComboBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbVendedor.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;cmbVendedor.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="chbUsuario.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chbUsuario.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chbUsuario.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 112</value>
+  </data>
+  <data name="chbUsuario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 17</value>
+  </data>
+  <data name="chbUsuario.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="chbUsuario.Text" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="&gt;&gt;chbUsuario.Name" xml:space="preserve">
+    <value>chbUsuario</value>
+  </data>
+  <data name="&gt;&gt;chbUsuario.Type" xml:space="preserve">
+    <value>Eniac.Controles.CheckBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;chbUsuario.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;chbUsuario.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="cmbUsuario.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cmbUsuario.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cmbUsuario.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 110</value>
+  </data>
+  <data name="cmbUsuario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 21</value>
+  </data>
+  <data name="cmbUsuario.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;cmbUsuario.Name" xml:space="preserve">
+    <value>cmbUsuario</value>
+  </data>
+  <data name="&gt;&gt;cmbUsuario.Type" xml:space="preserve">
+    <value>Eniac.Controles.ComboBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbUsuario.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;cmbUsuario.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="chbCategoria.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chbCategoria.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chbCategoria.Location" type="System.Drawing.Point, System.Drawing">
+    <value>276, 83</value>
+  </data>
+  <data name="chbCategoria.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 17</value>
+  </data>
+  <data name="chbCategoria.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="chbCategoria.Text" xml:space="preserve">
+    <value>Categoria</value>
+  </data>
+  <data name="&gt;&gt;chbCategoria.Name" xml:space="preserve">
+    <value>chbCategoria</value>
+  </data>
+  <data name="&gt;&gt;chbCategoria.Type" xml:space="preserve">
+    <value>Eniac.Controles.CheckBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;chbCategoria.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;chbCategoria.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="cmbCategoria.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cmbCategoria.Location" type="System.Drawing.Point, System.Drawing">
+    <value>377, 81</value>
+  </data>
+  <data name="cmbCategoria.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 21</value>
+  </data>
+  <data name="cmbCategoria.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;cmbCategoria.Name" xml:space="preserve">
+    <value>cmbCategoria</value>
+  </data>
+  <data name="&gt;&gt;cmbCategoria.Type" xml:space="preserve">
+    <value>Eniac.Controles.ComboBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbCategoria.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;cmbCategoria.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="chbLetra.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chbLetra.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chbLetra.Location" type="System.Drawing.Point, System.Drawing">
+    <value>276, 56</value>
+  </data>
+  <data name="chbLetra.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 17</value>
+  </data>
+  <data name="chbLetra.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="chbLetra.Text" xml:space="preserve">
+    <value>Letra</value>
+  </data>
+  <data name="&gt;&gt;chbLetra.Name" xml:space="preserve">
+    <value>chbLetra</value>
+  </data>
+  <data name="&gt;&gt;chbLetra.Type" xml:space="preserve">
+    <value>Eniac.Controles.CheckBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;chbLetra.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;chbLetra.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="chbEmisor.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chbEmisor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chbEmisor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 56</value>
+  </data>
+  <data name="chbEmisor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 17</value>
+  </data>
+  <data name="chbEmisor.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="chbEmisor.Text" xml:space="preserve">
+    <value>Emisor</value>
+  </data>
+  <data name="&gt;&gt;chbEmisor.Name" xml:space="preserve">
+    <value>chbEmisor</value>
+  </data>
+  <data name="&gt;&gt;chbEmisor.Type" xml:space="preserve">
+    <value>Eniac.Controles.CheckBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;chbEmisor.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;chbEmisor.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="cmbEmisor.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cmbEmisor.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cmbEmisor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>439, 54</value>
+  </data>
+  <data name="cmbEmisor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 21</value>
+  </data>
+  <data name="cmbEmisor.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;cmbEmisor.Name" xml:space="preserve">
+    <value>cmbEmisor</value>
+  </data>
+  <data name="&gt;&gt;cmbEmisor.Type" xml:space="preserve">
+    <value>Eniac.Controles.ComboBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbEmisor.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;cmbEmisor.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="cboLetra.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cboLetra.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cboLetra.Location" type="System.Drawing.Point, System.Drawing">
+    <value>328, 54</value>
+  </data>
+  <data name="cboLetra.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 21</value>
+  </data>
+  <data name="cboLetra.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;cboLetra.Name" xml:space="preserve">
+    <value>cboLetra</value>
+  </data>
+  <data name="&gt;&gt;cboLetra.Type" xml:space="preserve">
+    <value>Eniac.Controles.ComboBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cboLetra.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;cboLetra.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="txtNumero.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtNumero.Location" type="System.Drawing.Point, System.Drawing">
+    <value>555, 54</value>
+  </data>
+  <data name="txtNumero.MaxLength" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="txtNumero.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 20</value>
+  </data>
+  <data name="txtNumero.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="txtNumero.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;txtNumero.Name" xml:space="preserve">
+    <value>txtNumero</value>
+  </data>
+  <data name="&gt;&gt;txtNumero.Type" xml:space="preserve">
+    <value>Eniac.Controles.TextBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtNumero.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;txtNumero.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="chbNumero.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chbNumero.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chbNumero.Location" type="System.Drawing.Point, System.Drawing">
+    <value>489, 56</value>
+  </data>
+  <data name="chbNumero.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 17</value>
+  </data>
+  <data name="chbNumero.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="chbNumero.Text" xml:space="preserve">
+    <value>Numero</value>
+  </data>
+  <data name="&gt;&gt;chbNumero.Name" xml:space="preserve">
+    <value>chbNumero</value>
+  </data>
+  <data name="&gt;&gt;chbNumero.Type" xml:space="preserve">
+    <value>Eniac.Controles.CheckBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;chbNumero.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;chbNumero.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="txtNroRepartoHasta.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblNroRepartoHasta.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblNroRepartoHasta.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblNroRepartoHasta.Location" type="System.Drawing.Point, System.Drawing">
+    <value>668, 114</value>
+  </data>
+  <data name="lblNroRepartoHasta.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 13</value>
+  </data>
+  <data name="lblNroRepartoHasta.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="lblNroRepartoHasta.Text" xml:space="preserve">
+    <value>a</value>
+  </data>
+  <data name="&gt;&gt;lblNroRepartoHasta.Name" xml:space="preserve">
+    <value>lblNroRepartoHasta</value>
+  </data>
+  <data name="&gt;&gt;lblNroRepartoHasta.Type" xml:space="preserve">
+    <value>Eniac.Controles.Label, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblNroRepartoHasta.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;lblNroRepartoHasta.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="txtNroRepartoHasta.Location" type="System.Drawing.Point, System.Drawing">
+    <value>686, 110</value>
+  </data>
+  <data name="txtNroRepartoHasta.MaxLength" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="txtNroRepartoHasta.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 20</value>
+  </data>
+  <data name="txtNroRepartoHasta.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="txtNroRepartoHasta.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;txtNroRepartoHasta.Name" xml:space="preserve">
+    <value>txtNroRepartoHasta</value>
+  </data>
+  <data name="&gt;&gt;txtNroRepartoHasta.Type" xml:space="preserve">
+    <value>Eniac.Controles.TextBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtNroRepartoHasta.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;txtNroRepartoHasta.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="txtNroRepartoDesde.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtNroRepartoDesde.Location" type="System.Drawing.Point, System.Drawing">
+    <value>600, 110</value>
+  </data>
+  <data name="txtNroRepartoDesde.MaxLength" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="txtNroRepartoDesde.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 20</value>
+  </data>
+  <data name="txtNroRepartoDesde.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="txtNroRepartoDesde.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;txtNroRepartoDesde.Name" xml:space="preserve">
+    <value>txtNroRepartoDesde</value>
+  </data>
+  <data name="&gt;&gt;txtNroRepartoDesde.Type" xml:space="preserve">
+    <value>Eniac.Controles.TextBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtNroRepartoDesde.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;txtNroRepartoDesde.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="chbNroReparto.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chbNroReparto.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chbNroReparto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>515, 112</value>
+  </data>
+  <data name="chbNroReparto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 17</value>
+  </data>
+  <data name="chbNroReparto.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="chbNroReparto.Text" xml:space="preserve">
+    <value>Nro Reparto</value>
+  </data>
+  <data name="&gt;&gt;chbNroReparto.Name" xml:space="preserve">
+    <value>chbNroReparto</value>
+  </data>
+  <data name="&gt;&gt;chbNroReparto.Type" xml:space="preserve">
+    <value>Eniac.Controles.CheckBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;chbNroReparto.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;chbNroReparto.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="lblEstado.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblEstado.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblEstado.Location" type="System.Drawing.Point, System.Drawing">
+    <value>526, 83</value>
+  </data>
+  <data name="lblEstado.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 13</value>
+  </data>
+  <data name="lblEstado.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblEstado.Text" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="lblEstado.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lblEstado.Name" xml:space="preserve">
+    <value>lblEstado</value>
+  </data>
+  <data name="&gt;&gt;lblEstado.Type" xml:space="preserve">
+    <value>Eniac.Controles.Label, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblEstado.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;lblEstado.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="chbPorFecha.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chbPorFecha.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chbPorFecha.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 27</value>
+  </data>
+  <data name="chbPorFecha.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 17</value>
+  </data>
+  <data name="chbPorFecha.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="chbPorFecha.Text" xml:space="preserve">
+    <value>Por Fecha</value>
+  </data>
+  <data name="&gt;&gt;chbPorFecha.Name" xml:space="preserve">
+    <value>chbPorFecha</value>
+  </data>
+  <data name="&gt;&gt;chbPorFecha.Type" xml:space="preserve">
+    <value>Eniac.Controles.CheckBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;chbPorFecha.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;chbPorFecha.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="dtpHasta.CustomFormat" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
+  </data>
+  <data name="dtpHasta.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblHasta.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblHasta.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblHasta.Location" type="System.Drawing.Point, System.Drawing">
+    <value>235, 29</value>
+  </data>
+  <data name="lblHasta.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="lblHasta.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblHasta.Text" xml:space="preserve">
+    <value>Hasta</value>
+  </data>
+  <data name="&gt;&gt;lblHasta.Name" xml:space="preserve">
+    <value>lblHasta</value>
+  </data>
+  <data name="&gt;&gt;lblHasta.Type" xml:space="preserve">
+    <value>Eniac.Controles.Label, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblHasta.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;lblHasta.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="dtpHasta.Location" type="System.Drawing.Point, System.Drawing">
+    <value>273, 25</value>
+  </data>
+  <data name="dtpHasta.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 20</value>
+  </data>
+  <data name="dtpHasta.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;dtpHasta.Name" xml:space="preserve">
+    <value>dtpHasta</value>
+  </data>
+  <data name="&gt;&gt;dtpHasta.Type" xml:space="preserve">
+    <value>Eniac.Controles.DateTimePicker, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dtpHasta.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;dtpHasta.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="dtpDesde.CustomFormat" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
+  </data>
+  <data name="dtpDesde.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblDesde.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblDesde.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDesde.Location" type="System.Drawing.Point, System.Drawing">
+    <value>89, 29</value>
+  </data>
+  <data name="lblDesde.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 13</value>
+  </data>
+  <data name="lblDesde.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblDesde.Text" xml:space="preserve">
+    <value>Desde</value>
+  </data>
+  <data name="&gt;&gt;lblDesde.Name" xml:space="preserve">
+    <value>lblDesde</value>
+  </data>
+  <data name="&gt;&gt;lblDesde.Type" xml:space="preserve">
+    <value>Eniac.Controles.Label, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblDesde.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;lblDesde.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="dtpDesde.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 25</value>
+  </data>
+  <data name="dtpDesde.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 20</value>
+  </data>
+  <data name="dtpDesde.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;dtpDesde.Name" xml:space="preserve">
+    <value>dtpDesde</value>
+  </data>
+  <data name="&gt;&gt;dtpDesde.Type" xml:space="preserve">
+    <value>Eniac.Controles.DateTimePicker, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dtpDesde.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;dtpDesde.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="cmbEstados.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cmbEstados.ItemHeight" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="cmbEstados.Items" xml:space="preserve">
+    <value>Sin CAE</value>
+  </data>
+  <data name="cmbEstados.Items1" xml:space="preserve">
+    <value>Con CAE</value>
+  </data>
+  <data name="cmbEstados.Items2" xml:space="preserve">
+    <value>Todos</value>
+  </data>
+  <data name="cmbEstados.Location" type="System.Drawing.Point, System.Drawing">
+    <value>570, 79</value>
+  </data>
+  <data name="cmbEstados.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 21</value>
+  </data>
+  <data name="cmbEstados.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="cmbEstados.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cmbEstados.Name" xml:space="preserve">
+    <value>cmbEstados</value>
+  </data>
+  <data name="&gt;&gt;cmbEstados.Type" xml:space="preserve">
+    <value>Eniac.Controles.ComboBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbEstados.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;cmbEstados.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="cmbTiposComprobantes.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cmbTiposComprobantes.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cmbTiposComprobantes.ItemHeight" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="cmbTiposComprobantes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 54</value>
+  </data>
+  <data name="cmbTiposComprobantes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 21</value>
+  </data>
+  <data name="cmbTiposComprobantes.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;cmbTiposComprobantes.Name" xml:space="preserve">
+    <value>cmbTiposComprobantes</value>
+  </data>
+  <data name="&gt;&gt;cmbTiposComprobantes.Type" xml:space="preserve">
+    <value>Eniac.Controles.ComboBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbTiposComprobantes.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;cmbTiposComprobantes.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="btnConsultar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="btnConsultar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="btnConsultar.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnConsultar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnConsultar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>802, 79</value>
+  </data>
+  <data name="btnConsultar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 45</value>
+  </data>
+  <data name="btnConsultar.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="btnConsultar.Text" xml:space="preserve">
+    <value>&amp;Consultar</value>
+  </data>
+  <data name="btnConsultar.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;btnConsultar.Name" xml:space="preserve">
+    <value>btnConsultar</value>
+  </data>
+  <data name="&gt;&gt;btnConsultar.Type" xml:space="preserve">
+    <value>Eniac.Controles.Button, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnConsultar.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;btnConsultar.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="chbTipoComprobante.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chbTipoComprobante.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chbTipoComprobante.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 56</value>
+  </data>
+  <data name="chbTipoComprobante.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 17</value>
+  </data>
+  <data name="chbTipoComprobante.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="chbTipoComprobante.Text" xml:space="preserve">
+    <value>Tipo Comprobante</value>
+  </data>
+  <data name="&gt;&gt;chbTipoComprobante.Name" xml:space="preserve">
+    <value>chbTipoComprobante</value>
+  </data>
+  <data name="&gt;&gt;chbTipoComprobante.Type" xml:space="preserve">
+    <value>Eniac.Controles.CheckBox, Eniac.Controles, Version=19.1.15.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;chbTipoComprobante.Parent" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;chbTipoComprobante.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="grbFiltros.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 32</value>
+  </data>
+  <data name="grbFiltros.Size" type="System.Drawing.Size, System.Drawing">
+    <value>977, 138</value>
+  </data>
+  <data name="grbFiltros.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="grbFiltros.Text" xml:space="preserve">
+    <value>Filtros</value>
+  </data>
+  <data name="&gt;&gt;grbFiltros.Name" xml:space="preserve">
+    <value>grbFiltros</value>
+  </data>
+  <data name="&gt;&gt;grbFiltros.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grbFiltros.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grbFiltros.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>45</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>984, 553</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Impresión de Tickets Fiscales</value>
+  </data>
+  <data name="&gt;&gt;tspBarra.Name" xml:space="preserve">
+    <value>tspBarra</value>
+  </data>
+  <data name="&gt;&gt;tspBarra.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tssInfo.Name" xml:space="preserve">
+    <value>tssInfo</value>
+  </data>
+  <data name="&gt;&gt;tssInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tssRegistros.Name" xml:space="preserve">
+    <value>tssRegistros</value>
+  </data>
+  <data name="&gt;&gt;tssRegistros.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbRefrescar.Name" xml:space="preserve">
+    <value>tsbRefrescar</value>
+  </data>
+  <data name="&gt;&gt;tsbRefrescar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator1.Name" xml:space="preserve">
+    <value>ToolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbImprimirTickets.Name" xml:space="preserve">
+    <value>tsbImprimirTickets</value>
+  </data>
+  <data name="&gt;&gt;tsbImprimirTickets.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator2.Name" xml:space="preserve">
+    <value>ToolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbSalir.Name" xml:space="preserve">
+    <value>tsbSalir</value>
+  </data>
+  <data name="&gt;&gt;tsbSalir.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ImpresionTicketFiscal</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Eniac.Win.BaseForm, Eniac.Win, Version=19.8.5.2, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

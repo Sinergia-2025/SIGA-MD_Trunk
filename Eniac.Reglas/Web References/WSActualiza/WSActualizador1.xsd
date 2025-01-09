@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Eniac.ServerActualizar.Entidades" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Eniac.ServerActualizar.Entidades" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://wi531792.ferozo.com/actualizador/WSActualizador.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:import schemaLocation="http://wi531792.ferozo.com/actualizador/WSActualizador.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Eniac.ServerActualizar.XMLs" />
+  <xs:complexType name="Versiones">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ListadoVersiones" nillable="true" type="tns:ArrayOfVersion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Versiones" nillable="true" type="tns:Versiones" />
+  <xs:complexType name="ArrayOfVersion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Version" nillable="true" type="tns:Version" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVersion" nillable="true" type="tns:ArrayOfVersion" />
+  <xs:complexType name="Version">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NroVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Scripts" nillable="true" type="tns:Scripts" />
+      <xs:element minOccurs="0" name="URLMSI" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Version" nillable="true" type="tns:Version" />
+  <xs:complexType name="Scripts">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfVersionScript" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Scripts" nillable="true" type="tns:Scripts" />
+  <xs:complexType name="ArrayOfVersionScript">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VersionScript" nillable="true" type="tns:VersionScript" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVersionScript" nillable="true" type="tns:ArrayOfVersionScript" />
+  <xs:complexType name="VersionScript">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entidad">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Aplicacion" nillable="true" type="tns:Aplicacion" />
+          <xs:element minOccurs="0" name="Cliente" nillable="true" type="tns:Cliente" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NroVersion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Obligatorio" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Orden" type="xs:int" />
+          <xs:element minOccurs="0" name="Script" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VersionScript" nillable="true" type="tns:VersionScript" />
+  <xs:complexType name="Entidad">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="Entidad" nillable="true" type="tns:Entidad" />
+  <xs:complexType name="Aplicacion">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entidad">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IdAplicacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NombreAplicacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NombreMSI" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PathMSI" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PathScripts" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="URLServer" nillable="true" type="xs:string" />
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="UltimaVersion" nillable="true" type="q1:Version" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Eniac.ServerActualizar.XMLs" minOccurs="0" name="Versiones" nillable="true" type="q2:ArrayOfVersion" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Aplicacion" nillable="true" type="tns:Aplicacion" />
+  <xs:complexType name="Cliente">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entidad">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClaveCliente" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoCliente" type="xs:long" />
+          <xs:element minOccurs="0" name="NombreCliente" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Cliente" nillable="true" type="tns:Cliente" />
+  <xs:complexType name="ArrayOfVersionCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VersionCliente" nillable="true" type="tns:VersionCliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVersionCliente" nillable="true" type="tns:ArrayOfVersionCliente" />
+  <xs:complexType name="VersionCliente">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entidad">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Aplicacion" nillable="true" type="tns:Aplicacion" />
+          <xs:element minOccurs="0" name="Cliente" nillable="true" type="tns:Cliente" />
+          <xs:element minOccurs="0" name="Descargada" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NombreBase" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NroVersionHabilitada" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PermiteActualizar" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VersionCliente" nillable="true" type="tns:VersionCliente" />
+</xs:schema>

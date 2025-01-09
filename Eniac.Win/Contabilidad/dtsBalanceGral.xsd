@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsBalanceGral" targetNamespace="http://tempuri.org/dtsBalanceGral.xsd" xmlns:mstns="http://tempuri.org/dtsBalanceGral.xsd" xmlns="http://tempuri.org/dtsBalanceGral.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsBalanceGral" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dtsBalanceGral" msprop:Generator_DataSetName="dtsBalanceGral" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtBalanceGral" msprop:Generator_UserTableName="dtBalanceGral" msprop:Generator_RowDeletedName="dtBalanceGralRowDeleted" msprop:Generator_RowChangedName="dtBalanceGralRowChanged" msprop:Generator_RowClassName="dtBalanceGralRow" msprop:Generator_RowChangingName="dtBalanceGralRowChanging" msprop:Generator_RowEvArgName="dtBalanceGralRowChangeEvent" msprop:Generator_RowEvHandlerName="dtBalanceGralRowChangeEventHandler" msprop:Generator_TableClassName="dtBalanceGralDataTable" msprop:Generator_TableVarName="tabledtBalanceGral" msprop:Generator_RowDeletingName="dtBalanceGralRowDeleting" msprop:Generator_TablePropName="dtBalanceGral">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idCuenta" msprop:Generator_UserColumnName="idCuenta" msprop:Generator_ColumnVarNameInTable="columnidCuenta" msprop:Generator_ColumnPropNameInRow="idCuenta" msprop:Generator_ColumnPropNameInTable="idCuentaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NombreCuenta" msprop:Generator_UserColumnName="NombreCuenta" msprop:Generator_ColumnVarNameInTable="columnNombreCuenta" msprop:Generator_ColumnPropNameInRow="NombreCuenta" msprop:Generator_ColumnPropNameInTable="NombreCuentaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SaldoCuenta" msprop:Generator_UserColumnName="SaldoCuenta" msprop:Generator_ColumnVarNameInTable="columnSaldoCuenta" msprop:Generator_ColumnPropNameInRow="SaldoCuenta" msprop:Generator_ColumnPropNameInTable="SaldoCuentaColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="idPlanCuenta" msprop:Generator_UserColumnName="idPlanCuenta" msprop:Generator_ColumnVarNameInTable="columnidPlanCuenta" msprop:Generator_ColumnPropNameInRow="idPlanCuenta" msprop:Generator_ColumnPropNameInTable="idPlanCuentaColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="NombrePlanCuenta" msprop:Generator_UserColumnName="NombrePlanCuenta" msprop:Generator_ColumnVarNameInTable="columnNombrePlanCuenta" msprop:Generator_ColumnPropNameInRow="NombrePlanCuenta" msprop:Generator_ColumnPropNameInTable="NombrePlanCuentaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="codTipo" msprop:Generator_UserColumnName="codTipo" msprop:Generator_ColumnVarNameInTable="columncodTipo" msprop:Generator_ColumnPropNameInRow="codTipo" msprop:Generator_ColumnPropNameInTable="codTipoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="tipo" msprop:Generator_UserColumnName="tipo" msprop:Generator_ColumnVarNameInTable="columntipo" msprop:Generator_ColumnPropNameInRow="tipo" msprop:Generator_ColumnPropNameInTable="tipoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="codGrupo" msprop:Generator_UserColumnName="codGrupo" msprop:Generator_ColumnPropNameInRow="codGrupo" msprop:Generator_ColumnVarNameInTable="columncodGrupo" msprop:Generator_ColumnPropNameInTable="codGrupoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="grupo" msprop:Generator_UserColumnName="grupo" msprop:Generator_ColumnPropNameInRow="grupo" msprop:Generator_ColumnVarNameInTable="columngrupo" msprop:Generator_ColumnPropNameInTable="grupoColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

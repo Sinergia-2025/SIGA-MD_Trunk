@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WSActualizador" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://wi531792.ferozo.com/actualizador/WSActualizador.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://wi531792.ferozo.com/actualizador/WSActualizador.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://wi531792.ferozo.com/actualizador/WSActualizador.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Eniac.ServerActualizar.Entidades" />
+      <xsd:import schemaLocation="http://wi531792.ferozo.com/actualizador/WSActualizador.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://wi531792.ferozo.com/actualizador/WSActualizador.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Eniac.ServerActualizar.XMLs" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWSActualizador_GetVersionCompleta_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVersionCompleta" />
+  </wsdl:message>
+  <wsdl:message name="IWSActualizador_GetVersionCompleta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVersionCompletaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSActualizador_GetUltimaVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUltimaVersion" />
+  </wsdl:message>
+  <wsdl:message name="IWSActualizador_GetUltimaVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUltimaVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSActualizador_ActualizarVersionesClientes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarVersionesClientes" />
+  </wsdl:message>
+  <wsdl:message name="IWSActualizador_ActualizarVersionesClientes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarVersionesClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSActualizador_GetVersionesClientes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVersionesClientes" />
+  </wsdl:message>
+  <wsdl:message name="IWSActualizador_GetVersionesClientes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVersionesClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSActualizador_SubirScriptsVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubirScriptsVersion" />
+  </wsdl:message>
+  <wsdl:message name="IWSActualizador_SubirScriptsVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubirScriptsVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSActualizador_EliminarScriptsVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarScriptsVersion" />
+  </wsdl:message>
+  <wsdl:message name="IWSActualizador_EliminarScriptsVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarScriptsVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSActualizador_GetVersionWS_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVersionWS" />
+  </wsdl:message>
+  <wsdl:message name="IWSActualizador_GetVersionWS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVersionWSResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWSActualizador">
+    <wsdl:operation name="GetVersionCompleta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSActualizador/GetVersionCompleta" message="tns:IWSActualizador_GetVersionCompleta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSActualizador/GetVersionCompletaResponse" message="tns:IWSActualizador_GetVersionCompleta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUltimaVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSActualizador/GetUltimaVersion" message="tns:IWSActualizador_GetUltimaVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSActualizador/GetUltimaVersionResponse" message="tns:IWSActualizador_GetUltimaVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarVersionesClientes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSActualizador/ActualizarVersionesClientes" message="tns:IWSActualizador_ActualizarVersionesClientes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSActualizador/ActualizarVersionesClientesResponse" message="tns:IWSActualizador_ActualizarVersionesClientes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVersionesClientes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSActualizador/GetVersionesClientes" message="tns:IWSActualizador_GetVersionesClientes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSActualizador/GetVersionesClientesResponse" message="tns:IWSActualizador_GetVersionesClientes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubirScriptsVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSActualizador/SubirScriptsVersion" message="tns:IWSActualizador_SubirScriptsVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSActualizador/SubirScriptsVersionResponse" message="tns:IWSActualizador_SubirScriptsVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarScriptsVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSActualizador/EliminarScriptsVersion" message="tns:IWSActualizador_EliminarScriptsVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSActualizador/EliminarScriptsVersionResponse" message="tns:IWSActualizador_EliminarScriptsVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVersionWS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSActualizador/GetVersionWS" message="tns:IWSActualizador_GetVersionWS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSActualizador/GetVersionWSResponse" message="tns:IWSActualizador_GetVersionWS_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWSActualizador" type="tns:IWSActualizador">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetVersionCompleta">
+      <soap:operation soapAction="http://tempuri.org/IWSActualizador/GetVersionCompleta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUltimaVersion">
+      <soap:operation soapAction="http://tempuri.org/IWSActualizador/GetUltimaVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarVersionesClientes">
+      <soap:operation soapAction="http://tempuri.org/IWSActualizador/ActualizarVersionesClientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersionesClientes">
+      <soap:operation soapAction="http://tempuri.org/IWSActualizador/GetVersionesClientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubirScriptsVersion">
+      <soap:operation soapAction="http://tempuri.org/IWSActualizador/SubirScriptsVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarScriptsVersion">
+      <soap:operation soapAction="http://tempuri.org/IWSActualizador/EliminarScriptsVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersionWS">
+      <soap:operation soapAction="http://tempuri.org/IWSActualizador/GetVersionWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSActualizador">
+    <wsdl:port name="BasicHttpBinding_IWSActualizador" binding="tns:BasicHttpBinding_IWSActualizador">
+      <soap:address location="http://wi531792.ferozo.com/actualizador/WSActualizador.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

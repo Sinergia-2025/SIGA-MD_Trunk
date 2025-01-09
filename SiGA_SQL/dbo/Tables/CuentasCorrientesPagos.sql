@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[CuentasCorrientesPagos] (
+    [IdSucursal]           INT             NOT NULL,
+    [IdTipoComprobante]    VARCHAR (15)    NOT NULL,
+    [Letra]                VARCHAR (1)     NOT NULL,
+    [CentroEmisor]         INT             NOT NULL,
+    [NumeroComprobante]    BIGINT          NOT NULL,
+    [CuotaNumero]          INT             NOT NULL,
+    [Fecha]                DATETIME        NOT NULL,
+    [FechaVencimiento]     DATETIME        NOT NULL,
+    [ImporteCuota]         DECIMAL (12, 2) NOT NULL,
+    [SaldoCuota]           DECIMAL (12, 2) NOT NULL,
+    [IdFormasPago]         INT             NOT NULL,
+    [Observacion]          VARCHAR (100)   NULL,
+    [IdTipoComprobante2]   VARCHAR (15)    NULL,
+    [NumeroComprobante2]   BIGINT          NULL,
+    [CentroEmisor2]        INT             NULL,
+    [CuotaNumero2]         INT             NULL,
+    [Letra2]               VARCHAR (1)     NULL,
+    [DescuentoRecargo]     DECIMAL (12, 2) NOT NULL,
+    [DescuentoRecargoPorc] DECIMAL (6, 2)  NOT NULL,
+    CONSTRAINT [PK_CuentasCorrientesPagos] PRIMARY KEY CLUSTERED ([IdSucursal] ASC, [IdTipoComprobante] ASC, [Letra] ASC, [CentroEmisor] ASC, [NumeroComprobante] ASC, [CuotaNumero] ASC),
+    CONSTRAINT [FK_CuentasCorrientesPagos_CuentasCorrientes] FOREIGN KEY ([IdSucursal], [IdTipoComprobante], [Letra], [CentroEmisor], [NumeroComprobante]) REFERENCES [dbo].[CuentasCorrientes] ([IdSucursal], [IdTipoComprobante], [Letra], [CentroEmisor], [NumeroComprobante]),
+    CONSTRAINT [FK_CuentasCorrientesPagos_VentasFormasPago] FOREIGN KEY ([IdFormasPago]) REFERENCES [dbo].[VentasFormasPago] ([IdFormasPago])
+);
+

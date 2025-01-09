@@ -1,0 +1,8 @@
+
+-- ACTUALIZO PANTALLA DE POSICIÓN DE IVA DE ESTADISTICAS A AFIP
+
+UPDATE Funciones 
+   SET IdPadre = 'AFIP'
+      ,Posicion = 15
+ WHERE Id = 'PosicionDeIVA'
+GO

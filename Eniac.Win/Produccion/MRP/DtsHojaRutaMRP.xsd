@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DtsHojaRutaMRP" targetNamespace="http://tempuri.org/DtsHojaRutaMRP.xsd" xmlns:mstns="http://tempuri.org/DtsHojaRutaMRP.xsd" xmlns="http://tempuri.org/DtsHojaRutaMRP.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DtsHojaRutaMRP" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DtsHojaRutaMRP" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DtsHojaRutaMRP">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtHojaRutaMRP" msprop:Generator_RowEvHandlerName="dtHojaRutaMRPRowChangeEventHandler" msprop:Generator_RowDeletedName="dtHojaRutaMRPRowDeleted" msprop:Generator_RowDeletingName="dtHojaRutaMRPRowDeleting" msprop:Generator_RowEvArgName="dtHojaRutaMRPRowChangeEvent" msprop:Generator_TablePropName="dtHojaRutaMRP" msprop:Generator_RowChangedName="dtHojaRutaMRPRowChanged" msprop:Generator_UserTableName="dtHojaRutaMRP" msprop:Generator_RowChangingName="dtHojaRutaMRPRowChanging" msprop:Generator_RowClassName="dtHojaRutaMRPRow" msprop:Generator_TableClassName="dtHojaRutaMRPDataTable" msprop:Generator_TableVarName="tabledtHojaRutaMRP">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdProducto" msprop:Generator_UserColumnName="IdProducto" msprop:Generator_ColumnPropNameInTable="IdProductoColumn" msprop:Generator_ColumnPropNameInRow="IdProducto" msprop:Generator_ColumnVarNameInTable="columnIdProducto" type="xs:string" minOccurs="0" />
+              <xs:element name="CodigoOperacion" msprop:Generator_UserColumnName="CodigoOperacion" msprop:Generator_ColumnPropNameInTable="CodigoOperacionColumn" msprop:Generator_ColumnPropNameInRow="CodigoOperacion" msprop:Generator_ColumnVarNameInTable="columnCodigoOperacion" type="xs:string" minOccurs="0" />
+              <xs:element name="DescripcionProducto" msprop:Generator_UserColumnName="DescripcionProducto" msprop:Generator_ColumnPropNameInTable="DescripcionProductoColumn" msprop:Generator_ColumnPropNameInRow="DescripcionProducto" msprop:Generator_ColumnVarNameInTable="columnDescripcionProducto" type="xs:string" minOccurs="0" />
+              <xs:element name="Unidad" msprop:Generator_UserColumnName="Unidad" msprop:Generator_ColumnPropNameInTable="UnidadColumn" msprop:Generator_ColumnPropNameInRow="Unidad" msprop:Generator_ColumnVarNameInTable="columnUnidad" type="xs:string" minOccurs="0" />
+              <xs:element name="Unitaria" msprop:Generator_UserColumnName="Unitaria" msprop:Generator_ColumnPropNameInTable="UnitariaColumn" msprop:Generator_ColumnPropNameInRow="Unitaria" msprop:Generator_ColumnVarNameInTable="columnUnitaria" type="xs:string" minOccurs="0" />
+              <xs:element name="Prevista" msprop:Generator_UserColumnName="Prevista" msprop:Generator_ColumnPropNameInTable="PrevistaColumn" msprop:Generator_ColumnPropNameInRow="Prevista" msprop:Generator_ColumnVarNameInTable="columnPrevista" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtHojaRutaNormas" msprop:Generator_RowEvHandlerName="dtHojaRutaNormasRowChangeEventHandler" msprop:Generator_RowDeletedName="dtHojaRutaNormasRowDeleted" msprop:Generator_RowDeletingName="dtHojaRutaNormasRowDeleting" msprop:Generator_RowEvArgName="dtHojaRutaNormasRowChangeEvent" msprop:Generator_TablePropName="dtHojaRutaNormas" msprop:Generator_RowChangedName="dtHojaRutaNormasRowChanged" msprop:Generator_RowChangingName="dtHojaRutaNormasRowChanging" msprop:Generator_TableClassName="dtHojaRutaNormasDataTable" msprop:Generator_RowClassName="dtHojaRutaNormasRow" msprop:Generator_TableVarName="tabledtHojaRutaNormas" msprop:Generator_UserTableName="dtHojaRutaNormas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Codigo" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_UserColumnName="Codigo" type="xs:string" minOccurs="0" />
+              <xs:element name="Detalle" msprop:Generator_ColumnPropNameInRow="Detalle" msprop:Generator_ColumnPropNameInTable="DetalleColumn" msprop:Generator_ColumnVarNameInTable="columnDetalle" msprop:Generator_UserColumnName="Detalle" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

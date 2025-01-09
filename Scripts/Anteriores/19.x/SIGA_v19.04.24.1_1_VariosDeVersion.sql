@@ -1,0 +1,26 @@
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+PRINT ''
+PRINT '1. Tabla ListasDePrecios: Agrego campo PermiteUtilidadEnCero .'
+
+ALTER TABLE dbo.ListasDePrecios ADD PermiteUtilidadEnCero  bit NULL
+GO
+COMMIT
+UPDATE ListasDePrecios SET PermiteUtilidadEnCero  = 0;
+ALTER TABLE dbo.ListasDePrecios ALTER COLUMN PermiteUtilidadEnCero bit NOT NULL
+GO
+
+
+PRINT ''
+PRINT '2. Tabla Actividades: Agrego campo CodigoAfip .'
+ALTER TABLE Actividades ADD CodigoAfip	int	null
+GO

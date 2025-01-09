@@ -1,0 +1,4 @@
+UPDATE Parametros
+   SET ValorParametro = '0'
+  FROM Parametros
+ WHERE IdParametro = 'PORCENTAJEDEDESCRECARGOPORLINEADEPRODUCTO'

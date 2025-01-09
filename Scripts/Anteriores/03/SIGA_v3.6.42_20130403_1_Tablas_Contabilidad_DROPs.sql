@@ -1,0 +1,42 @@
+
+IF EXISTS (SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES
+                            WHERE TABLE_NAME = 'AsientoCuenta')
+    BEGIN
+		DROP TABLE dbo.AsientoCuenta
+    END
+GO
+
+IF EXISTS (SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES
+                            WHERE TABLE_NAME = 'Asientos')
+    BEGIN
+		DROP TABLE dbo.Asientos
+    END
+GO
+
+IF EXISTS (SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES
+                            WHERE TABLE_NAME = 'PlanesCuenta')
+    BEGIN
+		DROP TABLE dbo.PlanesCuenta
+    END
+GO
+
+IF EXISTS (SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES
+                            WHERE TABLE_NAME = 'Cuentas')
+    BEGIN
+		DROP TABLE dbo.Cuentas
+    END
+GO
+
+IF EXISTS (SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES
+                            WHERE TABLE_NAME = 'CentrosCosto')
+    BEGIN
+		DROP TABLE dbo.CentrosCosto
+    END
+GO
+
+IF EXISTS (SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES
+                            WHERE TABLE_NAME = 'Ejercicios')
+    BEGIN
+		DROP TABLE dbo.Ejercicios
+    END
+GO

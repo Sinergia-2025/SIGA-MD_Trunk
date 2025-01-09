@@ -1,0 +1,16 @@
+﻿CREATE PROCEDURE [dbo].[UsuariosRoles_D]
+@idUsuario NVARCHAR (4000), @idRol NVARCHAR (4000), @idSucursal INT
+AS EXTERNAL NAME [Eniac.Seguridad.BaseDeDatos].[Eniac.Seguridad.BaseDeDatos.StoredProcedures].[UsuariosRoles_D]
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'AutoDeployed', @value = N'yes', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'PROCEDURE', @level1name = N'UsuariosRoles_D';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'SqlAssemblyFile', @value = N'spUsuariosRoles.vb', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'PROCEDURE', @level1name = N'UsuariosRoles_D';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'SqlAssemblyFileLine', @value = 30, @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'PROCEDURE', @level1name = N'UsuariosRoles_D';
+

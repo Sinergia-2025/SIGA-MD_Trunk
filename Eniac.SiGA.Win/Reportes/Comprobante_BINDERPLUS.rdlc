@@ -1,0 +1,1892 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="MarinzaldiConnectionString1">
+      <rd:DataSourceID>af85b3fe-5907-43b5-b3de-3acc8de7eee3</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+    <DataSource Name="DummyDataSource">
+      <rd:DataSourceID>c137e4b6-27dc-4124-809a-8d4a9fecd8d2</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <PageHeader>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Textbox Name="txtCodCliente">
+        <Top>6.4cm</Top>
+        <Width>4cm</Width>
+        <Style>
+          <FontSize>8.5pt</FontSize>
+          <PaddingLeft>0pt</PaddingLeft>
+          <PaddingRight>0pt</PaddingRight>
+          <FontFamily>Segoe UI Light</FontFamily>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <VerticalAlign>Bottom</VerticalAlign>
+        </Style>
+        <ZIndex>9</ZIndex>
+        <CanGrow>false</CanGrow>
+        <Left>10cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=Parameters!TipoYNroDocumento.Value</Value>
+      </Textbox>
+      <Textbox Name="txtCondiciones">
+        <Top>6.4cm</Top>
+        <Width>3.5cm</Width>
+        <Style>
+          <FontSize>8.5pt</FontSize>
+          <PaddingLeft>0pt</PaddingLeft>
+          <PaddingRight>0pt</PaddingRight>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontFamily>Segoe UI Light</FontFamily>
+          <VerticalAlign>Bottom</VerticalAlign>
+        </Style>
+        <ZIndex>8</ZIndex>
+        <CanGrow>false</CanGrow>
+        <Left>14.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=Parameters!FormaPago.Value.ToString()</Value>
+      </Textbox>
+      <Textbox Name="txtCondicionIVA">
+        <Top>6.4cm</Top>
+        <Width>4cm</Width>
+        <Style>
+          <FontSize>8.5pt</FontSize>
+          <PaddingLeft>0pt</PaddingLeft>
+          <PaddingRight>0pt</PaddingRight>
+          <FontFamily>Segoe UI Light</FontFamily>
+          <VerticalAlign>Bottom</VerticalAlign>
+        </Style>
+        <ZIndex>7</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>5.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=Parameters!CategoriaIVA.Value</Value>
+      </Textbox>
+      <Textbox Name="txtTitulo">
+        <Width>7cm</Width>
+        <Style>
+          <FontSize>20pt</FontSize>
+          <FontWeight>Normal</FontWeight>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontFamily>Segoe UI Light</FontFamily>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <ZIndex>6</ZIndex>
+        <Left>11cm</Left>
+        <Height>28.45pt</Height>
+        <Value>=UCase(Parameters!TipoComprobante.Value.ToString())</Value>
+        <Top>0.5cm</Top>
+      </Textbox>
+      <Textbox Name="txtCUIT">
+        <Top>7.4cm</Top>
+        <Width>4cm</Width>
+        <Style>
+          <FontSize>8.5pt</FontSize>
+          <PaddingLeft>0pt</PaddingLeft>
+          <PaddingRight>0pt</PaddingRight>
+          <FontFamily>Segoe UI Light</FontFamily>
+          <VerticalAlign>Bottom</VerticalAlign>
+        </Style>
+        <ZIndex>5</ZIndex>
+        <CanGrow>false</CanGrow>
+        <Left>5.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=iif(Parameters!Cuit.Value&gt;0, format(Parameters!Cuit.Value,"00-00000000-0"), "")</Value>
+      </Textbox>
+      <Textbox Name="txtLocalidad">
+        <Top>7.4cm</Top>
+        <Width>4cm</Width>
+        <Style>
+          <FontSize>8.5pt</FontSize>
+          <PaddingLeft>0pt</PaddingLeft>
+          <PaddingRight>0pt</PaddingRight>
+          <FontFamily>Segoe UI Light</FontFamily>
+          <VerticalAlign>Bottom</VerticalAlign>
+        </Style>
+        <ZIndex>4</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1cm</Left>
+        <Height>0.5cm</Height>
+        <Value>= Parameters!Localidad.Value</Value>
+      </Textbox>
+      <Textbox Name="txtNombre">
+        <rd:DefaultName>textbox4</rd:DefaultName>
+        <Top>5.4cm</Top>
+        <Width>13cm</Width>
+        <Style>
+          <FontSize>8.5pt</FontSize>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>0pt</PaddingLeft>
+          <PaddingRight>0pt</PaddingRight>
+          <FontFamily>Segoe UI Light</FontFamily>
+          <VerticalAlign>Bottom</VerticalAlign>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <Color>Black</Color>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <Left>1cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=Parameters!NombreYApellido.Value</Value>
+      </Textbox>
+      <Textbox Name="txtDireccion">
+        <Top>6.4cm</Top>
+        <Width>4cm</Width>
+        <Style>
+          <FontSize>8.5pt</FontSize>
+          <PaddingLeft>0pt</PaddingLeft>
+          <PaddingRight>0pt</PaddingRight>
+          <FontFamily>Segoe UI Light</FontFamily>
+          <VerticalAlign>Bottom</VerticalAlign>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>false</CanGrow>
+        <Left>1cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=Parameters!Direccion.Value</Value>
+      </Textbox>
+      <Textbox Name="txtVendedor">
+        <Top>7.4cm</Top>
+        <Width>4cm</Width>
+        <Style>
+          <FontSize>8.5pt</FontSize>
+          <PaddingLeft>0pt</PaddingLeft>
+          <PaddingRight>0pt</PaddingRight>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontFamily>Segoe UI Light</FontFamily>
+          <VerticalAlign>Bottom</VerticalAlign>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>false</CanGrow>
+        <Left>10cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=Trim(Parameters!Vendedor.Value.ToString())</Value>
+      </Textbox>
+      <Textbox Name="txtFecha">
+        <Top>5.4cm</Top>
+        <Width>3.5cm</Width>
+        <Style>
+          <Format>dd/MM/yyyy</Format>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>0pt</PaddingLeft>
+          <PaddingRight>0pt</PaddingRight>
+          <PaddingTop>0pt</PaddingTop>
+          <PaddingBottom>0pt</PaddingBottom>
+          <FontSize>8.5pt</FontSize>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontFamily>Segoe UI Light</FontFamily>
+          <VerticalAlign>Bottom</VerticalAlign>
+        </Style>
+        <Left>14.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=Parameters!Fecha.Value</Value>
+      </Textbox>
+      <Textbox Name="lblEmpresa">
+        <Height>1cm</Height>
+        <Width>6cm</Width>
+        <Value>=UCase(Parameters!NombreEmpresa.Value.ToString())</Value>
+        <Left>1cm</Left>
+        <Top>0.5cm</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontFamily>Segoe UI Light</FontFamily>
+          <FontSize>20pt</FontSize>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X") or (Parameters!TipoComprobante.Value=" Cotizacion")</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="lblRazonSocial">
+        <Height>0.5cm</Height>
+        <Width>4cm</Width>
+        <Value>RAZÓN SOCIAL:</Value>
+        <Left>1cm</Left>
+        <Top>5cm</Top>
+        <Style>
+          <FontFamily>Segoe UI</FontFamily>
+          <FontSize>8.5pt</FontSize>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <Color>Black</Color>
+          <VerticalAlign>Bottom</VerticalAlign>
+        </Style>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="lblLocalidad">
+        <Height>0.5cm</Height>
+        <Width>4cm</Width>
+        <Value>LOCALIDAD:</Value>
+        <Left>1cm</Left>
+        <Top>7cm</Top>
+        <Style>
+          <FontFamily>Segoe UI</FontFamily>
+          <FontSize>8.5pt</FontSize>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <Color>Black</Color>
+          <VerticalAlign>Bottom</VerticalAlign>
+        </Style>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="lblDireccion">
+        <Height>0.5cm</Height>
+        <Width>4cm</Width>
+        <Value>DIRECCIÓN:</Value>
+        <Left>1cm</Left>
+        <Top>6cm</Top>
+        <Style>
+          <FontFamily>Segoe UI</FontFamily>
+          <FontSize>8.5pt</FontSize>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <Color>Black</Color>
+          <VerticalAlign>Bottom</VerticalAlign>
+        </Style>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="lblReservado1">
+        <Height>0.5cm</Height>
+        <Width>4cm</Width>
+        <Value>
+        </Value>
+        <Left>5.5cm</Left>
+        <Top>5cm</Top>
+        <Style>
+          <FontFamily>Segoe UI</FontFamily>
+          <FontSize>8.5pt</FontSize>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <Color>Black</Color>
+          <VerticalAlign>Bottom</VerticalAlign>
+        </Style>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="lblCondicionIVA">
+        <Height>0.5cm</Height>
+        <Width>4cm</Width>
+        <Value>CONDICIÓN AL I.V.A.:</Value>
+        <Left>5.5cm</Left>
+        <Top>6cm</Top>
+        <Style>
+          <FontFamily>Segoe UI</FontFamily>
+          <FontSize>8.5pt</FontSize>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <Color>Black</Color>
+          <VerticalAlign>Bottom</VerticalAlign>
+        </Style>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="lblCUIT">
+        <Height>0.5cm</Height>
+        <Width>4cm</Width>
+        <Value>C.U.I.T.:</Value>
+        <Left>5.5cm</Left>
+        <Top>7cm</Top>
+        <Style>
+          <FontFamily>Segoe UI</FontFamily>
+          <FontSize>8.5pt</FontSize>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <Color>Black</Color>
+          <VerticalAlign>Bottom</VerticalAlign>
+        </Style>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="lblReservado2">
+        <Height>0.5cm</Height>
+        <Width>4cm</Width>
+        <Value>
+        </Value>
+        <Left>10cm</Left>
+        <Top>5cm</Top>
+        <Style>
+          <FontFamily>Segoe UI</FontFamily>
+          <FontSize>8.5pt</FontSize>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <Color>Black</Color>
+          <VerticalAlign>Bottom</VerticalAlign>
+        </Style>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="lblCondicionVenta">
+        <Height>0.5cm</Height>
+        <Width>3.5cm</Width>
+        <Value>CONDICION DE VENTA:</Value>
+        <Left>14.5cm</Left>
+        <Top>6cm</Top>
+        <Style>
+          <FontFamily>Segoe UI</FontFamily>
+          <FontSize>8.5pt</FontSize>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <Color>Black</Color>
+          <VerticalAlign>Bottom</VerticalAlign>
+        </Style>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="lblVendedor">
+        <Height>0.5cm</Height>
+        <Width>4cm</Width>
+        <Value>VENDEDOR:</Value>
+        <Left>10cm</Left>
+        <Top>7cm</Top>
+        <Style>
+          <FontFamily>Segoe UI</FontFamily>
+          <FontSize>8.5pt</FontSize>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <Color>Black</Color>
+          <VerticalAlign>Bottom</VerticalAlign>
+        </Style>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="lblFechaEmision">
+        <Height>0.5cm</Height>
+        <Width>3.5cm</Width>
+        <Value>FECHA DE EMISIÓN:</Value>
+        <Left>14.5cm</Left>
+        <Top>5cm</Top>
+        <Style>
+          <FontFamily>Segoe UI</FontFamily>
+          <FontSize>8.5pt</FontSize>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <Color>Black</Color>
+          <VerticalAlign>Bottom</VerticalAlign>
+        </Style>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="lblCliente">
+        <Height>0.5cm</Height>
+        <Width>4cm</Width>
+        <Value>CLIENTE #:</Value>
+        <Left>10cm</Left>
+        <Top>6cm</Top>
+        <Style>
+          <FontFamily>Segoe UI</FontFamily>
+          <FontSize>8.5pt</FontSize>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <Color>Black</Color>
+          <VerticalAlign>Bottom</VerticalAlign>
+        </Style>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="lblFechaVencimiento">
+        <Height>0.5cm</Height>
+        <Width>3.5cm</Width>
+        <Value>
+        </Value>
+        <Left>14.5cm</Left>
+        <Top>7cm</Top>
+        <Style>
+          <FontFamily>Segoe UI Light</FontFamily>
+          <FontSize>8.5pt</FontSize>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <Color>Gray</Color>
+          <VerticalAlign>Bottom</VerticalAlign>
+        </Style>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="lblPARA">
+        <Height>1cm</Height>
+        <Width>4cm</Width>
+        <Value>PARA</Value>
+        <Left>1cm</Left>
+        <Top>4cm</Top>
+        <Style>
+          <FontFamily>Segoe UI Light</FontFamily>
+          <FontSize>18pt</FontSize>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <VerticalAlign>Middle</VerticalAlign>
+          <Color>#00B1E8</Color>
+        </Style>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="Textbox1">
+        <Height>1cm</Height>
+        <Width>3.5cm</Width>
+        <Value>DETALLE</Value>
+        <Left>14.5cm</Left>
+        <Top>4cm</Top>
+        <Style>
+          <FontFamily>Segoe UI Light</FontFamily>
+          <FontSize>18pt</FontSize>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <VerticalAlign>Middle</VerticalAlign>
+          <Color>#00B1E8</Color>
+        </Style>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="lblLetra">
+        <Height>1cm</Height>
+        <Width>1cm</Width>
+        <Value>=Parameters!Letra.Value.ToString()</Value>
+        <Left>9cm</Left>
+        <Top>0.5cm</Top>
+        <Style>
+          <FontFamily>Segoe UI</FontFamily>
+          <FontSize>24pt</FontSize>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <VerticalAlign>Middle</VerticalAlign>
+          <TextAlign>Center</TextAlign>
+        </Style>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="lblDocNoValido">
+        <Height>0.5cm</Height>
+        <Width>7cm</Width>
+        <Value>DOCUMENTO NO VÁLIDO COMO FACTURA</Value>
+        <Left>11cm</Left>
+        <Top>1.25cm</Top>
+        <Style>
+          <FontFamily>Segoe UI Light</FontFamily>
+          <FontSize>6pt</FontSize>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <Color>Black</Color>
+          <VerticalAlign>Middle</VerticalAlign>
+          <TextAlign>Right</TextAlign>
+        </Style>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="txtNumero" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Width>7cm</Width>
+        <Style>
+          <FontSize>14pt</FontSize>
+          <FontWeight>Normal</FontWeight>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontFamily>Segoe UI</FontFamily>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <ZIndex>6</ZIndex>
+        <Left>11cm</Left>
+        <Height>28.45pt</Height>
+        <Value>= " Nº " &amp; format(parameters!CentroEmisor.Value, "0000") &amp; " - " &amp; format(Parameters!Numero.Value, "00000000")</Value>
+        <Top>1.5cm</Top>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Textbox>
+      <Rectangle Name="BugFIX_Header1" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>3.5cm</Height>
+        <Width>9cm</Width>
+        <Left>1cm</Left>
+        <Top>0.5cm</Top>
+      </Rectangle>
+      <Rectangle Name="BugFIX_ParaDetalle" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>1cm</Height>
+        <Width>17cm</Width>
+        <Left>1cm</Left>
+        <Top>4cm</Top>
+      </Rectangle>
+      <Rectangle Name="BugFIX_Line1" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>1cm</Height>
+        <Width>17cm</Width>
+        <Left>1cm</Left>
+        <Top>5cm</Top>
+      </Rectangle>
+      <Rectangle Name="BugFIX_Line2" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>1cm</Height>
+        <Width>17cm</Width>
+        <Left>1cm</Left>
+        <Top>6cm</Top>
+      </Rectangle>
+      <Rectangle Name="BugFIX_Line3" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>1cm</Height>
+        <Width>17cm</Width>
+        <Left>1cm</Left>
+        <Top>7cm</Top>
+      </Rectangle>
+    </ReportItems>
+    <Height>9cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageHeader>
+  <BottomMargin>1.25cm</BottomMargin>
+  <rd:ReportID>594e5dec-6e0e-4c65-a3e9-7830430fa05c</rd:ReportID>
+  <PageWidth>21cm</PageWidth>
+  <DataSets>
+    <DataSet Name="SistemaDataSet_VentasProductos">
+      <rd:DataSetInfo>
+        <rd:DataSetName>SistemaDataSet</rd:DataSetName>
+        <rd:TableName>VentasProductos</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText>
+        </CommandText>
+      </Query>
+      <Fields>
+        <Field Name="IdSucursal">
+          <DataField>IdSucursal</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TipoComprobante">
+          <DataField>TipoComprobante</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Letra">
+          <DataField>Letra</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CentroEmisor">
+          <DataField>CentroEmisor</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="NumeroComprobante">
+          <DataField>NumeroComprobante</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="IdProducto">
+          <DataField>IdProducto</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Cantidad">
+          <DataField>Cantidad</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Precio">
+          <DataField>Precio</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Costo">
+          <DataField>Costo</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Descuento">
+          <DataField>Descuento</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PrecioLista">
+          <DataField>PrecioLista</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Utilidad">
+          <DataField>Utilidad</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ImporteTotal">
+          <DataField>ImporteTotal</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="NombreProducto">
+          <DataField>NombreProducto</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IdTipoComprobante">
+          <DataField>IdTipoComprobante</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DescuentoProducto">
+          <DataField>DescuentoProducto</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="DescuentoProductoPorc1">
+          <DataField>DescuentoProductoPorc1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DescuentoProductoPorc2">
+          <DataField>DescuentoProductoPorc2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NroLinea">
+          <DataField>NroLinea</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PrecioNeto">
+          <DataField>PrecioNeto</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="IdTipoImpuesto">
+          <DataField>IdTipoImpuesto</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AlicuotaImpuesto">
+          <DataField>AlicuotaImpuesto</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ImporteImpuesto">
+          <DataField>ImporteImpuesto</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Embalaje">
+          <DataField>Embalaje</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="SistemaDataSet_VentasObservaciones">
+      <Fields>
+        <Field Name="IdSucursal">
+          <DataField>IdSucursal</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="IdTipoComprobante">
+          <DataField>IdTipoComprobante</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Letra">
+          <DataField>Letra</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CentroEmisor">
+          <DataField>CentroEmisor</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="NumeroComprobante">
+          <DataField>NumeroComprobante</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="Linea">
+          <DataField>Linea</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Observacion">
+          <DataField>Observacion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>SistemaDataSet</rd:DataSetName>
+        <rd:TableName>VentasObservaciones</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Width>19cm</Width>
+  <Body>
+    <ColumnSpacing>0cm</ColumnSpacing>
+    <Height>3cm</Height>
+    <ReportItems>
+      <Table Name="tblProductos" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <DataSetName>SistemaDataSet_VentasProductos</DataSetName>
+        <Width>17cm</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="colCodigo">
+                      <rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">textbox1</rd:DefaultName>
+                      <Style>
+                        <FontSize>8.5pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>0cm</PaddingLeft>
+                        <PaddingRight>0cm</PaddingRight>
+                        <PaddingTop>0cm</PaddingTop>
+                        <PaddingBottom>0cm</PaddingBottom>
+                        <FontFamily>Segoe UI Light</FontFamily>
+                        <BorderStyle />
+                        <BorderColor />
+                        <BorderWidth />
+                        <VerticalAlign>Middle</VerticalAlign>
+                      </Style>
+                      <Value>=Fields!IdProducto.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="colDescripcion">
+                      <rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">NombreProducto</rd:DefaultName>
+                      <Style>
+                        <FontSize>8.5pt</FontSize>
+                        <PaddingLeft>0cm</PaddingLeft>
+                        <PaddingRight>0cm</PaddingRight>
+                        <PaddingTop>0cm</PaddingTop>
+                        <PaddingBottom>0cm</PaddingBottom>
+                        <FontFamily>Segoe UI Light</FontFamily>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <BorderStyle />
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <Value>=Fields!NombreProducto.Value</Value>
+                      <CanGrow>true</CanGrow>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox3">
+                      <Value>=Fields!Cantidad.Value/Fields!Embalaje.Value</Value>
+                      <Style xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+                        <FontSize>7pt</FontSize>
+                        <PaddingLeft>0cm</PaddingLeft>
+                        <PaddingRight>0cm</PaddingRight>
+                        <PaddingTop>0cm</PaddingTop>
+                        <PaddingBottom>0cm</PaddingBottom>
+                        <FontFamily>Segoe UI Light</FontFamily>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <BorderStyle />
+                        <BorderColor />
+                        <BorderWidth />
+                        <TextAlign>Right</TextAlign>
+                        <Color>Gray</Color>
+                        <Format>#,##0.00</Format>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="colCantidad">
+                      <rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Cantidad</rd:DefaultName>
+                      <Style>
+                        <FontSize>8.5pt</FontSize>
+                        <Format>##,##0.00</Format>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>0cm</PaddingLeft>
+                        <PaddingRight>0.5cm</PaddingRight>
+                        <PaddingTop>0cm</PaddingTop>
+                        <PaddingBottom>0cm</PaddingBottom>
+                        <FontFamily>Segoe UI Light</FontFamily>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <BorderStyle />
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <Value>=Fields!Cantidad.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="colPrecio">
+                      <rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Precio</rd:DefaultName>
+                      <Style>
+                        <FontSize>8.5pt</FontSize>
+                        <Format>$ ##,##0.00;$ -##,##0.00</Format>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>0cm</PaddingLeft>
+                        <PaddingRight>0.5cm</PaddingRight>
+                        <PaddingTop>0cm</PaddingTop>
+                        <PaddingBottom>0cm</PaddingBottom>
+                        <FontFamily>Segoe UI Light</FontFamily>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <BorderStyle />
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <Value>=Fields!Precio.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="colBonificacion">
+                      <rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">textbox6</rd:DefaultName>
+                      <Style>
+                        <FontSize>8.5pt</FontSize>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>0cm</PaddingLeft>
+                        <PaddingRight>0cm</PaddingRight>
+                        <PaddingTop>0cm</PaddingTop>
+                        <PaddingBottom>0cm</PaddingBottom>
+                        <BorderStyle />
+                        <BorderColor />
+                        <BorderWidth />
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <FontFamily>Segoe UI Light</FontFamily>
+                      </Style>
+                      <CanGrow>false</CanGrow>
+                      <Value>=format(Fields!DescuentoProductoPorc1.Value, "##,##0.00") &amp; " %"</Value>
+                      <Visibility>
+                        <Hidden>=Fields!DescuentoProductoPorc1.Value=0</Hidden>
+                      </Visibility>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="colImporte">
+                      <rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">ImporteTotal</rd:DefaultName>
+                      <Style>
+                        <FontSize>8.5pt</FontSize>
+                        <Format>$ ##,##0.00;$ -##,##0.00</Format>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>0cm</PaddingLeft>
+                        <PaddingRight>0cm</PaddingRight>
+                        <PaddingTop>0cm</PaddingTop>
+                        <PaddingBottom>0cm</PaddingBottom>
+                        <BorderStyle />
+                        <BorderColor />
+                        <BorderWidth />
+                        <FontFamily>Segoe UI Light</FontFamily>
+                        <VerticalAlign>Middle</VerticalAlign>
+                      </Style>
+                      <Value>=Fields!ImporteTotal.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.5cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <TableColumns>
+          <TableColumn>
+            <Width>1.5cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>7cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.75cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.25cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.25cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.25cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.5cm</Height>
+        <Left>27.7pt</Left>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <Top>39.8pt</Top>
+      </Table>
+      <Table Name="tblObservaciones" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <ZIndex>1</ZIndex>
+        <DataSetName>SistemaDataSet_VentasObservaciones</DataSetName>
+        <Top>2cm</Top>
+        <Width>16cm</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="colObservacion">
+                      <rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">Observacion</rd:DefaultName>
+                      <Style>
+                        <FontSize>8.5pt</FontSize>
+                        <PaddingLeft>0cm</PaddingLeft>
+                        <PaddingRight>0cm</PaddingRight>
+                        <PaddingTop>0cm</PaddingTop>
+                        <PaddingBottom>0cm</PaddingBottom>
+                        <BorderStyle />
+                        <BorderColor />
+                        <BorderWidth />
+                        <FontFamily>Segoe UI Light</FontFamily>
+                        <VerticalAlign>Middle</VerticalAlign>
+                      </Style>
+                      <Value>=Fields!Observacion.Value</Value>
+                      <CanGrow>true</CanGrow>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.45cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <TableColumns>
+          <TableColumn>
+            <Width>15.5cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Left>2.5cm</Left>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <Height>0.5cm</Height>
+      </Table>
+      <Textbox Name="hCodigo" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">textbox4</rd:DefaultName>
+        <Top>0.4cm</Top>
+        <Width>1.5cm</Width>
+        <Style>
+          <FontSize>8.5pt</FontSize>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>0cm</PaddingLeft>
+          <PaddingRight>0cm</PaddingRight>
+          <FontFamily>Segoe UI</FontFamily>
+          <VerticalAlign>Bottom</VerticalAlign>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <ZIndex>3</ZIndex>
+        <Left>1cm</Left>
+        <Height>0.5cm</Height>
+        <Value>CÓDIGO</Value>
+      </Textbox>
+      <Textbox Name="hDescripcion" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">textbox4</rd:DefaultName>
+        <Top>0.4cm</Top>
+        <Width>7.5cm</Width>
+        <Style>
+          <FontSize>8.5pt</FontSize>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>0cm</PaddingLeft>
+          <PaddingRight>0cm</PaddingRight>
+          <FontFamily>Segoe UI</FontFamily>
+          <VerticalAlign>Bottom</VerticalAlign>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <ZIndex>3</ZIndex>
+        <Left>2.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>DESCRIPCIÓN</Value>
+      </Textbox>
+      <Textbox Name="hCantidad" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">textbox4</rd:DefaultName>
+        <Top>0.4cm</Top>
+        <Width>2.25cm</Width>
+        <Style>
+          <FontSize>8.5pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>0cm</PaddingLeft>
+          <PaddingRight>0cm</PaddingRight>
+          <FontFamily>Segoe UI</FontFamily>
+          <VerticalAlign>Bottom</VerticalAlign>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <ZIndex>3</ZIndex>
+        <Left>10cm</Left>
+        <Height>0.5cm</Height>
+        <Value>CANTIDAD</Value>
+      </Textbox>
+      <Textbox Name="hPrecioUnitario" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">textbox4</rd:DefaultName>
+        <Top>0.4cm</Top>
+        <Width>2.25cm</Width>
+        <Style>
+          <FontSize>8.5pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>0cm</PaddingLeft>
+          <PaddingRight>0cm</PaddingRight>
+          <FontFamily>Segoe UI</FontFamily>
+          <VerticalAlign>Bottom</VerticalAlign>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <ZIndex>3</ZIndex>
+        <Left>12.25cm</Left>
+        <Height>0.5cm</Height>
+        <Value>PRECIO UNIT.</Value>
+      </Textbox>
+      <Textbox Name="hBonificacion" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">textbox4</rd:DefaultName>
+        <Top>0.4cm</Top>
+        <Width>1.25cm</Width>
+        <Style>
+          <FontSize>8.5pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>0cm</PaddingLeft>
+          <PaddingRight>0cm</PaddingRight>
+          <FontFamily>Segoe UI</FontFamily>
+          <VerticalAlign>Bottom</VerticalAlign>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <ZIndex>3</ZIndex>
+        <Left>14.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>BONIF.</Value>
+      </Textbox>
+      <Textbox Name="hImporte" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <rd:DefaultName xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">textbox4</rd:DefaultName>
+        <Top>0.4cm</Top>
+        <Width>2.25cm</Width>
+        <Style>
+          <FontSize>8.5pt</FontSize>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>0cm</PaddingLeft>
+          <PaddingRight>0cm</PaddingRight>
+          <FontFamily>Segoe UI</FontFamily>
+          <VerticalAlign>Bottom</VerticalAlign>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <ZIndex>3</ZIndex>
+        <Left>15.75cm</Left>
+        <Height>0.5cm</Height>
+        <Value>IMPORTE</Value>
+      </Textbox>
+      <Line Name="lineDetalle">
+        <Height>0in</Height>
+        <Width>18cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <Left>0.5cm</Left>
+        <Top>1cm</Top>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Line>
+    </ReportItems>
+    <Columns>1</Columns>
+  </Body>
+  <Language>es-AR</Language>
+  <PageFooter>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Textbox Name="txtDescuentoPorc">
+        <Top>0.85cm</Top>
+        <Width>1.25cm</Width>
+        <Style>
+          <FontSize>8.5pt</FontSize>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>0cm</PaddingLeft>
+          <PaddingRight>0cm</PaddingRight>
+          <PaddingTop>0cm</PaddingTop>
+          <PaddingBottom>0cm</PaddingBottom>
+          <BorderStyle>
+            <Left>None</Left>
+            <Right>None</Right>
+            <Top>None</Top>
+            <Bottom>None</Bottom>
+            <Default>None</Default>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth />
+          <FontFamily>Segoe UI Light</FontFamily>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <ZIndex>8</ZIndex>
+        <CanGrow>false</CanGrow>
+        <Left>14.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=format(Parameters!DescuentoRecargoPorc.Value, "##,##0.00") &amp; " %"</Value>
+        <Visibility>
+          <Hidden>=Parameters!DescuentoRecargo.Value=0</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="txtDescuento">
+        <Top>0.85cm</Top>
+        <Width>2.25cm</Width>
+        <Style>
+          <FontSize>8.5pt</FontSize>
+          <Format>$ ##,##0.00;$ -##,##0.00</Format>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>0cm</PaddingLeft>
+          <PaddingRight>0cm</PaddingRight>
+          <PaddingTop>0cm</PaddingTop>
+          <PaddingBottom>0cm</PaddingBottom>
+          <BorderStyle>
+            <Left>None</Left>
+            <Right>None</Right>
+            <Top>None</Top>
+            <Bottom>None</Bottom>
+            <Default>None</Default>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth />
+          <FontFamily>Segoe UI Light</FontFamily>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <ZIndex>6</ZIndex>
+        <CanGrow>false</CanGrow>
+        <Left>15.75cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=Parameters!DescuentoRecargo.Value</Value>
+        <Visibility>
+          <Hidden>=Parameters!DescuentoRecargo.Value=0</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="txtIVAPorc">
+        <Top>2.05cm</Top>
+        <Width>1.25cm</Width>
+        <Style>
+          <FontSize>8.5pt</FontSize>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>0cm</PaddingLeft>
+          <PaddingRight>0cm</PaddingRight>
+          <PaddingTop>0cm</PaddingTop>
+          <PaddingBottom>0cm</PaddingBottom>
+          <BorderStyle>
+            <Left>None</Left>
+            <Right>None</Right>
+            <Top>None</Top>
+            <Bottom>None</Bottom>
+            <Default>None</Default>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth />
+          <FontFamily>Segoe UI Light</FontFamily>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <ZIndex>5</ZIndex>
+        <Left>14.5cm</Left>
+        <Height>0.5cm</Height>
+        <Value>21 %</Value>
+        <Visibility>
+          <Hidden>=Parameters!TotalIVA.Value=0</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="txtObservaciones">
+        <Top>0.85cm</Top>
+        <Width>10cm</Width>
+        <Style>
+          <PaddingLeft>0cm</PaddingLeft>
+          <PaddingRight>0cm</PaddingRight>
+          <PaddingTop>0cm</PaddingTop>
+          <PaddingBottom>0cm</PaddingBottom>
+          <FontSize>8.5pt</FontSize>
+          <FontFamily>Segoe UI Light</FontFamily>
+          <VerticalAlign>Top</VerticalAlign>
+          <BorderStyle>
+            <Left>None</Left>
+            <Right>None</Right>
+            <Top>None</Top>
+            <Bottom>None</Bottom>
+            <Default>None</Default>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <ZIndex>4</ZIndex>
+        <CanGrow>false</CanGrow>
+        <Left>1cm</Left>
+        <Height>2.4cm</Height>
+        <Value>= Parameters!Observacion.Value</Value>
+      </Textbox>
+      <Textbox Name="txtDebug">
+        <Top>4.5cm</Top>
+        <Width>5cm</Width>
+        <Style>
+          <FontSize>7pt</FontSize>
+          <PaddingLeft>0cm</PaddingLeft>
+          <PaddingRight>0cm</PaddingRight>
+          <PaddingTop>0cm</PaddingTop>
+          <PaddingBottom>0cm</PaddingBottom>
+          <FontFamily>Segoe UI Light</FontFamily>
+          <VerticalAlign>Middle</VerticalAlign>
+          <Color>Black</Color>
+          <BorderStyle>
+            <Left>None</Left>
+            <Right>None</Right>
+            <Top>None</Top>
+            <Bottom>None</Bottom>
+            <Default>None</Default>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <ZIndex>3</ZIndex>
+        <Left>1cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=UCase(Parameters!TipoComprobante.Value.ToString()) &amp; " " &amp; Parameters!Letra.Value &amp; " Nº " &amp; format(parameters!CentroEmisor.Value, "0000") &amp; " - " &amp; format(Parameters!Numero.Value, "00000000")</Value>
+      </Textbox>
+      <Textbox Name="txtIVA">
+        <Top>58.3pt</Top>
+        <Width>2.25cm</Width>
+        <Style>
+          <FontSize>8.5pt</FontSize>
+          <Format>$ ##,##0.00;$ -##,##0.00</Format>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>0cm</PaddingLeft>
+          <PaddingRight>0cm</PaddingRight>
+          <PaddingTop>0cm</PaddingTop>
+          <PaddingBottom>0cm</PaddingBottom>
+          <BorderStyle>
+            <Left>None</Left>
+            <Right>None</Right>
+            <Top>None</Top>
+            <Bottom>None</Bottom>
+            <Default>None</Default>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth />
+          <FontFamily>Segoe UI Light</FontFamily>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>false</CanGrow>
+        <Left>15.75cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=Parameters!TotalIVA.Value</Value>
+        <Visibility>
+          <Hidden>=Parameters!TotalIVA.Value=0</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="txtTotal">
+        <Top>4cm</Top>
+        <Width>6cm</Width>
+        <Style>
+          <FontSize>18pt</FontSize>
+          <FontWeight>Normal</FontWeight>
+          <Format>$ ##,##0.00;$ -##,##0.00</Format>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>0cm</PaddingLeft>
+          <PaddingRight>0cm</PaddingRight>
+          <PaddingTop>0cm</PaddingTop>
+          <PaddingBottom>0cm</PaddingBottom>
+          <BorderStyle>
+            <Left>None</Left>
+            <Right>None</Right>
+            <Top>None</Top>
+            <Bottom>None</Bottom>
+            <Default>None</Default>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth />
+          <VerticalAlign>Middle</VerticalAlign>
+          <FontFamily>Segoe UI</FontFamily>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>false</CanGrow>
+        <Left>12cm</Left>
+        <Value>=Parameters!Total.Value</Value>
+        <Height>1cm</Height>
+      </Textbox>
+      <Textbox Name="txtBruto">
+        <Top>0.25cm</Top>
+        <Width>2.25cm</Width>
+        <Style>
+          <FontSize>8.5pt</FontSize>
+          <Format>$ ##,##0.00;$ -##,##0.00</Format>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>0cm</PaddingLeft>
+          <PaddingRight>0cm</PaddingRight>
+          <PaddingTop>0cm</PaddingTop>
+          <PaddingBottom>0cm</PaddingBottom>
+          <FontFamily>Segoe UI Light</FontFamily>
+          <VerticalAlign>Middle</VerticalAlign>
+          <BorderStyle>
+            <Left>None</Left>
+            <Right>None</Right>
+            <Top>None</Top>
+            <Bottom>None</Bottom>
+            <Default>None</Default>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <CanGrow>false</CanGrow>
+        <Left>15.75cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=Parameters!Bruto.Value</Value>
+      </Textbox>
+      <Textbox Name="txtNetoGravado" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Top>1.45cm</Top>
+        <Width>2.25cm</Width>
+        <Style>
+          <FontSize>8.5pt</FontSize>
+          <Format>$ ##,##0.00;$ -##,##0.00</Format>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>0cm</PaddingLeft>
+          <PaddingRight>0cm</PaddingRight>
+          <PaddingTop>0cm</PaddingTop>
+          <PaddingBottom>0cm</PaddingBottom>
+          <FontFamily>Segoe UI Light</FontFamily>
+          <BorderStyle>
+            <Left>None</Left>
+            <Right>None</Right>
+            <Top>None</Top>
+            <Bottom>None</Bottom>
+            <Default>None</Default>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth />
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <CanGrow>false</CanGrow>
+        <Left>15.75cm</Left>
+        <Height>0.5cm</Height>
+        <Value>=Parameters!Bruto.Value+Parameters!DescuentoRecargo.Value</Value>
+        <Visibility>
+          <Hidden>=Parameters!TotalIVA.Value=0</Hidden>
+        </Visibility>
+      </Textbox>
+      <Rectangle Name="BugFIX_Percent">
+        <Height>2.3cm</Height>
+        <Width>1.25cm</Width>
+        <Left>14.5cm</Left>
+        <Top>0.25cm</Top>
+      </Rectangle>
+      <Line Name="Line1">
+        <Height>0in</Height>
+        <Width>18cm</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <Left>0.5cm</Left>
+        <Top>0cm</Top>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Line>
+      <Textbox Name="lblObservaciones">
+        <Height>0.5cm</Height>
+        <Width>4cm</Width>
+        <Value>OBSERVACIONES:</Value>
+        <Left>1cm</Left>
+        <Top>0.25cm</Top>
+        <Style>
+          <FontFamily>Segoe UI</FontFamily>
+          <FontSize>8.5pt</FontSize>
+          <BorderStyle>
+            <Left>None</Left>
+            <Right>None</Right>
+            <Top>None</Top>
+            <Bottom>None</Bottom>
+            <Default>None</Default>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth />
+          <Color>Black</Color>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="lblSubtotal">
+        <Height>0.5cm</Height>
+        <Width>3cm</Width>
+        <Value>SUBTOTAL:</Value>
+        <Left>11.25cm</Left>
+        <Top>0.25cm</Top>
+        <Style>
+          <FontFamily>Segoe UI</FontFamily>
+          <FontSize>8.5pt</FontSize>
+          <BorderStyle>
+            <Left>None</Left>
+            <Right>None</Right>
+            <Top>None</Top>
+            <Bottom>None</Bottom>
+            <Default>None</Default>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth />
+          <Color>Black</Color>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="lblReservado90">
+        <Height>14.23pt</Height>
+        <Width>85.36pt</Width>
+        <Value>NETO GRAVADO:</Value>
+        <Left>320.09pt</Left>
+        <Top>41.26pt</Top>
+        <Style>
+          <FontFamily>Segoe UI</FontFamily>
+          <FontSize>8.5pt</FontSize>
+          <BorderStyle>
+            <Left>None</Left>
+            <Right>None</Right>
+            <Top>None</Top>
+            <Bottom>None</Bottom>
+            <Default>None</Default>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth />
+          <Color>Black</Color>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X") OR (Parameters!TotalIVA.Value=0)</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="lblDescuento">
+        <Height>0.5cm</Height>
+        <Width>3cm</Width>
+        <Value>DESCUENTO:</Value>
+        <Left>11.25cm</Left>
+        <Top>0.85cm</Top>
+        <Style>
+          <FontFamily>Segoe UI</FontFamily>
+          <FontSize>8.5pt</FontSize>
+          <BorderStyle>
+            <Left>None</Left>
+            <Right>None</Right>
+            <Top>None</Top>
+            <Bottom>None</Bottom>
+            <Default>None</Default>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth />
+          <Color>Black</Color>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="lblReservado91">
+        <Height>0.5cm</Height>
+        <Width>3cm</Width>
+        <Value>I.V.A. INSCRIPTO:</Value>
+        <Left>11.25cm</Left>
+        <Top>2.05cm</Top>
+        <Style>
+          <FontFamily>Segoe UI</FontFamily>
+          <FontSize>8.5pt</FontSize>
+          <BorderStyle>
+            <Left>None</Left>
+            <Right>None</Right>
+            <Top>None</Top>
+            <Bottom>None</Bottom>
+            <Default>None</Default>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth />
+          <Color>Black</Color>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X") OR (Parameters!TotalIVA.Value=0)</Hidden>
+        </Visibility>
+      </Textbox>
+      <Textbox Name="Textbox2" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Top>85.36pt</Top>
+        <Width>170.72pt</Width>
+        <Style>
+          <FontSize>18pt</FontSize>
+          <FontWeight>Normal</FontWeight>
+          <Format>$ ##,##0.00;$ -##,##0.00</Format>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>0cm</PaddingLeft>
+          <PaddingRight>0cm</PaddingRight>
+          <PaddingTop>0cm</PaddingTop>
+          <PaddingBottom>0cm</PaddingBottom>
+          <BorderStyle>
+            <Left>None</Left>
+            <Right>None</Right>
+            <Top>None</Top>
+            <Bottom>None</Bottom>
+            <Default>None</Default>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth />
+          <VerticalAlign>Middle</VerticalAlign>
+          <FontFamily>Segoe UI Light</FontFamily>
+          <Color>#00B1E8</Color>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>false</CanGrow>
+        <Left>341.43pt</Left>
+        <Value>IMPORTE TOTAL:</Value>
+        <Height>28.45pt</Height>
+        <Visibility>
+          <Hidden>=(Parameters!Letra.Value.ToString()&lt;&gt;"X")</Hidden>
+        </Visibility>
+      </Textbox>
+      <Rectangle Name="BugFIX_LBLTotal" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>2.3cm</Height>
+        <Width>3.25cm</Width>
+        <Left>11.25cm</Left>
+        <Top>0.25cm</Top>
+      </Rectangle>
+      <Rectangle Name="BugFIX_Observaciones" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>0.5cm</Height>
+        <Width>10cm</Width>
+        <Left>1cm</Left>
+        <Top>0.25cm</Top>
+      </Rectangle>
+      <Rectangle Name="BugFIX_ImporteTotal" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>1cm</Height>
+        <Width>6cm</Width>
+        <Left>12cm</Left>
+        <Top>3cm</Top>
+        <Style>
+          <BackgroundColor>
+          </BackgroundColor>
+        </Style>
+      </Rectangle>
+      <Rectangle Name="BugFIX_FooterLine" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>0.25cm</Height>
+        <Width>18cm</Width>
+        <Left>0.5cm</Left>
+        <Top>0.0pt</Top>
+      </Rectangle>
+      <Rectangle Name="BugFIX_Control" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>1cm</Height>
+        <Width>10cm</Width>
+        <Left>1cm</Left>
+        <Top>3.5cm</Top>
+      </Rectangle>
+      <Rectangle Name="BugFIX_Subtotal1">
+        <Height>0.6cm</Height>
+        <Width>4cm</Width>
+        <Left>14.25cm</Left>
+        <Top>.25cm</Top>
+      </Rectangle>
+      <Rectangle Name="BugFIX_Subtotal3">
+        <Height>0.6cm</Height>
+        <Width>4cm</Width>
+        <Left>14.25cm</Left>
+        <Top>1.45cm</Top>
+      </Rectangle>
+      <Rectangle Name="BugFIX_Subtotal2">
+        <Height>0.6cm</Height>
+        <Width>4cm</Width>
+        <Left>14.25cm</Left>
+        <Top>0.85cm</Top>
+      </Rectangle>
+      <Rectangle Name="BugFIX_Subtotal4">
+        <Height>0.6cm</Height>
+        <Width>4cm</Width>
+        <Left>14.25cm</Left>
+        <Top>2.05cm</Top>
+      </Rectangle>
+    </ReportItems>
+    <Height>5.2cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <TopMargin>0.9cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+  <LeftMargin>0.95cm</LeftMargin>
+  <RightMargin>0cm</RightMargin>
+  <Description>Facturas</Description>
+  <Author>Iván Todorovich</Author>
+  <ReportParameters>
+    <ReportParameter Name="NombreYApellido">
+      <DataType>String</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_0</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Localidad">
+      <DataType>String</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Telefono">
+      <DataType>String</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_2</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Fecha">
+      <DataType>DateTime</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_3</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Direccion">
+      <DataType>String</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_4</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="NombreEmpresa">
+      <DataType>String</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_5</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Numero">
+      <DataType>Integer</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_6</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FechaHasta">
+      <DataType>DateTime</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_7</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Bruto">
+      <DataType>Float</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_8</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DescuentoRecargo">
+      <DataType>Float</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_9</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Subtotal">
+      <DataType>Float</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_10</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TelefonoEmpresa">
+      <DataType>String</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_11</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TotalIVA">
+      <DataType>Float</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>TotalIVA</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TotalImpuestosVarios">
+      <DataType>Float</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>TotalImpuestosVarios</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Total">
+      <DataType>Float</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_14</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Observacion">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_15</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FormaPago">
+      <DataType>String</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_16</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Letra">
+      <DataType>String</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_17</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CategoriaIVA">
+      <DataType>String</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_18</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TipoYNroDocumento">
+      <DataType>String</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_19</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DireccionEmpresa">
+      <DataType>String</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_20</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CentroEmisor">
+      <DataType>Integer</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_21</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Vendedor">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_22</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TipoComprobante">
+      <DataType>String</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_23</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DescuentoRecargoPorc">
+      <DataType>Float</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Report_Parameter_24</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Cuit">
+      <DataType>Float</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Cuit</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Kilos">
+      <DataType>Float</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>Kilos</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FormaPagoDias">
+      <DataType>Integer</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>FormaPagoDias</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="IdCategoriaFiscal">
+      <DataType>Integer</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>IdCategoriaFiscal</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SaldoActual">
+      <DataType>Float</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>SaldoActual</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CotizacionDolar">
+      <DataType>Float</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>CotizacionDolar</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <DataElementName>Report</DataElementName>
+  <DataElementStyle>AttributeNormal</DataElementStyle>
+</Report>

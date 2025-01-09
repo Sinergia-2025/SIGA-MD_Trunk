@@ -1,0 +1,6 @@
+
+ALTER TABLE Clientes ADD PaginaWeb VARCHAR(100) NULL
+GO
+
+ALTER TABLE AuditoriaClientes ADD PaginaWeb VARCHAR(100) NULL
+GO

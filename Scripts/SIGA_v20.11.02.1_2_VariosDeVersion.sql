@@ -1,0 +1,39 @@
+
+DROP PROCEDURE dbo.BackupEn
+GO
+DROP PROCEDURE dbo.Funciones_D
+GO
+DROP PROCEDURE dbo.Funciones_GA
+GO
+DROP PROCEDURE dbo.Funciones_I
+GO
+DROP PROCEDURE dbo.Funciones_U
+GO
+DROP PROCEDURE dbo.Roles_D
+GO
+DROP PROCEDURE dbo.Roles_GA
+GO
+DROP PROCEDURE dbo.Roles_I
+GO
+DROP PROCEDURE dbo.Roles_U
+GO
+DROP PROCEDURE dbo.RolesFunciones_D
+GO
+DROP PROCEDURE dbo.RolesFunciones_GA
+GO
+DROP PROCEDURE dbo.RolesFunciones_I
+GO
+DROP PROCEDURE dbo.Tareas_GxFecha
+GO
+DROP PROCEDURE dbo.Usuarios_D
+GO
+DROP PROCEDURE dbo.Usuarios_GA
+GO
+DROP PROCEDURE dbo.Usuarios_G
+GO
+DROP PROCEDURE dbo.Usuarios_I
+GO
+DROP PROCEDURE dbo.Usuarios_UClave
+GO
+DROP PROCEDURE dbo.Usuarios_U
+GO

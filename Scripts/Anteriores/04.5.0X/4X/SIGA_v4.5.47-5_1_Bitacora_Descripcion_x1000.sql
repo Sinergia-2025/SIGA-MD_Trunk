@@ -1,0 +1,3 @@
+
+ALTER TABLE Bitacora ALTER COLUMN Descripcion VARCHAR(1000) NULL
+GO

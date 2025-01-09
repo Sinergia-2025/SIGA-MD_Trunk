@@ -1,0 +1,3 @@
+
+ALTER TABLE SueldosPersonal ALTER COLUMN CBU char(22)
+GO

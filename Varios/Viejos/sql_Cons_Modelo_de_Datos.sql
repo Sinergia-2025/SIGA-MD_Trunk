@@ -1,0 +1,6 @@
+select COLUMN_NAME from INFORMATION_SCHEMA.COLUMNS 
+ where TABLE_NAME='Clientes';
+
+
+select TABLE_NAME from INFORMATION_SCHEMA.COLUMNS 
+ where COLUMN_NAME='IdTipoComprobante';

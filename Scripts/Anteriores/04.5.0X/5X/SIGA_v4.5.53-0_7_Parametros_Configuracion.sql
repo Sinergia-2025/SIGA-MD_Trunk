@@ -1,0 +1,15 @@
+
+IF EXISTS (SELECT ValorParametro FROM Parametros P WHERE P.IdParametro = 'CUITEMPRESA' 
+                                                    AND P.ValorParametro IN ('30711162891'))	
+BEGIN
+
+    UPDATE Parametros
+       SET ValorParametro = 'True'
+     WHERE IdParametro IN ('PEDIDOSMOSTRARTAMANO', 'PEDIDOSMOSTRARUM', 'PEDIDOSMOSTRARCOSTO', 'PEDIDOSMOSTRARPRECIOVENTAPORTAMANO',
+                           'PEDIDOSMOSTRARMONEDA', 'PEDIDOSMOSTRARSEMAFORORENTABILIDADDETALLE', 'FACTURACIONVISUALIZASEMAFOROUTILIDAD')
+
+    UPDATE Parametros
+       SET ValorParametro = 'ContribucionMarginal'
+     WHERE IdParametro IN ('FACTURACIONSEMAFOROCALCULOMUESTRA')
+
+END

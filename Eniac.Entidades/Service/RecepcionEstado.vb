@@ -1,0 +1,45 @@
+<Serializable()>
+Public Class RecepcionEstado
+   Inherits Eniac.Entidades.Entidad
+
+#Region "Campos"
+
+   Private _nombreEstado As String = String.Empty
+   Private _idEstado As Integer = 0
+   Private _reporte As String = String.Empty
+
+#End Region
+
+#Region "Propiedades"
+
+
+   Public Property NombreEstado() As String
+      Get
+         Return _nombreEstado
+      End Get
+      Set(ByVal value As String)
+         _nombreEstado = value
+      End Set
+   End Property
+
+   Public Property IdEstado() As Integer
+      Get
+         Return _idEstado
+      End Get
+      Set(ByVal value As Integer)
+         _idEstado = value
+      End Set
+   End Property
+
+   Public Property Reporte() As String
+      Get
+         Return _reporte
+      End Get
+      Set(ByVal value As String)
+         _reporte = value
+      End Set
+   End Property
+
+#End Region
+
+End Class

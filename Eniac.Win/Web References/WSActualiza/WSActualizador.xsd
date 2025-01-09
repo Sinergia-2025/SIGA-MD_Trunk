@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Eniac.ServerActualizar.XMLs" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Eniac.ServerActualizar.XMLs" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49793/WSActualizador.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:complexType name="ArrayOfVersion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Version" nillable="true" type="tns:Version" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVersion" nillable="true" type="tns:ArrayOfVersion" />
+  <xs:complexType name="Version">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Comentario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="Version" nillable="true" type="q1:Version" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Version" nillable="true" type="tns:Version" />
+</xs:schema>

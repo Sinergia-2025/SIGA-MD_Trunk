@@ -1,0 +1,3 @@
+﻿Public Class ContabilidadSaldosInicialesABMDetalle
+
+End Class

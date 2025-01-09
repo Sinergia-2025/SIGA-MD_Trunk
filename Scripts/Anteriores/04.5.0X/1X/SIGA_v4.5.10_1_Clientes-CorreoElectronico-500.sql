@@ -1,0 +1,6 @@
+
+ALTER TABLE Clientes ALTER COLUMN CorreoElectronico VARCHAR(500) NULL
+GO
+
+ALTER TABLE AuditoriaClientes ALTER COLUMN CorreoElectronico VARCHAR(500) NULL
+GO

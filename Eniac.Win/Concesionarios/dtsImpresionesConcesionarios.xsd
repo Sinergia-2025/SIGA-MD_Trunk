@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsImpresionesConcesionarios" targetNamespace="http://tempuri.org/dtsImpresionesConcesionarios.xsd" xmlns:mstns="http://tempuri.org/dtsImpresionesConcesionarios.xsd" xmlns="http://tempuri.org/dtsImpresionesConcesionarios.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsImpresionesConcesionarios" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtsImpresionesConcesionarios" msprop:Generator_UserDSName="dtsImpresionesConcesionarios">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ConcesionarioOperacionAdicional" msprop:Generator_TableClassName="ConcesionarioOperacionAdicionalDataTable" msprop:Generator_TableVarName="tableConcesionarioOperacionAdicional" msprop:Generator_RowChangedName="ConcesionarioOperacionAdicionalRowChanged" msprop:Generator_TablePropName="ConcesionarioOperacionAdicional" msprop:Generator_RowDeletingName="ConcesionarioOperacionAdicionalRowDeleting" msprop:Generator_RowChangingName="ConcesionarioOperacionAdicionalRowChanging" msprop:Generator_RowEvHandlerName="ConcesionarioOperacionAdicionalRowChangeEventHandler" msprop:Generator_RowDeletedName="ConcesionarioOperacionAdicionalRowDeleted" msprop:Generator_RowClassName="ConcesionarioOperacionAdicionalRow" msprop:Generator_UserTableName="ConcesionarioOperacionAdicional" msprop:Generator_RowEvArgName="ConcesionarioOperacionAdicionalRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdAdicional" msprop:Generator_ColumnVarNameInTable="columnIdAdicional" msprop:Generator_ColumnPropNameInRow="IdAdicional" msprop:Generator_ColumnPropNameInTable="IdAdicionalColumn" msprop:Generator_UserColumnName="IdAdicional" type="xs:int" minOccurs="0" />
+              <xs:element name="NombreAdicional" msprop:Generator_ColumnVarNameInTable="columnNombreAdicional" msprop:Generator_ColumnPropNameInRow="NombreAdicional" msprop:Generator_ColumnPropNameInTable="NombreAdicionalColumn" msprop:Generator_UserColumnName="NombreAdicional" type="xs:string" minOccurs="0" />
+              <xs:element name="DetalleAdicional" msprop:Generator_ColumnVarNameInTable="columnDetalleAdicional" msprop:Generator_ColumnPropNameInRow="DetalleAdicional" msprop:Generator_ColumnPropNameInTable="DetalleAdicionalColumn" msprop:Generator_UserColumnName="DetalleAdicional" type="xs:string" minOccurs="0" />
+              <xs:element name="PrecioAdicional" msprop:Generator_ColumnVarNameInTable="columnPrecioAdicional" msprop:Generator_ColumnPropNameInRow="PrecioAdicional" msprop:Generator_ColumnPropNameInTable="PrecioAdicionalColumn" msprop:Generator_UserColumnName="PrecioAdicional" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ConcesionarioOperacionProducto" msprop:Generator_TableClassName="ConcesionarioOperacionProductoDataTable" msprop:Generator_TableVarName="tableConcesionarioOperacionProducto" msprop:Generator_RowChangedName="ConcesionarioOperacionProductoRowChanged" msprop:Generator_TablePropName="ConcesionarioOperacionProducto" msprop:Generator_RowDeletingName="ConcesionarioOperacionProductoRowDeleting" msprop:Generator_RowChangingName="ConcesionarioOperacionProductoRowChanging" msprop:Generator_RowEvHandlerName="ConcesionarioOperacionProductoRowChangeEventHandler" msprop:Generator_RowDeletedName="ConcesionarioOperacionProductoRowDeleted" msprop:Generator_RowClassName="ConcesionarioOperacionProductoRow" msprop:Generator_UserTableName="ConcesionarioOperacionProducto" msprop:Generator_RowEvArgName="ConcesionarioOperacionProductoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdProducto" msprop:Generator_ColumnVarNameInTable="columnIdProducto" msprop:Generator_ColumnPropNameInRow="IdProducto" msprop:Generator_ColumnPropNameInTable="IdProductoColumn" msprop:Generator_UserColumnName="IdProducto" type="xs:string" minOccurs="0" />
+              <xs:element name="NombreProducto" msprop:Generator_ColumnVarNameInTable="columnNombreProducto" msprop:Generator_ColumnPropNameInRow="NombreProducto" msprop:Generator_ColumnPropNameInTable="NombreProductoColumn" msprop:Generator_UserColumnName="NombreProducto" type="xs:string" minOccurs="0" />
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Importe" msprop:Generator_ColumnVarNameInTable="columnImporte" msprop:Generator_ColumnPropNameInRow="Importe" msprop:Generator_ColumnPropNameInTable="ImporteColumn" msprop:Generator_UserColumnName="Importe" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ConcesionarioOperacionCaracteristicas" msprop:Generator_TableClassName="ConcesionarioOperacionCaracteristicasDataTable" msprop:Generator_TableVarName="tableConcesionarioOperacionCaracteristicas" msprop:Generator_RowChangedName="ConcesionarioOperacionCaracteristicasRowChanged" msprop:Generator_TablePropName="ConcesionarioOperacionCaracteristicas" msprop:Generator_RowDeletingName="ConcesionarioOperacionCaracteristicasRowDeleting" msprop:Generator_RowChangingName="ConcesionarioOperacionCaracteristicasRowChanging" msprop:Generator_RowEvHandlerName="ConcesionarioOperacionCaracteristicasRowChangeEventHandler" msprop:Generator_RowDeletedName="ConcesionarioOperacionCaracteristicasRowDeleted" msprop:Generator_RowClassName="ConcesionarioOperacionCaracteristicasRow" msprop:Generator_UserTableName="ConcesionarioOperacionCaracteristicas" msprop:Generator_RowEvArgName="ConcesionarioOperacionCaracteristicasRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NombreCaracteristica" msprop:Generator_ColumnVarNameInTable="columnNombreCaracteristica" msprop:Generator_ColumnPropNameInRow="NombreCaracteristica" msprop:Generator_ColumnPropNameInTable="NombreCaracteristicaColumn" msprop:Generator_UserColumnName="NombreCaracteristica" type="xs:string" minOccurs="0" />
+              <xs:element name="DescripcionCaracteristica" msprop:Generator_ColumnVarNameInTable="columnDescripcionCaracteristica" msprop:Generator_ColumnPropNameInRow="DescripcionCaracteristica" msprop:Generator_ColumnPropNameInTable="DescripcionCaracteristicaColumn" msprop:Generator_UserColumnName="DescripcionCaracteristica" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ConcesionarioOperacionResumenMediosPago" msprop:Generator_TableClassName="ConcesionarioOperacionResumenMediosPagoDataTable" msprop:Generator_TableVarName="tableConcesionarioOperacionResumenMediosPago" msprop:Generator_RowChangedName="ConcesionarioOperacionResumenMediosPagoRowChanged" msprop:Generator_TablePropName="ConcesionarioOperacionResumenMediosPago" msprop:Generator_RowDeletingName="ConcesionarioOperacionResumenMediosPagoRowDeleting" msprop:Generator_RowChangingName="ConcesionarioOperacionResumenMediosPagoRowChanging" msprop:Generator_RowEvHandlerName="ConcesionarioOperacionResumenMediosPagoRowChangeEventHandler" msprop:Generator_RowDeletedName="ConcesionarioOperacionResumenMediosPagoRowDeleted" msprop:Generator_RowClassName="ConcesionarioOperacionResumenMediosPagoRow" msprop:Generator_UserTableName="ConcesionarioOperacionResumenMediosPago" msprop:Generator_RowEvArgName="ConcesionarioOperacionResumenMediosPagoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NombreMedioPago" msprop:Generator_ColumnVarNameInTable="columnNombreMedioPago" msprop:Generator_ColumnPropNameInRow="NombreMedioPago" msprop:Generator_ColumnPropNameInTable="NombreMedioPagoColumn" msprop:Generator_UserColumnName="NombreMedioPago" type="xs:string" minOccurs="0" />
+              <xs:element name="Importe" msprop:Generator_ColumnVarNameInTable="columnImporte" msprop:Generator_ColumnPropNameInRow="Importe" msprop:Generator_ColumnPropNameInTable="ImporteColumn" msprop:Generator_UserColumnName="Importe" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

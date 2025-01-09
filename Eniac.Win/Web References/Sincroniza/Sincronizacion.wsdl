@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ObtenerRegistros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idSucursalDestino" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigoDeAutorizacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerRegistrosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerRegistrosResult" type="tns:ArrayOfSincronizaRegistro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSincronizaRegistro">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SincronizaRegistro" nillable="true" type="tns:SincronizaRegistro" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SincronizaRegistro">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entidad">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="SucursalDestino" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="SucursalOrigen" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaHora" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="Query" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaHoraProceso" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Tabla" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Entidad">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdSucursal" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CargarRegistros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="registros" type="tns:ArrayOfSincronizaRegistro" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigoDeAutorizacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarRegistrosResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CambiarEstadoRegistros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idSucursalDestino" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigoDeAutorizacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CambiarEstadoRegistrosResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CargaRegistro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="registro" type="tns:SincronizaRegistro" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigoDeAutorizacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargaRegistroResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ObtenerRegistrosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerRegistros" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerRegistrosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerRegistrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargarRegistrosSoapIn">
+    <wsdl:part name="parameters" element="tns:CargarRegistros" />
+  </wsdl:message>
+  <wsdl:message name="CargarRegistrosSoapOut">
+    <wsdl:part name="parameters" element="tns:CargarRegistrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="CambiarEstadoRegistrosSoapIn">
+    <wsdl:part name="parameters" element="tns:CambiarEstadoRegistros" />
+  </wsdl:message>
+  <wsdl:message name="CambiarEstadoRegistrosSoapOut">
+    <wsdl:part name="parameters" element="tns:CambiarEstadoRegistrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargaRegistroSoapIn">
+    <wsdl:part name="parameters" element="tns:CargaRegistro" />
+  </wsdl:message>
+  <wsdl:message name="CargaRegistroSoapOut">
+    <wsdl:part name="parameters" element="tns:CargaRegistroResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SincronizacionSoap">
+    <wsdl:operation name="ObtenerRegistros">
+      <wsdl:input message="tns:ObtenerRegistrosSoapIn" />
+      <wsdl:output message="tns:ObtenerRegistrosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarRegistros">
+      <wsdl:input message="tns:CargarRegistrosSoapIn" />
+      <wsdl:output message="tns:CargarRegistrosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoRegistros">
+      <wsdl:input message="tns:CambiarEstadoRegistrosSoapIn" />
+      <wsdl:output message="tns:CambiarEstadoRegistrosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargaRegistro">
+      <wsdl:input message="tns:CargaRegistroSoapIn" />
+      <wsdl:output message="tns:CargaRegistroSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SincronizacionSoap" type="tns:SincronizacionSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerRegistros">
+      <soap:operation soapAction="http://tempuri.org/ObtenerRegistros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarRegistros">
+      <soap:operation soapAction="http://tempuri.org/CargarRegistros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoRegistros">
+      <soap:operation soapAction="http://tempuri.org/CambiarEstadoRegistros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaRegistro">
+      <soap:operation soapAction="http://tempuri.org/CargaRegistro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SincronizacionSoap12" type="tns:SincronizacionSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerRegistros">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerRegistros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarRegistros">
+      <soap12:operation soapAction="http://tempuri.org/CargarRegistros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoRegistros">
+      <soap12:operation soapAction="http://tempuri.org/CambiarEstadoRegistros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaRegistro">
+      <soap12:operation soapAction="http://tempuri.org/CargaRegistro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Sincronizacion">
+    <wsdl:port name="SincronizacionSoap" binding="tns:SincronizacionSoap">
+      <soap:address location="http://localhost:49435/Marinzaldi.Ws/Sincronizacion.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SincronizacionSoap12" binding="tns:SincronizacionSoap12">
+      <soap12:address location="http://localhost:49435/Marinzaldi.Ws/Sincronizacion.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

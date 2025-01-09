@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[ChequesHistorial] (
+    [IdSucursal]           INT             NOT NULL,
+    [NumeroCheque]         INT             NOT NULL,
+    [IdBanco]              INT             NOT NULL,
+    [IdBancoSucursal]      INT             NOT NULL,
+    [IdLocalidad]          INT             NOT NULL,
+    [FechaEmision]         DATETIME        NOT NULL,
+    [FechaCobro]           DATETIME        NOT NULL,
+    [Titular]              VARCHAR (40)    NULL,
+    [Importe]              DECIMAL (10, 2) NOT NULL,
+    [IdCajaIngreso]        INT             NULL,
+    [NroPlanillaIngreso]   INT             NULL,
+    [NroMovimientoIngreso] INT             NULL,
+    [IdCajaEgreso]         INT             NULL,
+    [NroPlanillaEgreso]    INT             NULL,
+    [NroMovimientoEgreso]  INT             NULL,
+    [EsPropio]             BIT             NOT NULL,
+    [IdCuentaBancaria]     INT             NULL,
+    [IdEstadoCheque]       VARCHAR (10)    NOT NULL,
+    [IdEstadoChequeAnt]    VARCHAR (10)    NULL,
+    [IdCliente]            BIGINT          NULL,
+    [IdProveedor]          BIGINT          NULL,
+    [Cuit]                 VARCHAR (13)    NULL,
+    CONSTRAINT [FK_ChequesHistorial_Clientes] FOREIGN KEY ([IdCliente]) REFERENCES [dbo].[Clientes] ([IdCliente]),
+    CONSTRAINT [FK_ChequesHistorial_Proveedores] FOREIGN KEY ([IdProveedor]) REFERENCES [dbo].[Proveedores] ([IdProveedor])
+);
+

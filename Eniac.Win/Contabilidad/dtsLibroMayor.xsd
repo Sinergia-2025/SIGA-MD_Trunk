@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsLibroMayor" targetNamespace="http://tempuri.org/dtsLibroMayor.xsd" xmlns:mstns="http://tempuri.org/dtsLibroMayor.xsd" xmlns="http://tempuri.org/dtsLibroMayor.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsLibroMayor" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dtsLibroMayor" msprop:Generator_DataSetName="dtsLibroMayor" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtLibro" msprop:Generator_UserTableName="dtLibro" msprop:Generator_RowDeletedName="dtLibroRowDeleted" msprop:Generator_RowChangedName="dtLibroRowChanged" msprop:Generator_RowClassName="dtLibroRow" msprop:Generator_RowChangingName="dtLibroRowChanging" msprop:Generator_RowEvArgName="dtLibroRowChangeEvent" msprop:Generator_RowEvHandlerName="dtLibroRowChangeEventHandler" msprop:Generator_TableClassName="dtLibroDataTable" msprop:Generator_TableVarName="tabledtLibro" msprop:Generator_RowDeletingName="dtLibroRowDeleting" msprop:Generator_TablePropName="dtLibro">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FechaAsiento" msprop:Generator_UserColumnName="FechaAsiento" msprop:Generator_ColumnVarNameInTable="columnfechaAsiento" msprop:Generator_ColumnPropNameInRow="fechaAsiento" msprop:Generator_ColumnPropNameInTable="fechaAsientoColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NombreAsiento" msprop:Generator_UserColumnName="NombreAsiento" msprop:Generator_ColumnVarNameInTable="columnNombreAsiento" msprop:Generator_ColumnPropNameInRow="NombreAsiento" msprop:Generator_ColumnPropNameInTable="NombreAsientoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Debe" msprop:Generator_UserColumnName="Debe" msprop:Generator_ColumnVarNameInTable="columndebe" msprop:Generator_ColumnPropNameInRow="debe" msprop:Generator_ColumnPropNameInTable="debeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Haber" msprop:Generator_UserColumnName="Haber" msprop:Generator_ColumnVarNameInTable="columnhaber" msprop:Generator_ColumnPropNameInRow="haber" msprop:Generator_ColumnPropNameInTable="haberColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IdAsiento" msprop:Generator_UserColumnName="IdAsiento" msprop:Generator_ColumnVarNameInTable="columnidAsiento" msprop:Generator_ColumnPropNameInRow="idAsiento" msprop:Generator_ColumnPropNameInTable="idAsientoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IdCuenta" msprop:Generator_UserColumnName="IdCuenta" msprop:Generator_ColumnVarNameInTable="columnidCuenta" msprop:Generator_ColumnPropNameInRow="idCuenta" msprop:Generator_ColumnPropNameInTable="idCuentaColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49793/WSActualizador.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Eniac.ServerActualizar.Entidades" />
+  <xs:import schemaLocation="http://localhost:49793/WSActualizador.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:element name="GetVersionCompleta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="versionInicial" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="versionActual" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoCliente" type="xs:long" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="base" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVersionCompletaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Eniac.ServerActualizar.Entidades" minOccurs="0" name="GetVersionCompletaResult" nillable="true" type="q1:Versiones" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUltimaVersion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoCliente" type="xs:long" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="base" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUltimaVersionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUltimaVersionResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarVersionesClientes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Eniac.ServerActualizar.Entidades" minOccurs="0" name="versionesClientes" nillable="true" type="q2:ArrayOfVersionCliente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarVersionesClientesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVersionesClientes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descargada" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVersionesClientesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Eniac.ServerActualizar.Entidades" minOccurs="0" name="GetVersionesClientesResult" nillable="true" type="q3:ArrayOfVersionCliente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubirScriptsVersion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAplicacion" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Eniac.ServerActualizar.Entidades" minOccurs="0" name="scriptsDeVersion" nillable="true" type="q4:ArrayOfVersionScript" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubirScriptsVersionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarScriptsVersion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nroVersion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarScriptsVersionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVersionWS">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVersionWSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="GetVersionWSResult" nillable="true" type="q5:Version" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

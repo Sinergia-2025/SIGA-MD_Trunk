@@ -1,0 +1,66 @@
+InfAuditoriaMonedas
+ABMSucursalesDepositos
+ABMUbicacionesEstados
+ABMSucursalesUbicaciones
+EstructuraProductos
+ABMPlazosEntrega
+ProduccionModelosFormasABM
+TiposObservacionesABM
+InconsistDepositoVsSucursales
+InconsistDepositoVsUbicaciones
+InconsistDepositosVsMovStock
+InconsistUbicacionesVsMovStock
+
+
+PresupuestosProv
+- PresupuestosProveedor
+- ConsultarPresupuestosProv
+** ConsultarPresupProv-VerPre
+- AnularPresupuestosProv
+- PresupuestosAdminProv
+** PresupuestosAdminProv-Modif
+- EstadoPresupuestosProvABM
+- InfPresupuestosDetalladosProv
+** InfPresupDetalladosProv-VerPre
+- InfPresupSumaPorProductosProv
+
+MRP
+- MRPCategoriasEmpleadosABM
+- MRPCentrosProductoresABM
+- MRPNormasFabricacionABM
+- MRPSeccionesABM
+- MRPTareasABM
+- MRPProcesosProductivosABM
+- MRPCostosProcesosProductivos
+- MRPPlanificacionProduccion
+- MRPConceptosNoProductivosABM
+- MRPPlanificacionRequerimientos
+- MRPAsignacionActividades
+- ProcesoDeclaracionProduccion
+- MRPAQLAABM
+- MRPAQLBABM
+
+OrdenCompraProv
+- OrdenCompraProveedor
+- ConsultarOrdenCompraProv
+** ConsultarOCProv-VerPre
+- AnularOrdenCompraProv
+- OrdenCompraAdminProv
+** OrdenCompraAdminProv-Modif
+** OrdenCompraAdminProv-VerPre
+- EstadoOrdenCompraProvABM
+- InfOrdenCompraDetalladosProv
+** InfOCDetalladosProv-VerPre
+- InfOCSumaPorProductosProv
+
+RequerimientosCompras
+- RequerimientosComprasABM
+- AnularRequerimientosCompras
+- InfRequerimientosCompras
+- InfReqComprasDetProducto
+- RequerimientosComprasAdmin
+
+
+Pantalla:
+    * PedidosAdminProvV2
+    * OrdenesProduccionAdminV2

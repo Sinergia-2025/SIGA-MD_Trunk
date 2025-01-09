@@ -1,0 +1,6 @@
+
+UPDATE Parametros
+   SET IdParametro = 'FACTURACIONTICKETINCLUYERECARGOGENERAL'
+      ,DescripcionParametro = 'Ticket: incluye Recargo General'
+ WHERE IdParametro = 'FACTURACIONTICKETINCLUYEDESCUENTORECARGOGENERAL'
+GO

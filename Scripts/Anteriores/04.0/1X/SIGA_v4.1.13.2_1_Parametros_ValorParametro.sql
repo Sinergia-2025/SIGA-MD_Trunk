@@ -1,0 +1,3 @@
+
+ALTER TABLE Parametros ALTER COLUMN ValorParametro VARCHAR(110)
+GO

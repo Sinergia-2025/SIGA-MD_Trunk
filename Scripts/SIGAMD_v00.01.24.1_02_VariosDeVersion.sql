@@ -1,0 +1,17 @@
+ALTER TABLE OrdenesProduccionProductos ALTER COLUMN Precio DECIMAL(16, 4) NOT NULL
+ALTER TABLE OrdenesProduccionProductos ALTER COLUMN Costo DECIMAL(16, 4) NOT NULL
+ALTER TABLE OrdenesProduccionProductos ALTER COLUMN ImporteTotal DECIMAL(16, 4) NOT NULL
+ALTER TABLE OrdenesProduccionProductos ALTER COLUMN CantEntregada DECIMAL(16, 4) NOT NULL
+ALTER TABLE OrdenesProduccionProductos ALTER COLUMN CantEnProceso DECIMAL(16, 4) NOT NULL
+ALTER TABLE OrdenesProduccionProductos ALTER COLUMN DescuentoRecargoProducto DECIMAL(16, 4) NOT NULL
+ALTER TABLE OrdenesProduccionProductos ALTER COLUMN DescuentoRecargoPorc  DECIMAL(10, 5) NOT NULL
+ALTER TABLE OrdenesProduccionProductos ALTER COLUMN DescuentoRecargoPorc2 DECIMAL(10, 5) NOT NULL
+ALTER TABLE OrdenesProduccionProductos ALTER COLUMN ImporteImpuesto DECIMAL(16, 4) NOT NULL
+ALTER TABLE OrdenesProduccionProductos ALTER COLUMN PrecioLista DECIMAL(16, 4) NOT NULL
+ALTER TABLE OrdenesProduccionProductos ALTER COLUMN ImporteImpuestoInterno DECIMAL(16, 4) NOT NULL
+ALTER TABLE OrdenesProduccionProductos ALTER COLUMN PrecioNeto DECIMAL(16, 4) NOT NULL
+ALTER TABLE OrdenesProduccionProductos ALTER COLUMN ImporteTotalNeto DECIMAL(16, 4) NOT NULL
+ALTER TABLE OrdenesProduccionProductos ALTER COLUMN DescRecGeneral DECIMAL(16, 4) NOT NULL
+ALTER TABLE OrdenesProduccionProductos ALTER COLUMN DescRecGeneralProducto DECIMAL(16, 4) NOT NULL
+ALTER TABLE OrdenesProduccionProductos ALTER COLUMN CantAnulada DECIMAL(16, 4) NOT NULL
+ALTER TABLE OrdenesProduccionProductos ALTER COLUMN CantPendiente DECIMAL(16, 4) NOT NULL
